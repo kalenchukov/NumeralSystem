@@ -1,4 +1,4 @@
-module dev.kalenchukov.numeral.system
+module dev.kalenchukov.numeralsystem
 {
 	requires org.jetbrains.annotations;
 
