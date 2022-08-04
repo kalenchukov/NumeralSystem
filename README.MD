@@ -1,7 +1,11 @@
-# Numeral System
+# NumeralSystem
+
 Системы счисления.
 
-### Получение цифр двоичной системы счисления
+## Использование
+
+#### Получение цифр двоичной системы счисления
+
 ```java
 Numerable numeralSystem = new BinarySystem();
 numeralSystem.getDigits();
@@ -9,16 +13,19 @@ numeralSystem.getDigits();
 ```
 
 Аналог в виде константы:
+
 ```java
 BinarySystem.DIGITS;
 ```
 
 Аналог в виде перечисления:
+
 ```java
 NumeralSystem.BINARY.getDigits();
 ```
 
-### Получение цифр восьмеричной системы счисления
+#### Получение цифр восьмеричной системы счисления
+
 ```java
 Numerable numeralSystem = new OctalSystem();
 numeralSystem.getDigits();
@@ -26,16 +33,19 @@ numeralSystem.getDigits();
 ```
 
 Аналог в виде константы:
+
 ```java
 OctalSystem.DIGITS;
 ```
 
 Аналог в виде перечисления:
+
 ```java
 NumeralSystem.OCTAL.getDigits();
 ```
 
-### Получение цифр десятеричной системы счисления
+#### Получение цифр десятеричной системы счисления
+
 ```java
 Numerable numeralSystem = new DecimalSystem();
 numeralSystem.getDigits();
@@ -43,16 +53,19 @@ numeralSystem.getDigits();
 ```
 
 Аналог в виде константы:
+
 ```java
 DecimalSystem.DIGITS;
 ```
 
 Аналог в виде перечисления:
+
 ```java
 NumeralSystem.DECIMAL.getDigits();
 ```
 
-### Получение цифр двенадцатеричной системы счисления
+#### Получение цифр двенадцатеричной системы счисления
+
 ```java
 Numerable numeralSystem = new DuodecimalSystem();
 numeralSystem.getDigits();
@@ -60,16 +73,19 @@ numeralSystem.getDigits();
 ```
 
 Аналог в виде константы:
+
 ```java
 DuodecimalSystem.DIGITS;
 ```
 
 Аналог в виде перечисления:
+
 ```java
 NumeralSystem.DUODECIMAL.getDigits();
 ```
 
-### Получение цифр шестнадцатеричной системы счисления
+#### Получение цифр шестнадцатеричной системы счисления
+
 ```java
 Numerable numeralSystem = new HexadecimalSystem();
 numeralSystem.getDigits();
@@ -77,11 +93,33 @@ numeralSystem.getDigits();
 ```
 
 Аналог в виде константы:
+
 ```java
 HexadecimalSystem.DIGITS;
 ```
 
 Аналог в виде перечисления:
+
 ```java
 NumeralSystem.HEXADECIMAL.getDigits();
 ```
+
+## Установка
+
+Для установки этого проекта, введите в терминале:
+
+```bash
+git clone https://github.com/kalenchukov/NumeralSystem.git
+```
+
+## Версии
+
+Доступные [версии](https://github.com/kalenchukov/NumeralSystem/releases).
+
+## Авторы
+
+[Алексей Каленчуков](https://github.com/kalenchukov)
+
+## Лицензия
+
+[MIT](https://opensource.org/licenses/MIT)
