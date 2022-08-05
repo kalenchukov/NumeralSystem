@@ -6,7 +6,6 @@
 
 package dev.kalenchukov.numeralsystem;
 
-import dev.kalenchukov.numeralsystem.resources.NumeralSystem;
 import org.jetbrains.annotations.NotNull;
 import org.junit.Test;
 
@@ -20,7 +19,7 @@ public class DuodecimalSystemTest
 	public static final Numerable NUMERAL_SYSTEM = new DuodecimalSystem();
 
 	/**
-	 * Проверка количества цифр десятеричной системы счисления.
+	 * Проверка количества цифр.
 	 */
 	@Test
 	public void testGetDigitCount()
@@ -29,7 +28,7 @@ public class DuodecimalSystemTest
 	}
 
 	/**
-	 * Проверка получения цифр двенадцатеричной системы счисления.
+	 * Проверка получения цифр.
 	 */
 	@Test
 	public void testGetDigit()
@@ -44,7 +43,7 @@ public class DuodecimalSystemTest
 	}
 
 	/**
-	 * Проверка позиции цифр двенадцатеричной системы счисления.
+	 * Проверка позиции цифр.
 	 */
 	@Test
 	public void testGetDigitPosition()

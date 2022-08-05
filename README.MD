@@ -24,6 +24,26 @@ BinarySystem.DIGITS;
 NumeralSystem.BINARY.getDigits();
 ```
 
+#### Получение цифр римской системы счисления
+
+```java
+Numerable numeralSystem = new RomanSystem();
+numeralSystem.getDigits();
+// Результат выполнения: [I, V, X, L, C, D, M]
+```
+
+Аналог в виде константы:
+
+```java
+RomanSystem.DIGITS;
+```
+
+Аналог в виде перечисления:
+
+```java
+NumeralSystem.ROMAN.getDigits();
+```
+
 #### Получение цифр восьмеричной системы счисления
 
 ```java

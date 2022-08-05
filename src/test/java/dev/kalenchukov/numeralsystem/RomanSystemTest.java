@@ -11,12 +11,13 @@ import org.junit.Test;
 
 import java.util.List;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 
-public class OctalSystemTest
+public class RomanSystemTest
 {
 	@NotNull
-	public static final Numerable NUMERAL_SYSTEM = new OctalSystem();
+	public static final Numerable NUMERAL_SYSTEM = new RomanSystem();
 
 	/**
 	 * Проверка количества цифр.
@@ -24,7 +25,7 @@ public class OctalSystemTest
 	@Test
 	public void testGetDigitCount()
 	{
-		assertEquals(8, NUMERAL_SYSTEM.getDigits().size());
+		assertEquals(7, NUMERAL_SYSTEM.getDigits().size());
 	}
 
 	/**
@@ -34,8 +35,7 @@ public class OctalSystemTest
 	public void testGetDigit()
 	{
 		List<Character> digits = List.of(
-			'0', '1', '2', '3', '4',
-			'5', '6', '7'
+			'I', 'V', 'X', 'L', 'C', 'D', 'M'
 		);
 
 		assertTrue(digits.containsAll(NUMERAL_SYSTEM.getDigits()));
@@ -49,13 +49,12 @@ public class OctalSystemTest
 	{
 		List<Character> digits = NUMERAL_SYSTEM.getDigits();
 
-		assertEquals(Character.valueOf('0'), digits.get(0));
-		assertEquals(Character.valueOf('1'), digits.get(1));
-		assertEquals(Character.valueOf('2'), digits.get(2));
-		assertEquals(Character.valueOf('3'), digits.get(3));
-		assertEquals(Character.valueOf('4'), digits.get(4));
-		assertEquals(Character.valueOf('5'), digits.get(5));
-		assertEquals(Character.valueOf('6'), digits.get(6));
-		assertEquals(Character.valueOf('7'), digits.get(7));
+		assertEquals(Character.valueOf('I'), digits.get(0));
+		assertEquals(Character.valueOf('V'), digits.get(1));
+		assertEquals(Character.valueOf('X'), digits.get(2));
+		assertEquals(Character.valueOf('L'), digits.get(3));
+		assertEquals(Character.valueOf('C'), digits.get(4));
+		assertEquals(Character.valueOf('D'), digits.get(5));
+		assertEquals(Character.valueOf('M'), digits.get(6));
 	}
 }

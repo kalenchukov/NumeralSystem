@@ -19,7 +19,7 @@ public class BinarySystemTest
 	public static final Numerable NUMERAL_SYSTEM = new BinarySystem();
 
 	/**
-	 * Проверка количества цифр бинарной системы счисления.
+	 * Проверка количества цифр.
 	 */
 	@Test
 	public void testGetDigitCount()
@@ -28,7 +28,7 @@ public class BinarySystemTest
 	}
 
 	/**
-	 * Проверка получения цифр бинарной системы счисления.
+	 * Проверка получения цифр.
 	 */
 	@Test
 	public void testGetDigit()
@@ -41,7 +41,7 @@ public class BinarySystemTest
 	}
 
 	/**
-	 * Проверка позиции цифр бинарной системы счисления.
+	 * Проверка позиции цифр.
 	 */
 	@Test
 	public void testGetDigitPosition()

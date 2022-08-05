@@ -24,6 +24,11 @@ public enum NumeralSystem
 	BINARY(BinarySystem.DIGITS),
 
 	/**
+	 * Римская система счисления.
+	 */
+	ROMAN(RomanSystem.DIGITS),
+
+	/**
 	 * Восьмеричная система счисления.
 	 */
 	OCTAL(OctalSystem.DIGITS),

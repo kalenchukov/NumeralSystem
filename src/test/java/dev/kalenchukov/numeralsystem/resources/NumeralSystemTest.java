@@ -15,7 +15,7 @@ import static org.junit.Assert.*;
 public class NumeralSystemTest
 {
 	/**
-	 * Проверка количества цифр бинарной системы счисления.
+	 * Проверка количества цифр.
 	 */
 	@Test
 	public void testBinaryCount()
@@ -24,7 +24,7 @@ public class NumeralSystemTest
 	}
 
 	/**
-	 * Проверка получения цифр бинарной системы счисления.
+	 * Проверка получения цифр.
 	 */
 	@Test
 	public void testBinary()
@@ -37,7 +37,7 @@ public class NumeralSystemTest
 	}
 
 	/**
-	 * Проверка позиции цифр бинарной системы счисления.
+	 * Проверка позиции цифр.
 	 */
 	@Test
 	public void testBinaryPosition()

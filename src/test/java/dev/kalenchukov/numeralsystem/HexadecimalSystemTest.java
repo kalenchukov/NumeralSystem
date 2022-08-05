@@ -6,7 +6,6 @@
 
 package dev.kalenchukov.numeralsystem;
 
-import dev.kalenchukov.numeralsystem.resources.NumeralSystem;
 import org.jetbrains.annotations.NotNull;
 import org.junit.Test;
 
@@ -20,7 +19,7 @@ public class HexadecimalSystemTest
 	public static final Numerable NUMERAL_SYSTEM = new HexadecimalSystem();
 
 	/**
-	 * Проверка количества цифр десятеричной системы счисления.
+	 * Проверка количества цифр.
 	 */
 	@Test
 	public void testGetDigitCount()
@@ -29,7 +28,7 @@ public class HexadecimalSystemTest
 	}
 
 	/**
-	 * Проверка получения цифр шестнадцатеричной системы счисления.
+	 * Проверка получения цифр.
 	 */
 	@Test
 	public void testGetDigit()
@@ -45,7 +44,7 @@ public class HexadecimalSystemTest
 	}
 
 	/**
-	 * Проверка позиции цифр шестнадцатеричной системы счисления.
+	 * Проверка позиции цифр.
 	 */
 	@Test
 	public void testGetDigitPosition()
