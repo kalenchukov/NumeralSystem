@@ -60,4 +60,26 @@ public class DecimalSystemTest
 		assertEquals(Character.valueOf('8'), digits.get(8));
 		assertEquals(Character.valueOf('9'), digits.get(9));
 	}
+
+	/**
+	 * Проверка преобразования цифр в строку с разделителем.
+	 */
+	@Test
+	public void testToStringSeparator()
+	{
+		String string = "0,1,2,3,4,5,6,7,8,9";
+
+		assertEquals(string, NUMERAL_SYSTEM.toString(","));
+	}
+
+	/**
+	 * Проверка преобразования цифр в строку.
+	 */
+	@Test
+	public void testToString()
+	{
+		String string = "0123456789";
+
+		assertEquals(string, NUMERAL_SYSTEM.toString());
+	}
 }

@@ -68,4 +68,26 @@ public class HexadecimalSystemTest
 		assertEquals(Character.valueOf('E'), digits.get(14));
 		assertEquals(Character.valueOf('F'), digits.get(15));
 	}
+
+	/**
+	 * Проверка преобразования цифр в строку с разделителем.
+	 */
+	@Test
+	public void testToStringSeparator()
+	{
+		String string = "0,1,2,3,4,5,6,7,8,9,A,B,C,D,E,F";
+
+		assertEquals(string, NUMERAL_SYSTEM.toString(","));
+	}
+
+	/**
+	 * Проверка преобразования цифр в строку.
+	 */
+	@Test
+	public void testToString()
+	{
+		String string = "0123456789ABCDEF";
+
+		assertEquals(string, NUMERAL_SYSTEM.toString());
+	}
 }

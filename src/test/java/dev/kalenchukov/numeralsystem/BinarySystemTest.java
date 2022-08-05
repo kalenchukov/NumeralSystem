@@ -51,4 +51,26 @@ public class BinarySystemTest
 		assertEquals(Character.valueOf('0'), digits.get(0));
 		assertEquals(Character.valueOf('1'), digits.get(1));
 	}
+
+	/**
+	 * Проверка преобразования цифр в строку с разделителем.
+	 */
+	@Test
+	public void testToStringSeparator()
+	{
+		String string = "0,1";
+
+		assertEquals(string, NUMERAL_SYSTEM.toString(","));
+	}
+
+	/**
+	 * Проверка преобразования цифр в строку.
+	 */
+	@Test
+	public void testToString()
+	{
+		String string = "01";
+
+		assertEquals(string, NUMERAL_SYSTEM.toString());
+	}
 }

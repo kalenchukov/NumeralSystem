@@ -58,4 +58,26 @@ public class OctalSystemTest
 		assertEquals(Character.valueOf('6'), digits.get(6));
 		assertEquals(Character.valueOf('7'), digits.get(7));
 	}
+
+	/**
+	 * Проверка преобразования цифр в строку с разделителем.
+	 */
+	@Test
+	public void testToStringSeparator()
+	{
+		String string = "0,1,2,3,4,5,6,7";
+
+		assertEquals(string, NUMERAL_SYSTEM.toString(","));
+	}
+
+	/**
+	 * Проверка преобразования цифр в строку.
+	 */
+	@Test
+	public void testToString()
+	{
+		String string = "01234567";
+
+		assertEquals(string, NUMERAL_SYSTEM.toString());
+	}
 }

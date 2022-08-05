@@ -24,4 +24,13 @@ public interface Numerable
 	@Unmodifiable
 	@NotNull
 	List<@NotNull Character> getDigits();
+
+	/**
+	 * Возвращает строковое представление цифр.
+	 *
+	 * @param separator Разделитель.
+	 * @return Строку из цифр.
+	 */
+	@NotNull
+	String toString(@NotNull final String separator);
 }

@@ -57,4 +57,26 @@ public class RomanSystemTest
 		assertEquals(Character.valueOf('D'), digits.get(5));
 		assertEquals(Character.valueOf('M'), digits.get(6));
 	}
+
+	/**
+	 * Проверка преобразования цифр в строку с разделителем.
+	 */
+	@Test
+	public void testToStringSeparator()
+	{
+		String string = "I,V,X,L,C,D,M";
+
+		assertEquals(string, NUMERAL_SYSTEM.toString(","));
+	}
+
+	/**
+	 * Проверка преобразования цифр в строку.
+	 */
+	@Test
+	public void testToString()
+	{
+		String string = "IVXLCDM";
+
+		assertEquals(string, NUMERAL_SYSTEM.toString());
+	}
 }
