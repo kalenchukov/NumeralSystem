@@ -49,7 +49,7 @@ public class NumeralSystemTest
 	}
 
 	/**
-	 * Проверка количества цифр восьмеричной системы счисления.
+	 * Проверка количества цифр.
 	 */
 	@Test
 	public void testOctalCount()
@@ -58,7 +58,7 @@ public class NumeralSystemTest
 	}
 
 	/**
-	 * Проверка получения цифр восьмеричной системы счисления.
+	 * Проверка получения цифр.
 	 */
 	@Test
 	public void testOctal()
@@ -72,7 +72,7 @@ public class NumeralSystemTest
 	}
 
 	/**
-	 * Проверка позиции цифр восьмеричной системы счисления.
+	 * Проверка позиции цифр.
 	 */
 	@Test
 	public void testOctalPosition()
@@ -90,7 +90,7 @@ public class NumeralSystemTest
 	}
 
 	/**
-	 * Проверка количества цифр десятеричной системы счисления.
+	 * Проверка количества цифр.
 	 */
 	@Test
 	public void testDecimalCount()
@@ -99,7 +99,7 @@ public class NumeralSystemTest
 	}
 
 	/**
-	 * Проверка получения цифр десятеричной системы счисления.
+	 * Проверка получения цифр.
 	 */
 	@Test
 	public void testDecimal()
@@ -113,7 +113,7 @@ public class NumeralSystemTest
 	}
 
 	/**
-	 * Проверка позиции цифр десятеричной системы счисления.
+	 * Проверка позиции цифр.
 	 */
 	@Test
 	public void testDecimalPosition()
@@ -133,7 +133,7 @@ public class NumeralSystemTest
 	}
 
 	/**
-	 * Проверка количества цифр десятеричной системы счисления.
+	 * Проверка количества цифр.
 	 */
 	@Test
 	public void testDuodecimalCount()
@@ -142,7 +142,7 @@ public class NumeralSystemTest
 	}
 
 	/**
-	 * Проверка получения цифр двенадцатеричной системы счисления.
+	 * Проверка получения цифр.
 	 */
 	@Test
 	public void testDuodecimal()
@@ -157,7 +157,7 @@ public class NumeralSystemTest
 	}
 
 	/**
-	 * Проверка позиции цифр двенадцатеричной системы счисления.
+	 * Проверка позиции цифр.
 	 */
 	@Test
 	public void testDuodecimalPosition()
@@ -179,7 +179,7 @@ public class NumeralSystemTest
 	}
 
 	/**
-	 * Проверка количества цифр десятеричной системы счисления.
+	 * Проверка количества цифр.
 	 */
 	@Test
 	public void testHexadecimalCount()
@@ -188,7 +188,7 @@ public class NumeralSystemTest
 	}
 
 	/**
-	 * Проверка получения цифр шестнадцатеричной системы счисления.
+	 * Проверка получения цифр.
 	 */
 	@Test
 	public void testHexadecimal()
@@ -204,7 +204,7 @@ public class NumeralSystemTest
 	}
 
 	/**
-	 * Проверка позиции цифр шестнадцатеричной системы счисления.
+	 * Проверка позиции цифр.
 	 */
 	@Test
 	public void testHexadecimalPosition()
@@ -227,5 +227,44 @@ public class NumeralSystemTest
 		assertEquals(Character.valueOf('D'), digits.get(13));
 		assertEquals(Character.valueOf('E'), digits.get(14));
 		assertEquals(Character.valueOf('F'), digits.get(15));
+	}
+
+	/**
+	 * Проверка количества цифр.
+	 */
+	@Test
+	public void testRomanCount()
+	{
+		assertEquals(7, NumeralSystem.ROMAN.getDigits().size());
+	}
+
+	/**
+	 * Проверка получения цифр.
+	 */
+	@Test
+	public void testRoman()
+	{
+		List<Character> digits = List.of(
+			'I', 'V', 'X', 'L', 'C', 'D', 'M'
+		);
+
+		assertTrue(digits.containsAll(NumeralSystem.ROMAN.getDigits()));
+	}
+
+	/**
+	 * Проверка позиции цифр.
+	 */
+	@Test
+	public void testRomanPosition()
+	{
+		List<Character> digits = NumeralSystem.ROMAN.getDigits();
+
+		assertEquals(Character.valueOf('I'), digits.get(0));
+		assertEquals(Character.valueOf('V'), digits.get(1));
+		assertEquals(Character.valueOf('X'), digits.get(2));
+		assertEquals(Character.valueOf('L'), digits.get(3));
+		assertEquals(Character.valueOf('C'), digits.get(4));
+		assertEquals(Character.valueOf('D'), digits.get(5));
+		assertEquals(Character.valueOf('M'), digits.get(6));
 	}
 }
