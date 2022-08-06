@@ -45,6 +45,16 @@ public abstract class AbstractSystem implements Numerable
 	}
 
 	/**
+	 * @see Numerable#toArray()
+	 */
+	@NotNull
+	@Override
+	public Character @NotNull [] toArray()
+	{
+		return this.digit.toArray(Character[]::new);
+	}
+
+	/**
 	 * @see Numerable#toString(String)
 	 */
 	@Override

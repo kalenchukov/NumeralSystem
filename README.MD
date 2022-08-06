@@ -18,7 +18,12 @@
 ```java
 Numerable numeralSystem = new HexadecimalSystem();
 numeralSystem.getDigits();
-// Результат выполнения: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, A, B, C, D, E, F]
+/*
+Результат выполнения:
+[
+    0, 1, 2, 3, 4, 5, 6, 7, 8, 9, A, B, C, D, E, F
+]
+*/
 ```
 
 Аналог в виде константы:
@@ -31,6 +36,19 @@ HexadecimalSystem.DIGITS;
 
 ```java
 NumeralSystem.HEXADECIMAL.getDigits();
+```
+
+#### Получение цифр в виде массива
+
+```java
+Numerable numeralSystem = new RomanSystemTest();
+numeralSystem.toArray();
+/*
+Результат выполнения:
+[
+    I, V, X, L, C, D, M
+]
+*/
 ```
 
 #### Получение цифр в виде строки с разделителем

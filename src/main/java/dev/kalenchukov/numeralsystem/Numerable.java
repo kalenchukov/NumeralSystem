@@ -17,19 +17,27 @@ import java.util.List;
 public interface Numerable
 {
 	/**
-	 * Возвращает цифры.
+	 * Возвращает цифры системы счисления.
 	 *
-	 * @return Коллекцию цифр.
+	 * @return Коллекцию цифр системы счисления.
 	 */
 	@Unmodifiable
 	@NotNull
 	List<@NotNull Character> getDigits();
 
 	/**
-	 * Возвращает строковое представление цифр.
+	 * Возвращает массив из цифр системы счисления.
+	 *
+	 * @return Массив из цифр системы счисления.
+	 */
+	@NotNull
+	Character @NotNull [] toArray();
+
+	/**
+	 * Возвращает строковое представление цифр системы счисления.
 	 *
 	 * @param separator Разделитель.
-	 * @return Строку из цифр.
+	 * @return Строку из цифр системы счисления.
 	 */
 	@NotNull
 	String toString(@NotNull final String separator);

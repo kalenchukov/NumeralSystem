@@ -11,8 +11,7 @@ import org.junit.Test;
 
 import java.util.List;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.*;
 
 public class RomanSystemTest
 {
@@ -56,6 +55,19 @@ public class RomanSystemTest
 		assertEquals(Character.valueOf('C'), digits.get(4));
 		assertEquals(Character.valueOf('D'), digits.get(5));
 		assertEquals(Character.valueOf('M'), digits.get(6));
+	}
+
+	/**
+	 * Проверка получения массива цифр.
+	 */
+	@Test
+	public void testToArray()
+	{
+		Character[] digits = new Character[] {
+			'I', 'V', 'X', 'L', 'C', 'D', 'M'
+		};
+
+		assertArrayEquals(digits, NUMERAL_SYSTEM.toArray());
 	}
 
 	/**

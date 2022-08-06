@@ -65,6 +65,21 @@ public class DuodecimalSystemTest
 	}
 
 	/**
+	 * Проверка получения массива цифр.
+	 */
+	@Test
+	public void testToArray()
+	{
+		Character[] digits = new Character[] {
+			'0', '1', '2', '3', '4',
+			'5', '6', '7', '8', '9',
+			'A', 'B'
+		};
+
+		assertArrayEquals(digits, NUMERAL_SYSTEM.toArray());
+	}
+
+	/**
 	 * Проверка преобразования цифр в строку с разделителем.
 	 */
 	@Test

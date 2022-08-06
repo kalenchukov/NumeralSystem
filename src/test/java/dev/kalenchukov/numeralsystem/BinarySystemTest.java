@@ -53,6 +53,19 @@ public class BinarySystemTest
 	}
 
 	/**
+	 * Проверка получения массива цифр.
+	 */
+	@Test
+	public void testToArray()
+	{
+		Character[] digits = new Character[] {
+			'0', '1'
+		};
+
+		assertArrayEquals(digits, NUMERAL_SYSTEM.toArray());
+	}
+
+	/**
 	 * Проверка преобразования цифр в строку с разделителем.
 	 */
 	@Test
