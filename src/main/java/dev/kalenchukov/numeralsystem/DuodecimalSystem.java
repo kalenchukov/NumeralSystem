@@ -57,7 +57,7 @@ public class DuodecimalSystem extends AbstractSystem
 
 		final DuodecimalSystem numeralSystem = (DuodecimalSystem) obj;
 
-		if (!Objects.equals(DuodecimalSystem.DIGITS, numeralSystem.getDigits())) {
+		if (!Objects.equals(DuodecimalSystem.DIGITS, numeralSystem.get())) {
 			return false;
 		}
 

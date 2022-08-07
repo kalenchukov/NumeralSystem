@@ -22,13 +22,13 @@ public class RomanSystemTest
 	 * Проверка цифр.
 	 */
 	@Test
-	public void testGetDigit()
+	public void testGet()
 	{
 		List<Character> digits = List.of(
 			'I', 'V', 'X', 'L', 'C', 'D', 'M'
 		);
 
-		assertArrayEquals(digits.toArray(), NUMERAL_SYSTEM.getDigits().toArray());
+		assertArrayEquals(digits.toArray(), NUMERAL_SYSTEM.get().toArray());
 	}
 
 	/**

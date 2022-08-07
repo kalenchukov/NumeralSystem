@@ -17,7 +17,7 @@
 
 ```java
 Numerable numeralSystem = new HexadecimalSystem();
-numeralSystem.getDigits();
+numeralSystem.get();
 /*
 Результат выполнения:
 [
@@ -35,7 +35,7 @@ HexadecimalSystem.DIGITS;
 Аналог в виде перечисления:
 
 ```java
-NumeralSystem.HEXADECIMAL.getDigits();
+NumeralSystem.HEXADECIMAL.get();
 ```
 
 #### Проверка принадлежности цифры системе счисления

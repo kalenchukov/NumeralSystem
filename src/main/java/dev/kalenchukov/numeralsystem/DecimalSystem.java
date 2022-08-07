@@ -56,7 +56,7 @@ public class DecimalSystem extends AbstractSystem
 
 		final DecimalSystem numeralSystem = (DecimalSystem) obj;
 
-		if (!Objects.equals(DecimalSystem.DIGITS, numeralSystem.getDigits())) {
+		if (!Objects.equals(DecimalSystem.DIGITS, numeralSystem.get())) {
 			return false;
 		}
 

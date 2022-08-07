@@ -24,7 +24,7 @@ public class NumeralSystemTest
 			'0', '1'
 		);
 
-		assertArrayEquals(digits.toArray(), NumeralSystem.BINARY.getDigits().toArray());
+		assertArrayEquals(digits.toArray(), NumeralSystem.BINARY.get().toArray());
 	}
 
 	/**
@@ -38,7 +38,7 @@ public class NumeralSystemTest
 			'5', '6', '7'
 		);
 
-		assertArrayEquals(digits.toArray(), NumeralSystem.OCTAL.getDigits().toArray());
+		assertArrayEquals(digits.toArray(), NumeralSystem.OCTAL.get().toArray());
 	}
 
 	/**
@@ -52,7 +52,7 @@ public class NumeralSystemTest
 			'5', '6', '7', '8', '9'
 		);
 
-		assertArrayEquals(digits.toArray(), NumeralSystem.DECIMAL.getDigits().toArray());
+		assertArrayEquals(digits.toArray(), NumeralSystem.DECIMAL.get().toArray());
 	}
 
 	/**
@@ -67,7 +67,7 @@ public class NumeralSystemTest
 			'A', 'B'
 		);
 
-		assertArrayEquals(digits.toArray(), NumeralSystem.DUODECIMAL.getDigits().toArray());
+		assertArrayEquals(digits.toArray(), NumeralSystem.DUODECIMAL.get().toArray());
 	}
 
 	/**
@@ -83,7 +83,7 @@ public class NumeralSystemTest
 			'F'
 		);
 
-		assertArrayEquals(digits.toArray(), NumeralSystem.HEXADECIMAL.getDigits().toArray());
+		assertArrayEquals(digits.toArray(), NumeralSystem.HEXADECIMAL.get().toArray());
 	}
 
 	/**
@@ -96,6 +96,6 @@ public class NumeralSystemTest
 			'I', 'V', 'X', 'L', 'C', 'D', 'M'
 		);
 
-		assertArrayEquals(digits.toArray(), NumeralSystem.ROMAN.getDigits().toArray());
+		assertArrayEquals(digits.toArray(), NumeralSystem.ROMAN.get().toArray());
 	}
 }

@@ -35,12 +35,12 @@ public abstract class AbstractSystem implements Numerable
 	}
 
 	/**
-	 * @see Numerable#getDigits()
+	 * @see Numerable#get()
 	 */
 	@Unmodifiable
 	@NotNull
 	@Override
-	public List<@NotNull Character> getDigits()
+	public List<@NotNull Character> get()
 	{
 		return Collections.unmodifiableList(this.digit);
 	}

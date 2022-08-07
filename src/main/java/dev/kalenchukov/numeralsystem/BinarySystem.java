@@ -55,7 +55,7 @@ public class BinarySystem extends AbstractSystem
 
 		final BinarySystem numeralSystem = (BinarySystem) obj;
 
-		if (!Objects.equals(BinarySystem.DIGITS, numeralSystem.getDigits())) {
+		if (!Objects.equals(BinarySystem.DIGITS, numeralSystem.get())) {
 			return false;
 		}
 

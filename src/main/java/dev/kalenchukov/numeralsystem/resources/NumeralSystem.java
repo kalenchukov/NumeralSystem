@@ -71,7 +71,7 @@ public enum NumeralSystem
 	 */
 	@NotNull
 	@Unmodifiable
-	public List<@NotNull Character> getDigits()
+	public List<@NotNull Character> get()
 	{
 		return Collections.unmodifiableList(this.digits);
 	}

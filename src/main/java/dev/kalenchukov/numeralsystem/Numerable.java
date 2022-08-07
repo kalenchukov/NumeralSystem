@@ -23,7 +23,7 @@ public interface Numerable
 	 */
 	@Unmodifiable
 	@NotNull
-	List<@NotNull Character> getDigits();
+	List<@NotNull Character> get();
 
 	/**
 	 * Проверяет содержание цифры в системе счисления.

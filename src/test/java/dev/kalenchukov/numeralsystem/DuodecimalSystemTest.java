@@ -22,7 +22,7 @@ public class DuodecimalSystemTest
 	 * Проверка цифр.
 	 */
 	@Test
-	public void testGetDigit()
+	public void testGet()
 	{
 		List<Character> digits = List.of(
 			'0', '1', '2', '3', '4',
@@ -30,7 +30,7 @@ public class DuodecimalSystemTest
 			'A', 'B'
 		);
 
-		assertArrayEquals(digits.toArray(), NUMERAL_SYSTEM.getDigits().toArray());
+		assertArrayEquals(digits.toArray(), NUMERAL_SYSTEM.get().toArray());
 	}
 
 	/**

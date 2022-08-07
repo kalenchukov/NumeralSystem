@@ -55,7 +55,7 @@ public class RomanSystem extends AbstractSystem
 
 		final RomanSystem numeralSystem = (RomanSystem) obj;
 
-		if (!Objects.equals(RomanSystem.DIGITS, numeralSystem.getDigits())) {
+		if (!Objects.equals(RomanSystem.DIGITS, numeralSystem.get())) {
 			return false;
 		}
 
