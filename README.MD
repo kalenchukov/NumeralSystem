@@ -42,7 +42,7 @@ NumeralSystem.HEXADECIMAL.getDigits();
 
 ```java
 Numerable numeralSystem = new DuodecimalSystem();
-numeralSystem.hasDigit('A');
+numeralSystem.contains('A');
 // Результат выполнения: true
 ```
 

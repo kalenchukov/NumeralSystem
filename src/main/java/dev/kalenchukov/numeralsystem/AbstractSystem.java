@@ -46,10 +46,10 @@ public abstract class AbstractSystem implements Numerable
 	}
 
 	/**
-	 * @see Numerable#hasDigit(Character)
+	 * @see Numerable#contains(Character)
 	 */
 	@Override
-	public boolean hasDigit(@NotNull final Character digit)
+	public boolean contains(@NotNull final Character digit)
 	{
 		Objects.requireNonNull(digit);
 

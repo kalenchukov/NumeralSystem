@@ -37,18 +37,18 @@ public class DuodecimalSystemTest
 	 * Проверка с содержащейся цифрой.
 	 */
 	@Test
-	public void testHasDigit()
+	public void testContains()
 	{
-		assertTrue(NUMERAL_SYSTEM.hasDigit('A'));
+		assertTrue(NUMERAL_SYSTEM.contains('A'));
 	}
 
 	/**
 	 * Проверка с не содержащейся цифрой.
 	 */
 	@Test
-	public void testHasDigitNot()
+	public void testContainsNot()
 	{
-		assertFalse(NUMERAL_SYSTEM.hasDigit('E'));
+		assertFalse(NUMERAL_SYSTEM.contains('E'));
 	}
 
 	/**

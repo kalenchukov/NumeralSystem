@@ -38,18 +38,18 @@ public class HexadecimalSystemTest
 	 * Проверка с содержащейся цифрой.
 	 */
 	@Test
-	public void testHasDigit()
+	public void testContains()
 	{
-		assertTrue(NUMERAL_SYSTEM.hasDigit('D'));
+		assertTrue(NUMERAL_SYSTEM.contains('D'));
 	}
 
 	/**
 	 * Проверка с не содержащейся цифрой.
 	 */
 	@Test
-	public void testHasDigitNot()
+	public void testContainsNot()
 	{
-		assertFalse(NUMERAL_SYSTEM.hasDigit('W'));
+		assertFalse(NUMERAL_SYSTEM.contains('W'));
 	}
 
 	/**

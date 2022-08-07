@@ -26,12 +26,12 @@ public interface Numerable
 	List<@NotNull Character> getDigits();
 
 	/**
-	 * Проверяет принадлежность цифры системе счисления.
+	 * Проверяет содержание цифры в системе счисления.
 	 *
 	 * @param digit Цифра.
-	 * @return {@code True}, если цифра принадлежит системе счисления, иначе {@code false}.
+	 * @return {@code True}, если цифра содержится в системе счисления, иначе {@code false}.
 	 */
-	boolean hasDigit(@NotNull Character digit);
+	boolean contains(@NotNull Character digit);
 
 	/**
 	 * Возвращает массив из цифр системы счисления.

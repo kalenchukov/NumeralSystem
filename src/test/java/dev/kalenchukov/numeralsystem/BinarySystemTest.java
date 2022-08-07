@@ -35,18 +35,18 @@ public class BinarySystemTest
 	 * Проверка с содержащейся цифрой.
 	 */
 	@Test
-	public void testHasDigit()
+	public void testContains()
 	{
-		assertTrue(NUMERAL_SYSTEM.hasDigit('1'));
+		assertTrue(NUMERAL_SYSTEM.contains('1'));
 	}
 
 	/**
 	 * Проверка с не содержащейся цифрой.
 	 */
 	@Test
-	public void testHasDigitNot()
+	public void testContainsNot()
 	{
-		assertFalse(NUMERAL_SYSTEM.hasDigit('2'));
+		assertFalse(NUMERAL_SYSTEM.contains('2'));
 	}
 
 	/**

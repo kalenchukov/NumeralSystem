@@ -36,18 +36,18 @@ public class DecimalSystemTest
 	 * Проверка с содержащейся цифрой.
 	 */
 	@Test
-	public void testHasDigit()
+	public void testContains()
 	{
-		assertTrue(NUMERAL_SYSTEM.hasDigit('7'));
+		assertTrue(NUMERAL_SYSTEM.contains('7'));
 	}
 
 	/**
 	 * Проверка с не содержащейся цифрой.
 	 */
 	@Test
-	public void testHasDigitNot()
+	public void testContainsNot()
 	{
-		assertFalse(NUMERAL_SYSTEM.hasDigit('F'));
+		assertFalse(NUMERAL_SYSTEM.contains('F'));
 	}
 
 	/**

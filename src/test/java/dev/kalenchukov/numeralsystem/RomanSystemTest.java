@@ -35,18 +35,18 @@ public class RomanSystemTest
 	 * Проверка с содержащейся цифрой.
 	 */
 	@Test
-	public void testHasDigit()
+	public void testContains()
 	{
-		assertTrue(NUMERAL_SYSTEM.hasDigit('I'));
+		assertTrue(NUMERAL_SYSTEM.contains('I'));
 	}
 
 	/**
 	 * Проверка с не содержащейся цифрой.
 	 */
 	@Test
-	public void testHasDigitNot()
+	public void testContainsNot()
 	{
-		assertFalse(NUMERAL_SYSTEM.hasDigit('0'));
+		assertFalse(NUMERAL_SYSTEM.contains('0'));
 	}
 
 	/**
