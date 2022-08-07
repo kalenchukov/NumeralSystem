@@ -50,7 +50,7 @@ public class DecimalSystem extends AbstractSystem
 			return true;
 		}
 
-		if (this.getClass() != obj.getClass()) {
+		if (!this.getClass().equals(obj.getClass())) {
 			return false;
 		}
 
