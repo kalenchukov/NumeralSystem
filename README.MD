@@ -39,7 +39,7 @@ HexadecimalSystem.DIGITS;
 NumeralSystem.HEXADECIMAL.get();
 ```
 
-#### Проверка принадлежности цифры системе счисления
+#### Проверка содержания цифры в системе счисления
 
 ```java
 Numerable numeralSystem = new DuodecimalSystem();
