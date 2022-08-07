@@ -31,6 +31,19 @@ public class NumeralSystemTest
 	 * Проверка получения цифр.
 	 */
 	@Test
+	public void testTernary()
+	{
+		List<Character> digits = List.of(
+			'0', '1', '2'
+		);
+
+		assertArrayEquals(digits.toArray(), NumeralSystem.TERNARY.get().toArray());
+	}
+
+	/**
+	 * Проверка получения цифр.
+	 */
+	@Test
 	public void testOctal()
 	{
 		List<Character> digits = List.of(

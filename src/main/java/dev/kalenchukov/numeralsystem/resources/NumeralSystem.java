@@ -24,6 +24,11 @@ public enum NumeralSystem
 	BINARY(BinarySystem.DIGITS),
 
 	/**
+	 * Троичная система счисления.
+	 */
+	TERNARY(TernarySystem.DIGITS),
+
+	/**
 	 * Римская система счисления.
 	 */
 	ROMAN(RomanSystem.DIGITS),
