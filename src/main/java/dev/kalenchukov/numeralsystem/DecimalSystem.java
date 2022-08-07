@@ -7,9 +7,11 @@
 package dev.kalenchukov.numeralsystem;
 
 import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 import org.jetbrains.annotations.Unmodifiable;
 
 import java.util.List;
+import java.util.Objects;
 
 /**
  * Класс десятеричной система счисления.
@@ -32,5 +34,41 @@ public class DecimalSystem extends AbstractSystem
 	public DecimalSystem()
 	{
 		super(DIGITS);
+	}
+
+	/**
+	 * @see Object#equals(Object)
+	 */
+	@Override
+	public boolean equals(@Nullable final Object obj)
+	{
+		if (obj == null) {
+			return false;
+		}
+
+		if (this == obj) {
+			return true;
+		}
+
+		if (this.getClass() != obj.getClass()) {
+			return false;
+		}
+
+		final DecimalSystem numeralSystem = (DecimalSystem) obj;
+
+		if (!Objects.equals(DecimalSystem.DIGITS, numeralSystem.getDigits())) {
+			return false;
+		}
+
+		return true;
+	}
+
+	/**
+	 * @see Object#hashCode()
+	 */
+	@Override
+	public int hashCode()
+	{
+		return DecimalSystem.DIGITS.hashCode();
 	}
 }

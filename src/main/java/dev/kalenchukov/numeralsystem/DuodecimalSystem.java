@@ -7,9 +7,11 @@
 package dev.kalenchukov.numeralsystem;
 
 import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 import org.jetbrains.annotations.Unmodifiable;
 
 import java.util.List;
+import java.util.Objects;
 
 /**
  * Класс двенадцатеричной системы счисления.
@@ -33,5 +35,41 @@ public class DuodecimalSystem extends AbstractSystem
 	public DuodecimalSystem()
 	{
 		super(DIGITS);
+	}
+
+	/**
+	 * @see Object#equals(Object)
+	 */
+	@Override
+	public boolean equals(@Nullable final Object obj)
+	{
+		if (obj == null) {
+			return false;
+		}
+
+		if (this == obj) {
+			return true;
+		}
+
+		if (this.getClass() != obj.getClass()) {
+			return false;
+		}
+
+		final DuodecimalSystem numeralSystem = (DuodecimalSystem) obj;
+
+		if (!Objects.equals(DuodecimalSystem.DIGITS, numeralSystem.getDigits())) {
+			return false;
+		}
+
+		return true;
+	}
+
+	/**
+	 * @see Object#hashCode()
+	 */
+	@Override
+	public int hashCode()
+	{
+		return DuodecimalSystem.DIGITS.hashCode();
 	}
 }

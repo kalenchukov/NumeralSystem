@@ -100,4 +100,32 @@ public class DuodecimalSystemTest
 
 		assertEquals(string, NUMERAL_SYSTEM.toString());
 	}
+
+	/**
+	 * Проверка сравнения объектов.
+	 */
+	@Test
+	public void testEquals()
+	{
+		assertFalse(NUMERAL_SYSTEM.equals(null));
+
+		assertTrue(NUMERAL_SYSTEM.equals(NUMERAL_SYSTEM));
+
+		assertFalse(NUMERAL_SYSTEM.equals(new DecimalSystem()));
+
+		assertTrue(NUMERAL_SYSTEM.equals(new DuodecimalSystem()));
+	}
+
+	/**
+	 * Проверка хэш-кода.
+	 */
+	@Test
+	public void testHashCode()
+	{
+		assertEquals(NUMERAL_SYSTEM.hashCode(), NUMERAL_SYSTEM.hashCode());
+
+		assertEquals(NUMERAL_SYSTEM.hashCode(), new DuodecimalSystem().hashCode());
+
+		assertNotEquals(NUMERAL_SYSTEM.hashCode(), new DecimalSystem().hashCode());
+	}
 }
