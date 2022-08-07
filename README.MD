@@ -38,6 +38,14 @@ HexadecimalSystem.DIGITS;
 NumeralSystem.HEXADECIMAL.getDigits();
 ```
 
+#### Проверка принадлежности цифры системе счисления
+
+```java
+Numerable numeralSystem = new DuodecimalSystem();
+numeralSystem.hasDigit('A');
+// Результат выполнения: true
+```
+
 #### Получение цифр в виде массива
 
 ```java
