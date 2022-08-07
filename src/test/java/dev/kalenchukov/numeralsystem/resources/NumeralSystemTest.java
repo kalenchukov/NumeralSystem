@@ -15,15 +15,6 @@ import static org.junit.Assert.*;
 public class NumeralSystemTest
 {
 	/**
-	 * Проверка количества цифр.
-	 */
-	@Test
-	public void testBinaryCount()
-	{
-		assertEquals(2, NumeralSystem.BINARY.getDigits().size());
-	}
-
-	/**
 	 * Проверка получения цифр.
 	 */
 	@Test
@@ -33,28 +24,7 @@ public class NumeralSystemTest
 			'0', '1'
 		);
 
-		assertTrue(digits.containsAll(NumeralSystem.BINARY.getDigits()));
-	}
-
-	/**
-	 * Проверка позиции цифр.
-	 */
-	@Test
-	public void testBinaryPosition()
-	{
-		List<Character> digits = NumeralSystem.BINARY.getDigits();
-
-		assertEquals(Character.valueOf('0'), digits.get(0));
-		assertEquals(Character.valueOf('1'), digits.get(1));
-	}
-
-	/**
-	 * Проверка количества цифр.
-	 */
-	@Test
-	public void testOctalCount()
-	{
-		assertEquals(8, NumeralSystem.OCTAL.getDigits().size());
+		assertArrayEquals(digits.toArray(), NumeralSystem.BINARY.getDigits().toArray());
 	}
 
 	/**
@@ -68,34 +38,7 @@ public class NumeralSystemTest
 			'5', '6', '7'
 		);
 
-		assertTrue(digits.containsAll(NumeralSystem.OCTAL.getDigits()));
-	}
-
-	/**
-	 * Проверка позиции цифр.
-	 */
-	@Test
-	public void testOctalPosition()
-	{
-		List<Character> digits = NumeralSystem.OCTAL.getDigits();
-
-		assertEquals(Character.valueOf('0'), digits.get(0));
-		assertEquals(Character.valueOf('1'), digits.get(1));
-		assertEquals(Character.valueOf('2'), digits.get(2));
-		assertEquals(Character.valueOf('3'), digits.get(3));
-		assertEquals(Character.valueOf('4'), digits.get(4));
-		assertEquals(Character.valueOf('5'), digits.get(5));
-		assertEquals(Character.valueOf('6'), digits.get(6));
-		assertEquals(Character.valueOf('7'), digits.get(7));
-	}
-
-	/**
-	 * Проверка количества цифр.
-	 */
-	@Test
-	public void testDecimalCount()
-	{
-		assertEquals(10, NumeralSystem.DECIMAL.getDigits().size());
+		assertArrayEquals(digits.toArray(), NumeralSystem.OCTAL.getDigits().toArray());
 	}
 
 	/**
@@ -109,36 +52,7 @@ public class NumeralSystemTest
 			'5', '6', '7', '8', '9'
 		);
 
-		assertTrue(digits.containsAll(NumeralSystem.DECIMAL.getDigits()));
-	}
-
-	/**
-	 * Проверка позиции цифр.
-	 */
-	@Test
-	public void testDecimalPosition()
-	{
-		List<Character> digits = NumeralSystem.DECIMAL.getDigits();
-
-		assertEquals(Character.valueOf('0'), digits.get(0));
-		assertEquals(Character.valueOf('1'), digits.get(1));
-		assertEquals(Character.valueOf('2'), digits.get(2));
-		assertEquals(Character.valueOf('3'), digits.get(3));
-		assertEquals(Character.valueOf('4'), digits.get(4));
-		assertEquals(Character.valueOf('5'), digits.get(5));
-		assertEquals(Character.valueOf('6'), digits.get(6));
-		assertEquals(Character.valueOf('7'), digits.get(7));
-		assertEquals(Character.valueOf('8'), digits.get(8));
-		assertEquals(Character.valueOf('9'), digits.get(9));
-	}
-
-	/**
-	 * Проверка количества цифр.
-	 */
-	@Test
-	public void testDuodecimalCount()
-	{
-		assertEquals(12, NumeralSystem.DUODECIMAL.getDigits().size());
+		assertArrayEquals(digits.toArray(), NumeralSystem.DECIMAL.getDigits().toArray());
 	}
 
 	/**
@@ -153,38 +67,7 @@ public class NumeralSystemTest
 			'A', 'B'
 		);
 
-		assertTrue(digits.containsAll(NumeralSystem.DUODECIMAL.getDigits()));
-	}
-
-	/**
-	 * Проверка позиции цифр.
-	 */
-	@Test
-	public void testDuodecimalPosition()
-	{
-		List<Character> digits = NumeralSystem.DUODECIMAL.getDigits();
-
-		assertEquals(Character.valueOf('0'), digits.get(0));
-		assertEquals(Character.valueOf('1'), digits.get(1));
-		assertEquals(Character.valueOf('2'), digits.get(2));
-		assertEquals(Character.valueOf('3'), digits.get(3));
-		assertEquals(Character.valueOf('4'), digits.get(4));
-		assertEquals(Character.valueOf('5'), digits.get(5));
-		assertEquals(Character.valueOf('6'), digits.get(6));
-		assertEquals(Character.valueOf('7'), digits.get(7));
-		assertEquals(Character.valueOf('8'), digits.get(8));
-		assertEquals(Character.valueOf('9'), digits.get(9));
-		assertEquals(Character.valueOf('A'), digits.get(10));
-		assertEquals(Character.valueOf('B'), digits.get(11));
-	}
-
-	/**
-	 * Проверка количества цифр.
-	 */
-	@Test
-	public void testHexadecimalCount()
-	{
-		assertEquals(16, NumeralSystem.HEXADECIMAL.getDigits().size());
+		assertArrayEquals(digits.toArray(), NumeralSystem.DUODECIMAL.getDigits().toArray());
 	}
 
 	/**
@@ -200,42 +83,7 @@ public class NumeralSystemTest
 			'F'
 		);
 
-		assertTrue(digits.containsAll(NumeralSystem.HEXADECIMAL.getDigits()));
-	}
-
-	/**
-	 * Проверка позиции цифр.
-	 */
-	@Test
-	public void testHexadecimalPosition()
-	{
-		List<Character> digits = NumeralSystem.HEXADECIMAL.getDigits();
-
-		assertEquals(Character.valueOf('0'), digits.get(0));
-		assertEquals(Character.valueOf('1'), digits.get(1));
-		assertEquals(Character.valueOf('2'), digits.get(2));
-		assertEquals(Character.valueOf('3'), digits.get(3));
-		assertEquals(Character.valueOf('4'), digits.get(4));
-		assertEquals(Character.valueOf('5'), digits.get(5));
-		assertEquals(Character.valueOf('6'), digits.get(6));
-		assertEquals(Character.valueOf('7'), digits.get(7));
-		assertEquals(Character.valueOf('8'), digits.get(8));
-		assertEquals(Character.valueOf('9'), digits.get(9));
-		assertEquals(Character.valueOf('A'), digits.get(10));
-		assertEquals(Character.valueOf('B'), digits.get(11));
-		assertEquals(Character.valueOf('C'), digits.get(12));
-		assertEquals(Character.valueOf('D'), digits.get(13));
-		assertEquals(Character.valueOf('E'), digits.get(14));
-		assertEquals(Character.valueOf('F'), digits.get(15));
-	}
-
-	/**
-	 * Проверка количества цифр.
-	 */
-	@Test
-	public void testRomanCount()
-	{
-		assertEquals(7, NumeralSystem.ROMAN.getDigits().size());
+		assertArrayEquals(digits.toArray(), NumeralSystem.HEXADECIMAL.getDigits().toArray());
 	}
 
 	/**
@@ -248,23 +96,6 @@ public class NumeralSystemTest
 			'I', 'V', 'X', 'L', 'C', 'D', 'M'
 		);
 
-		assertTrue(digits.containsAll(NumeralSystem.ROMAN.getDigits()));
-	}
-
-	/**
-	 * Проверка позиции цифр.
-	 */
-	@Test
-	public void testRomanPosition()
-	{
-		List<Character> digits = NumeralSystem.ROMAN.getDigits();
-
-		assertEquals(Character.valueOf('I'), digits.get(0));
-		assertEquals(Character.valueOf('V'), digits.get(1));
-		assertEquals(Character.valueOf('X'), digits.get(2));
-		assertEquals(Character.valueOf('L'), digits.get(3));
-		assertEquals(Character.valueOf('C'), digits.get(4));
-		assertEquals(Character.valueOf('D'), digits.get(5));
-		assertEquals(Character.valueOf('M'), digits.get(6));
+		assertArrayEquals(digits.toArray(), NumeralSystem.ROMAN.getDigits().toArray());
 	}
 }
