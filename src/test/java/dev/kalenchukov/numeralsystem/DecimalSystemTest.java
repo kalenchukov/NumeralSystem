@@ -33,6 +33,24 @@ public class DecimalSystemTest
 	}
 
 	/**
+	 * Проверка с содержащейся цифрой.
+	 */
+	@Test
+	public void testHasDigit()
+	{
+		assertTrue(NUMERAL_SYSTEM.hasDigit('7'));
+	}
+
+	/**
+	 * Проверка с не содержащейся цифрой.
+	 */
+	@Test
+	public void testHasDigitNot()
+	{
+		assertFalse(NUMERAL_SYSTEM.hasDigit('F'));
+	}
+
+	/**
 	 * Проверка получения массива цифр.
 	 */
 	@Test

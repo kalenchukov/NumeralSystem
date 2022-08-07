@@ -26,6 +26,14 @@ public interface Numerable
 	List<@NotNull Character> getDigits();
 
 	/**
+	 * Проверяет принадлежность цифры системе счисления.
+	 *
+	 * @param digit Цифра.
+	 * @return {@code True}, если цифра принадлежит системе счисления, иначе {@code false}.
+	 */
+	boolean hasDigit(@NotNull Character digit);
+
+	/**
 	 * Возвращает массив из цифр системы счисления.
 	 *
 	 * @return Массив из цифр системы счисления.
@@ -40,5 +48,5 @@ public interface Numerable
 	 * @return Строку из цифр системы счисления.
 	 */
 	@NotNull
-	String toString(@NotNull final String separator);
+	String toString(@NotNull String separator);
 }

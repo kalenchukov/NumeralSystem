@@ -34,6 +34,24 @@ public class DuodecimalSystemTest
 	}
 
 	/**
+	 * Проверка с содержащейся цифрой.
+	 */
+	@Test
+	public void testHasDigit()
+	{
+		assertTrue(NUMERAL_SYSTEM.hasDigit('A'));
+	}
+
+	/**
+	 * Проверка с не содержащейся цифрой.
+	 */
+	@Test
+	public void testHasDigitNot()
+	{
+		assertFalse(NUMERAL_SYSTEM.hasDigit('E'));
+	}
+
+	/**
 	 * Проверка получения массива цифр.
 	 */
 	@Test

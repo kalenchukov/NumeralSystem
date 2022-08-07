@@ -11,6 +11,7 @@ import org.jetbrains.annotations.Unmodifiable;
 
 import java.util.Collections;
 import java.util.List;
+import java.util.Objects;
 
 /**
  * Класс абстрактной системы счисления
@@ -42,6 +43,17 @@ public abstract class AbstractSystem implements Numerable
 	public List<@NotNull Character> getDigits()
 	{
 		return Collections.unmodifiableList(this.digit);
+	}
+
+	/**
+	 * @see Numerable#hasDigit(Character)
+	 */
+	@Override
+	public boolean hasDigit(@NotNull final Character digit)
+	{
+		Objects.requireNonNull(digit);
+
+		return this.digit.contains(digit);
 	}
 
 	/**

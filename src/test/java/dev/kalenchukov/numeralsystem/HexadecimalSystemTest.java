@@ -35,6 +35,24 @@ public class HexadecimalSystemTest
 	}
 
 	/**
+	 * Проверка с содержащейся цифрой.
+	 */
+	@Test
+	public void testHasDigit()
+	{
+		assertTrue(NUMERAL_SYSTEM.hasDigit('D'));
+	}
+
+	/**
+	 * Проверка с не содержащейся цифрой.
+	 */
+	@Test
+	public void testHasDigitNot()
+	{
+		assertFalse(NUMERAL_SYSTEM.hasDigit('W'));
+	}
+
+	/**
 	 * Проверка получения массива цифр.
 	 */
 	@Test

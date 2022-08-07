@@ -33,6 +33,24 @@ public class OctalSystemTest
 	}
 
 	/**
+	 * Проверка с содержащейся цифрой.
+	 */
+	@Test
+	public void testHasDigit()
+	{
+		assertTrue(NUMERAL_SYSTEM.hasDigit('3'));
+	}
+
+	/**
+	 * Проверка с не содержащейся цифрой.
+	 */
+	@Test
+	public void testHasDigitNot()
+	{
+		assertFalse(NUMERAL_SYSTEM.hasDigit('9'));
+	}
+
+	/**
 	 * Проверка получения массива цифр.
 	 */
 	@Test

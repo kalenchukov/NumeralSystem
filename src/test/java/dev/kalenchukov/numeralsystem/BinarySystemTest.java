@@ -32,6 +32,24 @@ public class BinarySystemTest
 	}
 
 	/**
+	 * Проверка с содержащейся цифрой.
+	 */
+	@Test
+	public void testHasDigit()
+	{
+		assertTrue(NUMERAL_SYSTEM.hasDigit('1'));
+	}
+
+	/**
+	 * Проверка с не содержащейся цифрой.
+	 */
+	@Test
+	public void testHasDigitNot()
+	{
+		assertFalse(NUMERAL_SYSTEM.hasDigit('2'));
+	}
+
+	/**
 	 * Проверка получения массива цифр.
 	 */
 	@Test
