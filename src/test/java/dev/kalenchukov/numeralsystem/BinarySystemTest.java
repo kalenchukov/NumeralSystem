@@ -19,16 +19,7 @@ public class BinarySystemTest
 	public static final Numerable NUMERAL_SYSTEM = new BinarySystem();
 
 	/**
-	 * Проверка количества цифр.
-	 */
-	@Test
-	public void testGetDigitCount()
-	{
-		assertEquals(2, NUMERAL_SYSTEM.getDigits().size());
-	}
-
-	/**
-	 * Проверка получения цифр.
+	 * Проверка цифр.
 	 */
 	@Test
 	public void testGetDigit()
@@ -37,19 +28,7 @@ public class BinarySystemTest
 			'0', '1'
 		);
 
-		assertTrue(digits.containsAll(NUMERAL_SYSTEM.getDigits()));
-	}
-
-	/**
-	 * Проверка позиции цифр.
-	 */
-	@Test
-	public void testGetDigitPosition()
-	{
-		List<Character> digits = NUMERAL_SYSTEM.getDigits();
-
-		assertEquals(Character.valueOf('0'), digits.get(0));
-		assertEquals(Character.valueOf('1'), digits.get(1));
+		assertArrayEquals(digits.toArray(), NUMERAL_SYSTEM.getDigits().toArray());
 	}
 
 	/**

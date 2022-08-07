@@ -19,16 +19,7 @@ public class DuodecimalSystemTest
 	public static final Numerable NUMERAL_SYSTEM = new DuodecimalSystem();
 
 	/**
-	 * Проверка количества цифр.
-	 */
-	@Test
-	public void testGetDigitCount()
-	{
-		assertEquals(12, NUMERAL_SYSTEM.getDigits().size());
-	}
-
-	/**
-	 * Проверка получения цифр.
+	 * Проверка цифр.
 	 */
 	@Test
 	public void testGetDigit()
@@ -39,29 +30,7 @@ public class DuodecimalSystemTest
 			'A', 'B'
 		);
 
-		assertTrue(digits.containsAll(NUMERAL_SYSTEM.getDigits()));
-	}
-
-	/**
-	 * Проверка позиции цифр.
-	 */
-	@Test
-	public void testGetDigitPosition()
-	{
-		List<Character> digits = NUMERAL_SYSTEM.getDigits();
-
-		assertEquals(Character.valueOf('0'), digits.get(0));
-		assertEquals(Character.valueOf('1'), digits.get(1));
-		assertEquals(Character.valueOf('2'), digits.get(2));
-		assertEquals(Character.valueOf('3'), digits.get(3));
-		assertEquals(Character.valueOf('4'), digits.get(4));
-		assertEquals(Character.valueOf('5'), digits.get(5));
-		assertEquals(Character.valueOf('6'), digits.get(6));
-		assertEquals(Character.valueOf('7'), digits.get(7));
-		assertEquals(Character.valueOf('8'), digits.get(8));
-		assertEquals(Character.valueOf('9'), digits.get(9));
-		assertEquals(Character.valueOf('A'), digits.get(10));
-		assertEquals(Character.valueOf('B'), digits.get(11));
+		assertArrayEquals(digits.toArray(), NUMERAL_SYSTEM.getDigits().toArray());
 	}
 
 	/**
