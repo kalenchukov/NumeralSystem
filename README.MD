@@ -22,6 +22,8 @@
 NumeralSystem.HEXADECIMAL.getNumeralSystem();
 ```
 
+### Цифры систем счисления 
+
 #### Получение цифр
 
 ```java
