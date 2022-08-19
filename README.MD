@@ -14,6 +14,14 @@
 
 ## Использование
 
+### Перечисления
+
+#### Получение системы счисления
+
+```java
+NumeralSystem.HEXADECIMAL.getNumeralSystem();
+```
+
 #### Получение цифр
 
 ```java
@@ -31,12 +39,6 @@ numeralSystem.get();
 
 ```java
 HexadecimalSystem.DIGITS;
-```
-
-Аналог в виде перечисления:
-
-```java
-NumeralSystem.HEXADECIMAL.get();
 ```
 
 #### Проверка содержания цифры в системе счисления

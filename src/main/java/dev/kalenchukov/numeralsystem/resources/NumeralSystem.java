@@ -8,10 +8,6 @@ package dev.kalenchukov.numeralsystem.resources;
 
 import dev.kalenchukov.numeralsystem.*;
 import org.jetbrains.annotations.NotNull;
-import org.jetbrains.annotations.Unmodifiable;
-
-import java.util.Collections;
-import java.util.List;
 
 /**
  * Перечисление систем счисления.
@@ -19,65 +15,59 @@ import java.util.List;
 public enum NumeralSystem
 {
 	/**
-	 * Двоичная система счисления.
+	 * Двоичная.
 	 */
-	BINARY(BinarySystem.DIGITS),
+	BINARY(new BinarySystem()),
 
 	/**
-	 * Троичная система счисления.
+	 * Римская.
 	 */
-	TERNARY(TernarySystem.DIGITS),
+	ROMAN(new RomanSystem()),
 
 	/**
-	 * Римская система счисления.
+	 * Восьмеричная.
 	 */
-	ROMAN(RomanSystem.DIGITS),
+	OCTAL(new OctalSystem()),
 
 	/**
-	 * Восьмеричная система счисления.
+	 * Десятеричная.
 	 */
-	OCTAL(OctalSystem.DIGITS),
+	DECIMAL(new DecimalSystem()),
 
 	/**
-	 * Десятеричная система счисления.
+	 * Двенадцатеричная.
 	 */
-	DECIMAL(DecimalSystem.DIGITS),
+	DUODECIMAL(new DuodecimalSystem()),
 
 	/**
-	 * Двенадцатеричная система счисления.
+	 * Шестнадцатеричная.
 	 */
-	DUODECIMAL(DuodecimalSystem.DIGITS),
+	HEXADECIMAL(new HexadecimalSystem());
 
 	/**
-	 * Шестнадцатеричная система счисления.
-	 */
-	HEXADECIMAL(HexadecimalSystem.DIGITS);
-
-	/**
-	 * Цифры.
+	 * Система счисления.
 	 */
 	@NotNull
-	private final List<@NotNull Character> digits;
+	private final Numerable numeralSystem;
 
 	/**
 	 * Конструктор для {@code NumeralSystem}.
 	 *
-	 * @param digits Цифры.
+	 * @param numeralSystem Система счисления.
 	 */
-	NumeralSystem(@NotNull final List<@NotNull Character> digits)
+	NumeralSystem(@NotNull final Numerable numeralSystem)
 	{
-		this.digits = digits;
+		this.numeralSystem = numeralSystem;
 	}
 
 	/**
-	 * Возвращает цифры системы счисления.
+	 * Возвращает систему счисления.
 	 *
-	 * @return Цифры.
+	 * @return Система счисления.
 	 */
 	@NotNull
-	@Unmodifiable
-	public List<@NotNull Character> get()
+	public Numerable getNumeralSystem()
 	{
-		return Collections.unmodifiableList(this.digits);
+		return this.numeralSystem;
 	}
 }
