@@ -53,62 +53,6 @@ public class HexadecimalSystemTest
 	}
 
 	/**
-	 * Проверка с содержащейся цифрой.
-	 */
-	@Test
-	public void testContains()
-	{
-		assertTrue(NUMERAL_SYSTEM.contains('D'));
-	}
-
-	/**
-	 * Проверка с не содержащейся цифрой.
-	 */
-	@Test
-	public void testContainsNot()
-	{
-		assertFalse(NUMERAL_SYSTEM.contains('W'));
-	}
-
-	/**
-	 * Проверка получения массива цифр.
-	 */
-	@Test
-	public void testToArray()
-	{
-		Character[] digits = new Character[] {
-			'0', '1', '2', '3', '4',
-			'5', '6', '7', '8', '9',
-			'A', 'B', 'C', 'D', 'E',
-			'F'
-		};
-
-		assertArrayEquals(digits, NUMERAL_SYSTEM.toArray());
-	}
-
-	/**
-	 * Проверка преобразования цифр в строку с разделителем.
-	 */
-	@Test
-	public void testToStringSeparator()
-	{
-		String string = "0,1,2,3,4,5,6,7,8,9,A,B,C,D,E,F";
-
-		assertEquals(string, NUMERAL_SYSTEM.toString(","));
-	}
-
-	/**
-	 * Проверка преобразования цифр в строку.
-	 */
-	@Test
-	public void testToString()
-	{
-		String string = "0123456789ABCDEF";
-
-		assertEquals(string, NUMERAL_SYSTEM.toString());
-	}
-
-	/**
 	 * Проверка сравнения объектов.
 	 */
 	@Test

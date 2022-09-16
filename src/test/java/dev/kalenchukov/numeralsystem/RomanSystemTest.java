@@ -50,59 +50,6 @@ public class RomanSystemTest
 	}
 
 	/**
-	 * Проверка с содержащейся цифрой.
-	 */
-	@Test
-	public void testContains()
-	{
-		assertTrue(NUMERAL_SYSTEM.contains('I'));
-	}
-
-	/**
-	 * Проверка с не содержащейся цифрой.
-	 */
-	@Test
-	public void testContainsNot()
-	{
-		assertFalse(NUMERAL_SYSTEM.contains('0'));
-	}
-
-	/**
-	 * Проверка получения массива цифр.
-	 */
-	@Test
-	public void testToArray()
-	{
-		Character[] digits = new Character[] {
-			'I', 'V', 'X', 'L', 'C', 'D', 'M'
-		};
-
-		assertArrayEquals(digits, NUMERAL_SYSTEM.toArray());
-	}
-
-	/**
-	 * Проверка преобразования цифр в строку с разделителем.
-	 */
-	@Test
-	public void testToStringSeparator()
-	{
-		String string = "I,V,X,L,C,D,M";
-
-		assertEquals(string, NUMERAL_SYSTEM.toString(","));
-	}
-
-	/**
-	 * Проверка преобразования цифр в строку.
-	 */
-	@Test
-	public void testToString()
-	{
-		String string = "IVXLCDM";
-
-		assertEquals(string, NUMERAL_SYSTEM.toString());
-	}
-
-	/**
 	 * Проверка сравнения объектов.
 	 */
 	@Test
