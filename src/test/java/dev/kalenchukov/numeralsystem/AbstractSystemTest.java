@@ -58,6 +58,25 @@ public class AbstractSystemTest
 	}
 
 	/**
+	 * Проверяет корректные данные.
+	 */
+	@Test
+	public void testNoneMatch()
+	{
+		assertTrue(NUMERAL_SYSTEM.noneMatch("ABCDEF"));
+	}
+
+	/**
+	 * Проверяет некорректные данные.
+	 */
+	@Test
+	public void testNoneMatchNot()
+	{
+		assertFalse(NUMERAL_SYSTEM.noneMatch(""));
+		assertFalse(NUMERAL_SYSTEM.noneMatch("AB0DEF"));
+	}
+
+	/**
 	 * Проверяет некорректные данные.
 	 */
 	@Test

@@ -67,6 +67,14 @@ numeralSystem.anyMatch("AB0CD");
 // Результат выполнения: true
 ```
 
+#### Проверка не принадлежности всех цифр системе счисления
+
+```java
+Numerable numeralSystem = new DecimalSystem();
+numeralSystem.anyMatch("ABCDEF");
+// Результат выполнения: true
+```
+
 #### Получение цифр в виде массива
 
 ```java

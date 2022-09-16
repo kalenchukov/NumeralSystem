@@ -108,6 +108,22 @@ public abstract class AbstractSystem implements Numerable
 	}
 
 	/**
+	 * @see Numerable#noneMatch(String)
+	 */
+	@Override
+	public boolean noneMatch(@NotNull final String string)
+	{
+		Objects.requireNonNull(string);
+
+		if (string.isEmpty()) {
+			return false;
+		}
+
+		return Arrays.stream(this.stringToArrayCharacter(string))
+					 .noneMatch(this.digits::contains);
+	}
+
+	/**
 	 * @see Numerable#toArray()
 	 */
 	@NotNull
