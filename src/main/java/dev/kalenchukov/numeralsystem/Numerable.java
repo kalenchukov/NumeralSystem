@@ -60,6 +60,14 @@ public interface Numerable
 	boolean allMatch(@NotNull final String string);
 
 	/**
+	 * Проверяет принадлежность хотя бы одной цифры системе счисления.
+	 *
+	 * @param string Строка.
+	 * @return {@code True}, если хотя бы одна цифра принадлежит системе счисления, иначе {@code false}.
+	 */
+	boolean anyMatch(@NotNull final String string);
+
+	/**
 	 * Возвращает массив из цифр системы счисления.
 	 *
 	 * @return Массив из цифр системы счисления.

@@ -92,6 +92,22 @@ public abstract class AbstractSystem implements Numerable
 	}
 
 	/**
+	 * @see Numerable#anyMatch(String)
+	 */
+	@Override
+	public boolean anyMatch(@NotNull final String string)
+	{
+		Objects.requireNonNull(string);
+
+		if (string.isEmpty()) {
+			return false;
+		}
+
+		return Arrays.stream(this.stringToArrayCharacter(string))
+					 .anyMatch(this.digits::contains);
+	}
+
+	/**
 	 * @see Numerable#toArray()
 	 */
 	@NotNull

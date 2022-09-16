@@ -59,6 +59,14 @@ numeralSystem.allMatch("0123456789");
 // Результат выполнения: true
 ```
 
+#### Проверка принадлежности хотя бы одной цифры системе счисления
+
+```java
+Numerable numeralSystem = new DecimalSystem();
+numeralSystem.anyMatch("AB0CD");
+// Результат выполнения: true
+```
+
 #### Получение цифр в виде массива
 
 ```java
