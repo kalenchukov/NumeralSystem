@@ -27,6 +27,7 @@ package dev.kalenchukov.numeralsystem;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Unmodifiable;
 
+import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 import java.util.Objects;
@@ -40,16 +41,16 @@ public abstract class AbstractSystem implements Numerable
 	 * Цифры.
 	 */
 	@NotNull
-	private final List<@NotNull Character> digit;
+	private final List<@NotNull Character> digits;
 
 	/**
 	 * Конструктор для {@code AbstractSystem}.
 	 *
-	 * @param digit Цифры.
+	 * @param digits Цифры.
 	 */
-	protected AbstractSystem(@NotNull final List<@NotNull Character> digit)
+	protected AbstractSystem(@NotNull final List<@NotNull Character> digits)
 	{
-		this.digit = digit;
+		this.digits = digits;
 	}
 
 	/**
@@ -60,7 +61,7 @@ public abstract class AbstractSystem implements Numerable
 	@Override
 	public List<@NotNull Character> get()
 	{
-		return Collections.unmodifiableList(this.digit);
+		return Collections.unmodifiableList(this.digits);
 	}
 
 	/**
@@ -71,7 +72,23 @@ public abstract class AbstractSystem implements Numerable
 	{
 		Objects.requireNonNull(digit);
 
-		return this.digit.contains(digit);
+		return this.digits.contains(digit);
+	}
+
+	/**
+	 * @see Numerable#allMatch(String)
+	 */
+	@Override
+	public boolean allMatch(@NotNull final String string)
+	{
+		Objects.requireNonNull(string);
+
+		if (string.isEmpty()) {
+			return false;
+		}
+
+		return Arrays.stream(this.stringToArrayCharacter(string))
+					 .allMatch(this.digits::contains);
 	}
 
 	/**
@@ -81,7 +98,7 @@ public abstract class AbstractSystem implements Numerable
 	@Override
 	public Character @NotNull [] toArray()
 	{
-		return this.digit.toArray(Character[]::new);
+		return this.digits.toArray(Character[]::new);
 	}
 
 	/**
@@ -93,11 +110,11 @@ public abstract class AbstractSystem implements Numerable
 	{
 		StringBuilder string = new StringBuilder();
 
-		for (int index = 0; index < this.digit.size(); index++)
+		for (int index = 0; index < this.digits.size(); index++)
 		{
-			string.append(this.digit.get(index));
+			string.append(this.digits.get(index));
 
-			if (index != this.digit.size() - 1) {
+			if (index != this.digits.size() - 1) {
 				string.append(separator);
 			}
 		}
@@ -113,5 +130,19 @@ public abstract class AbstractSystem implements Numerable
 	public String toString()
 	{
 		return this.toString("");
+	}
+
+	/**
+	 * Преобразовывает строку в массив символов.
+	 *
+	 * @param string Строка.
+	 * @return Массив символов.
+	 */
+	@NotNull
+	private Character @NotNull [] stringToArrayCharacter(@NotNull final String string)
+	{
+		return string.chars()
+					 .mapToObj(i -> (char) i)
+					 .toArray(Character[]::new);
 	}
 }

@@ -30,6 +30,26 @@ public class AbstractSystemTest
 	}
 
 	/**
+	 * Проверяет корректные данные.
+	 */
+	@Test
+	public void testAllMatch()
+	{
+		assertTrue(NUMERAL_SYSTEM.allMatch("0123456789"));
+	}
+
+	/**
+	 * Проверяет некорректные данные.
+	 */
+	@Test
+	public void testAllMatchNot()
+	{
+		assertFalse(NUMERAL_SYSTEM.allMatch(""));
+		assertFalse(NUMERAL_SYSTEM.allMatch("123F"));
+		assertFalse(NUMERAL_SYSTEM.allMatch("F"));
+		assertFalse(NUMERAL_SYSTEM.allMatch("123456A789"));
+	}
+	/**
 	 * Проверка получения массива цифр.
 	 */
 	@Test

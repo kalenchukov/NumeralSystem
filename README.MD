@@ -51,6 +51,14 @@ numeralSystem.contains('A');
 // Результат выполнения: true
 ```
 
+#### Проверка принадлежности всех цифр системе счисления
+
+```java
+Numerable numeralSystem = new DecimalSystem();
+numeralSystem.allMatch("0123456789");
+// Результат выполнения: true
+```
+
 #### Получение цифр в виде массива
 
 ```java

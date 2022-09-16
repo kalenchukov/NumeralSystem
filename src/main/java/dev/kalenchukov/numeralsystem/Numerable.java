@@ -52,6 +52,14 @@ public interface Numerable
 	boolean contains(@NotNull Character digit);
 
 	/**
+	 * Проверяет принадлежность всех цифр системе счисления.
+	 *
+	 * @param string Строка.
+	 * @return {@code True}, если все цифры принадлежат системе счисления, иначе {@code false}.
+	 */
+	boolean allMatch(@NotNull final String string);
+
+	/**
 	 * Возвращает массив из цифр системы счисления.
 	 *
 	 * @return Массив из цифр системы счисления.
