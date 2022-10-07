@@ -1,3 +1,6 @@
+/**
+ * Определяет API для работы с системами счисления.
+ */
 module dev.kalenchukov.numeralsystem
 {
 	requires org.jetbrains.annotations;
