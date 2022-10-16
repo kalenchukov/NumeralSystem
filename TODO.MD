@@ -4,4 +4,5 @@
 [x] - не делать
 
 # CORE
+* Методы определяющие сортировку цифр в строке: isSorted, isSortedAsc, isSortedDesc
 * 
