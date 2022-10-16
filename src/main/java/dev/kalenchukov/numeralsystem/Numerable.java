@@ -57,7 +57,7 @@ public interface Numerable
 	 * @param string Строка.
 	 * @return {@code True}, если все цифры принадлежат системе счисления, иначе {@code false}.
 	 */
-	boolean allMatch(@NotNull final String string);
+	boolean allMatch(@NotNull String string);
 
 	/**
 	 * Проверяет принадлежность хотя бы одной цифры системе счисления.
@@ -65,7 +65,7 @@ public interface Numerable
 	 * @param string Строка.
 	 * @return {@code True}, если хотя бы одна цифра принадлежит системе счисления, иначе {@code false}.
 	 */
-	boolean anyMatch(@NotNull final String string);
+	boolean anyMatch(@NotNull String string);
 
 	/**
 	 * Проверяет не принадлежность всех цифр системе счисления.
@@ -73,7 +73,7 @@ public interface Numerable
 	 * @param string Строка.
 	 * @return {@code True}, если все цифры не принадлежат системе счисления, иначе {@code false}.
 	 */
-	boolean noneMatch(@NotNull final String string);
+	boolean noneMatch(@NotNull String string);
 
 	/**
 	 * Возвращает массив из цифр системы счисления.
