@@ -104,14 +104,6 @@ numeralSystem.toString();
 // Результат выполнения: 0123456789AB
 ```
 
-## Установка
-
-Для установки этого проекта, введите в терминале:
-
-```bash
-git clone https://github.com/kalenchukov/NumeralSystem.git
-```
-
 ## Версии
 
 Доступные [версии](https://github.com/kalenchukov/NumeralSystem/releases).
