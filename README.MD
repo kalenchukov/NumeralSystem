@@ -103,11 +103,3 @@ Numerable numeralSystem = new DuodecimalSystem();
 numeralSystem.toString();
 // Результат выполнения: 0123456789AB
 ```
-
-## Версии
-
-Доступные [версии](https://github.com/kalenchukov/NumeralSystem/releases).
-
-## Лицензия
-
-[MIT](https://opensource.org/licenses/MIT)
