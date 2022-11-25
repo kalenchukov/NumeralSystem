@@ -116,10 +116,6 @@ git clone https://github.com/kalenchukov/NumeralSystem.git
 
 Доступные [версии](https://github.com/kalenchukov/NumeralSystem/releases).
 
-## Авторы
-
-[Алексей Каленчуков](https://github.com/kalenchukov)
-
 ## Лицензия
 
 [MIT](https://opensource.org/licenses/MIT)
