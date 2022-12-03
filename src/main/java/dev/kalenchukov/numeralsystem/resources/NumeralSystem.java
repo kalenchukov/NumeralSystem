@@ -71,7 +71,7 @@ public enum NumeralSystem
 	/**
 	 * Конструктор для {@code NumeralSystem}.
 	 *
-	 * @param numeralSystem Система счисления.
+	 * @param numeralSystem система счисления.
 	 */
 	NumeralSystem(@NotNull final Numerable numeralSystem)
 	{
@@ -81,7 +81,7 @@ public enum NumeralSystem
 	/**
 	 * Возвращает систему счисления.
 	 *
-	 * @return Система счисления.
+	 * @return система счисления.
 	 */
 	@NotNull
 	public Numerable getNumeralSystem()
@@ -92,7 +92,7 @@ public enum NumeralSystem
 	/**
 	 * Возвращает название константы.
 	 *
-	 * @return Название константы.
+	 * @return название константы.
 	 */
 	@NotNull
 	@Override

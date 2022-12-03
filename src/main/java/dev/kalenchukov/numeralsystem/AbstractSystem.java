@@ -46,7 +46,7 @@ public abstract class AbstractSystem implements Numerable
 	/**
 	 * Конструктор для {@code AbstractSystem}.
 	 *
-	 * @param digits Цифры.
+	 * @param digits цифры.
 	 */
 	protected AbstractSystem(@NotNull final List<@NotNull Character> digits)
 	{
@@ -167,8 +167,8 @@ public abstract class AbstractSystem implements Numerable
 	/**
 	 * Преобразовывает строку в массив символов.
 	 *
-	 * @param string Строка.
-	 * @return Массив символов.
+	 * @param string строка.
+	 * @return массив символов.
 	 */
 	@NotNull
 	private Character @NotNull [] stringToArrayCharacter(@NotNull final String string)

@@ -37,7 +37,7 @@ public interface Numerable
 	/**
 	 * Возвращает цифры системы счисления.
 	 *
-	 * @return Коллекцию цифр системы счисления.
+	 * @return коллекцию цифр системы счисления.
 	 */
 	@Unmodifiable
 	@NotNull
@@ -46,39 +46,39 @@ public interface Numerable
 	/**
 	 * Проверяет содержание цифры в системе счисления.
 	 *
-	 * @param digit Цифра.
-	 * @return {@code True}, если цифра содержится в системе счисления, иначе {@code false}.
+	 * @param digit цифра.
+	 * @return {@code true}, если цифра содержится в системе счисления, иначе {@code false}.
 	 */
 	boolean contains(@NotNull Character digit);
 
 	/**
 	 * Проверяет принадлежность всех цифр системе счисления.
 	 *
-	 * @param string Строка.
-	 * @return {@code True}, если все цифры принадлежат системе счисления, иначе {@code false}.
+	 * @param string строка.
+	 * @return {@code true}, если все цифры принадлежат системе счисления, иначе {@code false}.
 	 */
 	boolean allMatch(@NotNull String string);
 
 	/**
 	 * Проверяет принадлежность хотя бы одной цифры системе счисления.
 	 *
-	 * @param string Строка.
-	 * @return {@code True}, если хотя бы одна цифра принадлежит системе счисления, иначе {@code false}.
+	 * @param string строка.
+	 * @return {@code true}, если хотя бы одна цифра принадлежит системе счисления, иначе {@code false}.
 	 */
 	boolean anyMatch(@NotNull String string);
 
 	/**
 	 * Проверяет не принадлежность всех цифр системе счисления.
 	 *
-	 * @param string Строка.
-	 * @return {@code True}, если все цифры не принадлежат системе счисления, иначе {@code false}.
+	 * @param string строка.
+	 * @return {@code true}, если все цифры не принадлежат системе счисления, иначе {@code false}.
 	 */
 	boolean noneMatch(@NotNull String string);
 
 	/**
 	 * Возвращает массив из цифр системы счисления.
 	 *
-	 * @return Массив из цифр системы счисления.
+	 * @return массив из цифр системы счисления.
 	 */
 	@NotNull
 	Character @NotNull [] toArray();
@@ -86,8 +86,8 @@ public interface Numerable
 	/**
 	 * Возвращает строковое представление цифр системы счисления.
 	 *
-	 * @param separator Разделитель.
-	 * @return Строку из цифр системы счисления.
+	 * @param separator разделитель.
+	 * @return строку из цифр системы счисления.
 	 */
 	@NotNull
 	String toString(@NotNull String separator);
