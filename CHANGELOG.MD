@@ -1,7 +1,5 @@
 # Журнал изменений
-
 ## vX.X.X - XX.XX.XXXX
-
 ### Добавлено
 * Добавлен AUTHOR.MD.
 * Добавлен INSTALL.MD.
@@ -15,7 +13,6 @@
 * 
 
 ## v1.4.0 - 16.10.2022
-
 ### Добавлено
 * Добавлен метод AbstractSystem.allMatch(String).
 * Добавлен метод AbstractSystem.anyMatch(String).
@@ -27,7 +24,6 @@
 * Добавлен плагин maven-source в pom.xml.
 
 ## v1.3.0 - 31.08.2022
-
 ### Добавлено
 * Добавлен метод Numerable.toString(String).
 
@@ -41,7 +37,6 @@
 * Исправлен баг в методе TernarySystem.equals(Object).
 
 ## v1.2.0 - 07.08.2022
-
 ### Добавлено
 * Добавлена троичная система счисления.
 * Добавлен метод AbstractSystem.toString().
@@ -66,6 +61,5 @@
 * Переименован метод Numerable.getDigits() -> Numerable.get().
 
 ## v1.1.0 - 05.08.2022
-
 ### Добавлено
 * Добавлена римская система счисления.

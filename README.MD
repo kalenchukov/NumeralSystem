@@ -1,9 +1,7 @@
 # NumeralSystem
-
 Системы счисления.
 
 ## Поддерживаемые системы счисления
-
 * Двоичная
 * Троичная
 * Римская
@@ -13,19 +11,14 @@
 * Шестнадцатеричная
 
 ## Использование
-
 ### Перечисления
-
 #### Получение системы счисления
-
 ```java
 NumeralSystem.HEXADECIMAL.getNumeralSystem();
 ```
 
 ### Цифры систем счисления 
-
 #### Получение цифр
-
 ```java
 Numerable numeralSystem = new HexadecimalSystem();
 numeralSystem.get();
@@ -44,7 +37,6 @@ HexadecimalSystem.DIGITS;
 ```
 
 #### Проверка содержания цифры в системе счисления
-
 ```java
 Numerable numeralSystem = new DuodecimalSystem();
 numeralSystem.contains('A');
@@ -52,7 +44,6 @@ numeralSystem.contains('A');
 ```
 
 #### Проверка принадлежности всех цифр системе счисления
-
 ```java
 Numerable numeralSystem = new DecimalSystem();
 numeralSystem.allMatch("0123456789");
@@ -60,7 +51,6 @@ numeralSystem.allMatch("0123456789");
 ```
 
 #### Проверка принадлежности хотя бы одной цифры системе счисления
-
 ```java
 Numerable numeralSystem = new DecimalSystem();
 numeralSystem.anyMatch("AB0CD");
@@ -68,7 +58,6 @@ numeralSystem.anyMatch("AB0CD");
 ```
 
 #### Проверка не принадлежности всех цифр системе счисления
-
 ```java
 Numerable numeralSystem = new DecimalSystem();
 numeralSystem.anyMatch("ABCDEF");
@@ -76,7 +65,6 @@ numeralSystem.anyMatch("ABCDEF");
 ```
 
 #### Получение цифр в виде массива
-
 ```java
 Numerable numeralSystem = new RomanSystemTest();
 numeralSystem.toArray();
@@ -89,7 +77,6 @@ numeralSystem.toArray();
 ```
 
 #### Получение цифр в виде строки с разделителем
-
 ```java
 Numerable numeralSystem = new OctalSystem();
 numeralSystem.toString(",");
@@ -97,7 +84,6 @@ numeralSystem.toString(",");
 ```
 
 #### Получение цифр в виде строки
-
 ```java
 Numerable numeralSystem = new DuodecimalSystem();
 numeralSystem.toString();
