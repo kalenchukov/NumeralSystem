@@ -29,13 +29,16 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+/**
+ * Класс проверки методов класса {@link AbstractSystem}.
+ */
 public class AbstractSystemTest
 {
 	@NotNull
 	public static final Numerable NUMERAL_SYSTEM = new DecimalSystem();
 
 	/**
-	 * Проверка с содержащейся цифрой.
+	 * Проверка метода {@link AbstractSystem#contains(Character)}.
 	 */
 	@Test
 	public void testContains()
@@ -44,16 +47,16 @@ public class AbstractSystemTest
 	}
 
 	/**
-	 * Проверка с не содержащейся цифрой.
+	 * Проверка метода {@link AbstractSystem#contains(Character)} с некорректным значением.
 	 */
 	@Test
-	public void testContainsNot()
+	public void testContainsNotCorrect()
 	{
 		assertFalse(NUMERAL_SYSTEM.contains('F'));
 	}
 
 	/**
-	 * Проверяет корректные данные.
+	 * Проверка метода {@link AbstractSystem#allMatch(String)}.
 	 */
 	@Test
 	public void testAllMatch()
@@ -62,7 +65,7 @@ public class AbstractSystemTest
 	}
 
 	/**
-	 * Проверяет корректные данные.
+	 * Проверка метода {@link AbstractSystem#anyMatch(String)}.
 	 */
 	@Test
 	public void testAnyMatch()
@@ -71,17 +74,17 @@ public class AbstractSystemTest
 	}
 
 	/**
-	 * Проверяет некорректные данные.
+	 * Проверка метода {@link AbstractSystem#anyMatch(String)} с некорректным значением.
 	 */
 	@Test
-	public void testAnyMatchNot()
+	public void testAnyMatchNotCorrect()
 	{
 		assertFalse(NUMERAL_SYSTEM.anyMatch(""));
 		assertFalse(NUMERAL_SYSTEM.anyMatch("ABCDEF"));
 	}
 
 	/**
-	 * Проверяет корректные данные.
+	 * Проверка метода {@link AbstractSystem#noneMatch(String)}.
 	 */
 	@Test
 	public void testNoneMatch()
@@ -90,28 +93,29 @@ public class AbstractSystemTest
 	}
 
 	/**
-	 * Проверяет некорректные данные.
+	 * Проверка метода {@link AbstractSystem#noneMatch(String)} с некорректным значением.
 	 */
 	@Test
-	public void testNoneMatchNot()
+	public void testNoneMatchNotCorrect()
 	{
 		assertFalse(NUMERAL_SYSTEM.noneMatch(""));
 		assertFalse(NUMERAL_SYSTEM.noneMatch("AB0DEF"));
 	}
 
 	/**
-	 * Проверяет некорректные данные.
+	 * Проверка метода {@link AbstractSystem#allMatch(String)} с некорректным значением.
 	 */
 	@Test
-	public void testAllMatchNot()
+	public void testAllMatchNotCorrect()
 	{
 		assertFalse(NUMERAL_SYSTEM.allMatch(""));
 		assertFalse(NUMERAL_SYSTEM.allMatch("123F"));
 		assertFalse(NUMERAL_SYSTEM.allMatch("F"));
 		assertFalse(NUMERAL_SYSTEM.allMatch("123456A789"));
 	}
+
 	/**
-	 * Проверка получения массива цифр.
+	 * Проверка метода {@link AbstractSystem#toArray()}.
 	 */
 	@Test
 	public void testToArray()
@@ -125,7 +129,7 @@ public class AbstractSystemTest
 	}
 
 	/**
-	 * Проверка преобразования цифр в строку с разделителем.
+	 * Проверка метода {@link AbstractSystem#toString(String)}.
 	 */
 	@Test
 	public void testToStringSeparator()
@@ -136,7 +140,7 @@ public class AbstractSystemTest
 	}
 
 	/**
-	 * Проверка преобразования цифр в строку.
+	 * Проверка метода {@link AbstractSystem#toString()}.
 	 */
 	@Test
 	public void testToString()

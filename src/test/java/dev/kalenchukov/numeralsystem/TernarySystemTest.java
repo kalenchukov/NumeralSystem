@@ -31,13 +31,16 @@ import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+/**
+ * Класс проверки методов класса {@link TernarySystem}.
+ */
 public class TernarySystemTest
 {
 	@NotNull
 	public static final Numerable NUMERAL_SYSTEM = new TernarySystem();
 
 	/**
-	 * Проверка цифр.
+	 * Проверка метода {@link TernarySystem#get()}.
 	 */
 	@Test
 	public void testGet()
@@ -50,7 +53,7 @@ public class TernarySystemTest
 	}
 
 	/**
-	 * Проверка сравнения объектов.
+	 * Проверка метода {@link TernarySystem#equals(Object)}.
 	 */
 	@Test
 	public void testEquals()
@@ -65,7 +68,7 @@ public class TernarySystemTest
 	}
 
 	/**
-	 * Проверка хэш-кода.
+	 * Проверка метода {@link TernarySystem#hashCode()}.
 	 */
 	@Test
 	public void testHashCode()

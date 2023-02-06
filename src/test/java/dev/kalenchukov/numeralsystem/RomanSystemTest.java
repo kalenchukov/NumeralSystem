@@ -31,13 +31,16 @@ import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+/**
+ * Класс проверки методов класса {@link RomanSystem}.
+ */
 public class RomanSystemTest
 {
 	@NotNull
 	public static final Numerable NUMERAL_SYSTEM = new RomanSystem();
 
 	/**
-	 * Проверка цифр.
+	 * Проверка метода {@link RomanSystem#get()}.
 	 */
 	@Test
 	public void testGet()
@@ -50,7 +53,7 @@ public class RomanSystemTest
 	}
 
 	/**
-	 * Проверка сравнения объектов.
+	 * Проверка метода {@link RomanSystem#equals(Object)}.
 	 */
 	@Test
 	public void testEquals()
@@ -65,7 +68,7 @@ public class RomanSystemTest
 	}
 
 	/**
-	 * Проверка хэш-кода.
+	 * Проверка метода {@link RomanSystem#hashCode()}.
 	 */
 	@Test
 	public void testHashCode()

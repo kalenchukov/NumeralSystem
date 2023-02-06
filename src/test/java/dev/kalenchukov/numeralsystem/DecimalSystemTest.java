@@ -31,13 +31,16 @@ import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+/**
+ * Класс проверки методов класса {@link DecimalSystem}.
+ */
 public class DecimalSystemTest
 {
 	@NotNull
 	public static final Numerable NUMERAL_SYSTEM = new DecimalSystem();
 
 	/**
-	 * Проверка цифр.
+	 * Проверка метода {@link DecimalSystem#get()}.
 	 */
 	@Test
 	public void testGet()
@@ -51,7 +54,7 @@ public class DecimalSystemTest
 	}
 
 	/**
-	 * Проверка сравнения объектов.
+	 * Проверка метода {@link DecimalSystem#equals(Object)}.
 	 */
 	@Test
 	public void testEquals()
@@ -66,7 +69,7 @@ public class DecimalSystemTest
 	}
 
 	/**
-	 * Проверка хэш-кода.
+	 * Проверка метода {@link DecimalSystem#hashCode()}.
 	 */
 	@Test
 	public void testHashCode()

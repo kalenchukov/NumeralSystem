@@ -31,13 +31,16 @@ import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+/**
+ * Класс проверки методов класса {@link HexadecimalSystem}.
+ */
 public class HexadecimalSystemTest
 {
 	@NotNull
 	public static final Numerable NUMERAL_SYSTEM = new HexadecimalSystem();
 
 	/**
-	 * Проверка цифр.
+	 * Проверка метода {@link HexadecimalSystem#get()}.
 	 */
 	@Test
 	public void testGet()
@@ -53,7 +56,7 @@ public class HexadecimalSystemTest
 	}
 
 	/**
-	 * Проверка сравнения объектов.
+	 * Проверка метода {@link HexadecimalSystem#equals(Object)}.
 	 */
 	@Test
 	public void testEquals()
@@ -68,7 +71,7 @@ public class HexadecimalSystemTest
 	}
 
 	/**
-	 * Проверка хэш-кода.
+	 * Проверка метода {@link HexadecimalSystem#hashCode()}.
 	 */
 	@Test
 	public void testHashCode()

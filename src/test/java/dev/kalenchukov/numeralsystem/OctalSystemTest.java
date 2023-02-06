@@ -31,13 +31,16 @@ import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+/**
+ * Класс проверки методов класса {@link OctalSystem}.
+ */
 public class OctalSystemTest
 {
 	@NotNull
 	public static final Numerable NUMERAL_SYSTEM = new OctalSystem();
 
 	/**
-	 * Проверка цифр.
+	 * Проверка метода {@link OctalSystem#get()}.
 	 */
 	@Test
 	public void testGet()
@@ -51,7 +54,7 @@ public class OctalSystemTest
 	}
 
 	/**
-	 * Проверка сравнения объектов.
+	 * Проверка метода {@link OctalSystem#equals(Object)}.
 	 */
 	@Test
 	public void testEquals()
@@ -66,7 +69,7 @@ public class OctalSystemTest
 	}
 
 	/**
-	 * Проверка хэш-кода.
+	 * Проверка метода {@link OctalSystem#hashCode()}.
 	 */
 	@Test
 	public void testHashCode()
