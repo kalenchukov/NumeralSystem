@@ -60,13 +60,13 @@ public class DuodecimalSystemTest
 	@Test
 	public void testEquals()
 	{
-		assertFalse(NUMERAL_SYSTEM.equals(null));
+		assertNotEquals(null, NUMERAL_SYSTEM);
 
-		assertTrue(NUMERAL_SYSTEM.equals(NUMERAL_SYSTEM));
+		assertEquals(NUMERAL_SYSTEM, NUMERAL_SYSTEM);
 
-		assertFalse(NUMERAL_SYSTEM.equals(new DecimalSystem()));
+		assertNotEquals(NUMERAL_SYSTEM, new DecimalSystem());
 
-		assertTrue(NUMERAL_SYSTEM.equals(new DuodecimalSystem()));
+		assertEquals(NUMERAL_SYSTEM, new DuodecimalSystem());
 	}
 
 	/**

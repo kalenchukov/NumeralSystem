@@ -58,13 +58,13 @@ public class RomanSystemTest
 	@Test
 	public void testEquals()
 	{
-		assertFalse(NUMERAL_SYSTEM.equals(null));
+		assertNotEquals(null, NUMERAL_SYSTEM);
 
-		assertTrue(NUMERAL_SYSTEM.equals(NUMERAL_SYSTEM));
+		assertEquals(NUMERAL_SYSTEM, NUMERAL_SYSTEM);
 
-		assertFalse(NUMERAL_SYSTEM.equals(new BinarySystem()));
+		assertNotEquals(NUMERAL_SYSTEM, new BinarySystem());
 
-		assertTrue(NUMERAL_SYSTEM.equals(new RomanSystem()));
+		assertEquals(NUMERAL_SYSTEM, new RomanSystem());
 	}
 
 	/**

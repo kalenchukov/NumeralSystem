@@ -58,13 +58,13 @@ public class BinarySystemTest
 	@Test
 	public void testEquals()
 	{
-		assertFalse(NUMERAL_SYSTEM.equals(null));
+		assertNotEquals(null, NUMERAL_SYSTEM);
 
-		assertTrue(NUMERAL_SYSTEM.equals(NUMERAL_SYSTEM));
+		assertEquals(NUMERAL_SYSTEM, NUMERAL_SYSTEM);
 
-		assertFalse(NUMERAL_SYSTEM.equals(new RomanSystem()));
+		assertNotEquals(NUMERAL_SYSTEM, new RomanSystem());
 
-		assertTrue(NUMERAL_SYSTEM.equals(new BinarySystem()));
+		assertEquals(NUMERAL_SYSTEM, new BinarySystem());
 	}
 
 	/**

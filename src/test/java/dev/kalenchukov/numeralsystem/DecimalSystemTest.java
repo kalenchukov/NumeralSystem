@@ -59,13 +59,13 @@ public class DecimalSystemTest
 	@Test
 	public void testEquals()
 	{
-		assertFalse(NUMERAL_SYSTEM.equals(null));
+		assertNotEquals(null, NUMERAL_SYSTEM);
 
-		assertTrue(NUMERAL_SYSTEM.equals(NUMERAL_SYSTEM));
+		assertEquals(NUMERAL_SYSTEM, NUMERAL_SYSTEM);
 
-		assertFalse(NUMERAL_SYSTEM.equals(new DuodecimalSystem()));
+		assertNotEquals(NUMERAL_SYSTEM, new DuodecimalSystem());
 
-		assertTrue(NUMERAL_SYSTEM.equals(new DecimalSystem()));
+		assertEquals(NUMERAL_SYSTEM, new DecimalSystem());
 	}
 
 	/**

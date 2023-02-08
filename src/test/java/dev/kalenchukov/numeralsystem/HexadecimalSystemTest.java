@@ -61,13 +61,13 @@ public class HexadecimalSystemTest
 	@Test
 	public void testEquals()
 	{
-		assertFalse(NUMERAL_SYSTEM.equals(null));
+		assertNotEquals(null, NUMERAL_SYSTEM);
 
-		assertTrue(NUMERAL_SYSTEM.equals(NUMERAL_SYSTEM));
+		assertEquals(NUMERAL_SYSTEM, NUMERAL_SYSTEM);
 
-		assertFalse(NUMERAL_SYSTEM.equals(new OctalSystem()));
+		assertNotEquals(NUMERAL_SYSTEM, new OctalSystem());
 
-		assertTrue(NUMERAL_SYSTEM.equals(new HexadecimalSystem()));
+		assertEquals(NUMERAL_SYSTEM, new HexadecimalSystem());
 	}
 
 	/**
