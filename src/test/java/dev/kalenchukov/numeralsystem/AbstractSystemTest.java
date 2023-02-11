@@ -61,7 +61,7 @@ public class AbstractSystemTest
 	@Test
 	public void testAllMatch()
 	{
-		assertTrue(NUMERAL_SYSTEM.allMatch("0123456789"));
+		assertTrue(NUMERAL_SYSTEM.allMatch("56734589057651234"));
 	}
 
 	/**
@@ -112,6 +112,24 @@ public class AbstractSystemTest
 		assertFalse(NUMERAL_SYSTEM.allMatch("123F"));
 		assertFalse(NUMERAL_SYSTEM.allMatch("F"));
 		assertFalse(NUMERAL_SYSTEM.allMatch("123456A789"));
+	}
+
+	/**
+	 * Проверка метода {@link AbstractSystem#isSortedAsc(String)}.
+	 */
+	@Test
+	public void testIsSortedAsc()
+	{
+		assertTrue(NUMERAL_SYSTEM.isSortedAsc("0123456789"));
+	}
+
+	/**
+	 * Проверка метода {@link AbstractSystem#isSortedAsc(String)} с некорректным значением.
+	 */
+	@Test
+	public void testIsSortedAscNotCorrect()
+	{
+		assertFalse(NUMERAL_SYSTEM.isSortedAsc("1234567890"));
 	}
 
 	/**

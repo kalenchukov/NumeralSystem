@@ -51,7 +51,7 @@ true
 #### Проверка принадлежности всех цифр системе счисления
 ```java
 Numerable numeralSystem = new DecimalSystem();
-numeralSystem.allMatch("0123456789");
+numeralSystem.allMatch("56734589057651234");
 ```
 
 Результат выполнения:
@@ -74,6 +74,17 @@ true
 ```java
 Numerable numeralSystem = new DecimalSystem();
 numeralSystem.anyMatch("ABCDEF");
+```
+
+Результат выполнения:
+```
+true
+```
+
+#### Проверка расположения всех цифр системы счисления в возрастающем порядке
+```java
+Numerable numeralSystem = new DecimalSystem();
+numeralSystem.isSortedAsc("0123456789");
 ```
 
 Результат выполнения:
