@@ -135,6 +135,20 @@ public abstract class AbstractSystem implements Numerable
 	}
 
 	/**
+	 * @see Numerable#isSortedDesc(String)
+	 */
+	@Override
+	public boolean isSortedDesc(@NotNull final String string)
+	{
+		Objects.requireNonNull(string);
+
+		StringBuilder stringBuilder = new StringBuilder(this.toString());
+		stringBuilder.reverse();
+
+		return stringBuilder.toString().equals(string);
+	}
+
+	/**
 	 * @see Numerable#toArray()
 	 */
 	@NotNull

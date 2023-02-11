@@ -133,6 +133,24 @@ public class AbstractSystemTest
 	}
 
 	/**
+	 * Проверка метода {@link AbstractSystem#isSortedDesc(String)}.
+	 */
+	@Test
+	public void testIsSortedDesc()
+	{
+		assertTrue(NUMERAL_SYSTEM.isSortedDesc("9876543210"));
+	}
+
+	/**
+	 * Проверка метода {@link AbstractSystem#isSortedDesc(String)} с некорректным значением.
+	 */
+	@Test
+	public void testIsSortedDescNotCorrect()
+	{
+		assertFalse(NUMERAL_SYSTEM.isSortedDesc("0987654321"));
+	}
+
+	/**
 	 * Проверка метода {@link AbstractSystem#toArray()}.
 	 */
 	@Test

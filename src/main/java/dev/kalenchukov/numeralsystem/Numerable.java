@@ -84,6 +84,14 @@ public interface Numerable
 	boolean isSortedAsc(@NotNull String string);
 
 	/**
+	 * Проверяет, расположены ли все цифры системы счисления в убывающем порядке.
+	 *
+	 * @param string строка.
+	 * @return {@code true}, если все цифры системы счисления расположены в убывающем порядке, иначе {@code false}.
+	 */
+	boolean isSortedDesc(@NotNull String string);
+
+	/**
 	 * Возвращает массив из цифр системы счисления.
 	 *
 	 * @return массив из цифр системы счисления.

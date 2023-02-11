@@ -2,6 +2,7 @@
 ## vX.X.X - XX.XX.XXXX
 ### Добавлено
 * Добавлен метод Numerable.isSortedAsc(String).
+* Добавлен метод Numerable.isSortedDesc(String).
 * Добавлен AUTHOR.MD.
 * Добавлен INSTALL.MD.
 * Добавлен CHANGELOG.MD.

@@ -92,6 +92,17 @@ numeralSystem.isSortedAsc("0123456789");
 true
 ```
 
+#### Проверка расположения всех цифр системы счисления в убывающем порядке
+```java
+Numerable numeralSystem = new DecimalSystem();
+numeralSystem.isSortedDesc("9876543210");
+```
+
+Результат выполнения:
+```
+true
+```
+
 #### Получение цифр в виде массива
 ```java
 Numerable numeralSystem = new RomanSystemTest();
