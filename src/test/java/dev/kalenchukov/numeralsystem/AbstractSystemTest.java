@@ -26,6 +26,8 @@ package dev.kalenchukov.numeralsystem;
 
 import org.jetbrains.annotations.NotNull;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.ValueSource;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -40,152 +42,169 @@ public class AbstractSystemTest
 	/**
 	 * Проверка метода {@link AbstractSystem#contains(Character)}.
 	 */
-	@Test
-	public void testContains()
+	@ParameterizedTest
+	@ValueSource(chars = {
+		'7', '0', '3'
+	})
+	public void testContains(Character value)
 	{
-		assertTrue(NUMERAL_SYSTEM.contains('7'));
+		assertTrue(NUMERAL_SYSTEM.contains(value));
 	}
 
 	/**
 	 * Проверка метода {@link AbstractSystem#contains(Character)} с некорректным значением.
 	 */
-	@Test
-	public void testContainsNotCorrect()
+	@ParameterizedTest
+	@ValueSource(chars = {
+		'A', 'a', 'Ё'
+	})
+	public void testContainsNotCorrect(Character value)
 	{
-		assertFalse(NUMERAL_SYSTEM.contains('F'));
+		assertFalse(NUMERAL_SYSTEM.contains(value));
 	}
 
 	/**
 	 * Проверка метода {@link AbstractSystem#allMatch(String)}.
 	 */
-	@Test
-	public void testAllMatch()
+	@ParameterizedTest
+	@ValueSource(strings = {
+		"56734589057651234", "0", "23434"
+	})
+	public void testAllMatch(String value)
 	{
-		assertTrue(NUMERAL_SYSTEM.allMatch("56734589057651234"));
+		assertTrue(NUMERAL_SYSTEM.allMatch(value));
 	}
 
 	/**
 	 * Проверка метода {@link AbstractSystem#anyMatch(String)}.
 	 */
-	@Test
-	public void testAnyMatch()
+	@ParameterizedTest
+	@ValueSource(strings = {
+		"AB0CD", "7sddd"
+	})
+	public void testAnyMatch(String value)
 	{
-		assertTrue(NUMERAL_SYSTEM.anyMatch("AB0CD"));
+		assertTrue(NUMERAL_SYSTEM.anyMatch(value));
 	}
 
 	/**
 	 * Проверка метода {@link AbstractSystem#anyMatch(String)} с некорректным значением.
 	 */
-	@Test
-	public void testAnyMatchNotCorrect()
+	@ParameterizedTest
+	@ValueSource(strings = {
+		"", "ABCDEF", "erfds"
+	})
+	public void testAnyMatchNotCorrect(String value)
 	{
-		assertFalse(NUMERAL_SYSTEM.anyMatch(""));
-		assertFalse(NUMERAL_SYSTEM.anyMatch("ABCDEF"));
+		assertFalse(NUMERAL_SYSTEM.anyMatch(value));
 	}
 
 	/**
 	 * Проверка метода {@link AbstractSystem#noneMatch(String)}.
 	 */
-	@Test
-	public void testNoneMatch()
+	@ParameterizedTest
+	@ValueSource(strings = {
+		"ABCDEF", "sddf"
+	})
+	public void testNoneMatch(String value)
 	{
-		assertTrue(NUMERAL_SYSTEM.noneMatch("ABCDEF"));
+		assertTrue(NUMERAL_SYSTEM.noneMatch(value));
 	}
 
 	/**
 	 * Проверка метода {@link AbstractSystem#noneMatch(String)} с некорректным значением.
 	 */
-	@Test
-	public void testNoneMatchNotCorrect()
+	@ParameterizedTest
+	@ValueSource(strings = {
+		"", "AB7DEF", "324asd"
+	})
+	public void testNoneMatchNotCorrect(String value)
 	{
-		assertFalse(NUMERAL_SYSTEM.noneMatch(""));
-		assertFalse(NUMERAL_SYSTEM.noneMatch("AB0DEF"));
+		assertFalse(NUMERAL_SYSTEM.noneMatch(value));
 	}
 
 	/**
 	 * Проверка метода {@link AbstractSystem#allMatch(String)} с некорректным значением.
 	 */
-	@Test
-	public void testAllMatchNotCorrect()
+	@ParameterizedTest
+	@ValueSource(strings = {
+		"", "123F", "F", "123456A789"
+	})
+	public void testAllMatchNotCorrect(String value)
 	{
-		assertFalse(NUMERAL_SYSTEM.allMatch(""));
-		assertFalse(NUMERAL_SYSTEM.allMatch("123F"));
-		assertFalse(NUMERAL_SYSTEM.allMatch("F"));
-		assertFalse(NUMERAL_SYSTEM.allMatch("123456A789"));
+		assertFalse(NUMERAL_SYSTEM.allMatch(value));
 	}
 
 	/**
 	 * Проверка метода {@link AbstractSystem#isSorted(String)}.
 	 */
-	@Test
-	public void testIsSorted()
+	@ParameterizedTest
+	@ValueSource(strings = {
+		"0", "9", "55", "77665544322", "0123456789", "9876543210"
+	})
+	public void testIsSorted(String value)
 	{
-		assertTrue(NUMERAL_SYSTEM.isSorted("0"));
-		assertTrue(NUMERAL_SYSTEM.isSorted("9"));
-		assertTrue(NUMERAL_SYSTEM.isSorted("0123456789"));
-		assertTrue(NUMERAL_SYSTEM.isSorted("9876543210"));
+		assertTrue(NUMERAL_SYSTEM.isSorted(value));
 	}
 
 	/**
 	 * Проверка метода {@link AbstractSystem#isSorted(String)} с некорректным значением.
 	 */
-	@Test
-	public void testIsSortedNotCorrect()
+	@ParameterizedTest
+	@ValueSource(strings = {
+		"", "6789012345", "2345671890", "23r44567"
+	})
+	public void testIsSortedNotCorrect(String value)
 	{
-		assertFalse(NUMERAL_SYSTEM.isSorted("6789012345"));
-		assertFalse(NUMERAL_SYSTEM.isSorted("2345671890"));
+		assertFalse(NUMERAL_SYSTEM.isSorted(value));
 	}
 
 	/**
 	 * Проверка метода {@link AbstractSystem#isSortedAsc(String)}.
 	 */
-	@Test
-	public void testIsSortedAsc()
+	@ParameterizedTest
+	@ValueSource(strings = {
+		"0", "22", "22334455", "0123", "789", "23456", "0123456789"
+	})
+	public void testIsSortedAsc(String value)
 	{
-		assertTrue(NUMERAL_SYSTEM.isSortedAsc("0"));
-		assertTrue(NUMERAL_SYSTEM.isSortedAsc("0123"));
-		assertTrue(NUMERAL_SYSTEM.isSortedAsc("789"));
-		assertTrue(NUMERAL_SYSTEM.isSortedAsc("23456"));
-		assertTrue(NUMERAL_SYSTEM.isSortedAsc("0123456789"));
+		assertTrue(NUMERAL_SYSTEM.isSortedAsc(value));
 	}
 
 	/**
 	 * Проверка метода {@link AbstractSystem#isSortedAsc(String)} с некорректным значением.
 	 */
-	@Test
-	public void testIsSortedAscNotCorrect()
+	@ParameterizedTest
+	@ValueSource(strings = {
+		"", "A", "10", "576890", "576z890", "1234567890"
+	})
+	public void testIsSortedAscNotCorrect(String value)
 	{
-		assertFalse(NUMERAL_SYSTEM.isSortedAsc("A"));
-		assertFalse(NUMERAL_SYSTEM.isSortedAsc("10"));
-		assertFalse(NUMERAL_SYSTEM.isSortedAsc("576890"));
-		assertFalse(NUMERAL_SYSTEM.isSortedAsc("1234567890"));
+		assertFalse(NUMERAL_SYSTEM.isSortedAsc(value));
 	}
 
 	/**
 	 * Проверка метода {@link AbstractSystem#isSortedDesc(String)}.
 	 */
-	@Test
-	public void testIsSortedDesc()
+	@ParameterizedTest
+	@ValueSource(strings = {
+		"0", "9", "77", "6655443221", "65", "3210", "9876543210"
+	})
+	public void testIsSortedDesc(String value)
 	{
-		assertTrue(NUMERAL_SYSTEM.isSortedDesc("0"));
-		assertTrue(NUMERAL_SYSTEM.isSortedDesc("9"));
-		assertTrue(NUMERAL_SYSTEM.isSortedDesc("65"));
-		assertTrue(NUMERAL_SYSTEM.isSortedDesc("3210"));
-		assertTrue(NUMERAL_SYSTEM.isSortedDesc("9876543210"));
+		assertTrue(NUMERAL_SYSTEM.isSortedDesc(value));
 	}
 
 	/**
 	 * Проверка метода {@link AbstractSystem#isSortedDesc(String)} с некорректным значением.
 	 */
-	@Test
-	public void testIsSortedDescNotCorrect()
+	@ParameterizedTest
+	@ValueSource(strings = {
+		"", "A", "09", "098", "25431", "25431a", "0987654321"
+	})
+	public void testIsSortedDescNotCorrect(String value)
 	{
-		assertFalse(NUMERAL_SYSTEM.isSortedDesc("A"));
-		assertFalse(NUMERAL_SYSTEM.isSortedDesc("09"));
-		assertFalse(NUMERAL_SYSTEM.isSortedDesc("098"));
-		assertFalse(NUMERAL_SYSTEM.isSortedDesc("25431"));
-		assertFalse(NUMERAL_SYSTEM.isSortedDesc("25431a"));
-		assertFalse(NUMERAL_SYSTEM.isSortedDesc("0987654321"));
+		assertFalse(NUMERAL_SYSTEM.isSortedDesc(value));
 	}
 
 	/**
