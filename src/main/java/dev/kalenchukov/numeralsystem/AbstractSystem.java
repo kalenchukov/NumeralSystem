@@ -33,7 +33,7 @@ import java.util.List;
 import java.util.Objects;
 
 /**
- * Класс абстрактной системы счисления
+ * Класс абстрактной системы счисления.
  */
 public abstract class AbstractSystem implements Numerable
 {
