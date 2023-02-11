@@ -1,6 +1,7 @@
 # Журнал изменений
 ## vX.X.X - XX.XX.XXXX
 ### Добавлено
+* Добавлен метод Numerable.isSorted(String).
 * Добавлен метод Numerable.isSortedAsc(String).
 * Добавлен метод Numerable.isSortedDesc(String).
 * Добавлен AUTHOR.MD.

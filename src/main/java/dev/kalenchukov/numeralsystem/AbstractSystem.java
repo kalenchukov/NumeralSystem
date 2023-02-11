@@ -124,6 +124,17 @@ public abstract class AbstractSystem implements Numerable
 	}
 
 	/**
+	 * @see Numerable#isSorted(String)
+	 */
+	@Override
+	public boolean isSorted(@NotNull final String string)
+	{
+		Objects.requireNonNull(string);
+
+		return this.isSortedAsc(string) || this.isSortedDesc(string);
+	}
+
+	/**
 	 * @see Numerable#isSortedAsc(String)
 	 */
 	@Override

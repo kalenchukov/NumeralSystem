@@ -81,6 +81,17 @@ numeralSystem.anyMatch("ABCDEF");
 true
 ```
 
+#### Проверка расположения всех цифр системы счисления в возрастающем или убывающем порядке
+```java
+Numerable numeralSystem = new DecimalSystem();
+numeralSystem.isSorted("0123456789");
+```
+
+Результат выполнения:
+```
+true
+```
+
 #### Проверка расположения всех цифр системы счисления в возрастающем порядке
 ```java
 Numerable numeralSystem = new DecimalSystem();

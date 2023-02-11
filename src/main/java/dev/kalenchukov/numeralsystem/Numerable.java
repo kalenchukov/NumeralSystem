@@ -76,6 +76,15 @@ public interface Numerable
 	boolean noneMatch(@NotNull String string);
 
 	/**
+	 * Проверяет, расположены ли все цифры системы счисления в возрастающем или убывающем порядке.
+	 *
+	 * @param string строка.
+	 * @return {@code true}, если все цифры системы счисления расположены в возрастающем или
+	 * убывающем порядке, иначе {@code false}.
+	 */
+	boolean isSorted(@NotNull String string);
+
+	/**
 	 * Проверяет, расположены ли все цифры системы счисления в возрастающем порядке.
 	 *
 	 * @param string строка.
