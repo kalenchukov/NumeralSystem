@@ -142,7 +142,28 @@ public abstract class AbstractSystem implements Numerable
 	{
 		Objects.requireNonNull(string);
 
-		return this.toString().equals(string);
+		if (!this.allMatch(string)) {
+			return false;
+		}
+
+		if (string.length() == 1) {
+			return true;
+		}
+
+		int lastIndex = -1;
+
+		for (char digit : string.toCharArray())
+		{
+			int nextIndex = this.digits.indexOf(digit);
+
+			if (lastIndex > nextIndex) {
+				return false;
+			}
+
+			lastIndex = nextIndex;
+		}
+
+		return true;
 	}
 
 	/**
@@ -153,10 +174,28 @@ public abstract class AbstractSystem implements Numerable
 	{
 		Objects.requireNonNull(string);
 
-		StringBuilder stringBuilder = new StringBuilder(this.toString());
-		stringBuilder.reverse();
+		if (!this.allMatch(string)) {
+			return false;
+		}
 
-		return stringBuilder.toString().equals(string);
+		if (string.length() == 1) {
+			return true;
+		}
+
+		int lastIndex = this.digits.size() + 1;
+
+		for (char digit : string.toCharArray())
+		{
+			int nextIndex = this.digits.indexOf(digit);
+
+			if (lastIndex < nextIndex) {
+				return false;
+			}
+
+			lastIndex = nextIndex;
+		}
+
+		return true;
 	}
 
 	/**

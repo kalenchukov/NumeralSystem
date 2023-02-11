@@ -81,10 +81,10 @@ numeralSystem.anyMatch("ABCDEF");
 true
 ```
 
-#### Проверка расположения всех цифр системы счисления в возрастающем или убывающем порядке
+#### Проверка расположения цифр системы счисления в возрастающем или убывающем порядке
 ```java
 Numerable numeralSystem = new DecimalSystem();
-numeralSystem.isSorted("0123456789");
+numeralSystem.isSorted("012");
 ```
 
 Результат выполнения:
@@ -92,10 +92,10 @@ numeralSystem.isSorted("0123456789");
 true
 ```
 
-#### Проверка расположения всех цифр системы счисления в возрастающем порядке
+#### Проверка расположения цифр системы счисления в возрастающем порядке
 ```java
 Numerable numeralSystem = new DecimalSystem();
-numeralSystem.isSortedAsc("0123456789");
+numeralSystem.isSortedAsc("01234");
 ```
 
 Результат выполнения:
@@ -103,10 +103,10 @@ numeralSystem.isSortedAsc("0123456789");
 true
 ```
 
-#### Проверка расположения всех цифр системы счисления в убывающем порядке
+#### Проверка расположения цифр системы счисления в убывающем порядке
 ```java
 Numerable numeralSystem = new DecimalSystem();
-numeralSystem.isSortedDesc("9876543210");
+numeralSystem.isSortedDesc("987654");
 ```
 
 Результат выполнения:

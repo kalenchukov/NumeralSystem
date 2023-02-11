@@ -120,6 +120,8 @@ public class AbstractSystemTest
 	@Test
 	public void testIsSorted()
 	{
+		assertTrue(NUMERAL_SYSTEM.isSorted("0"));
+		assertTrue(NUMERAL_SYSTEM.isSorted("9"));
 		assertTrue(NUMERAL_SYSTEM.isSorted("0123456789"));
 		assertTrue(NUMERAL_SYSTEM.isSorted("9876543210"));
 	}
@@ -140,6 +142,10 @@ public class AbstractSystemTest
 	@Test
 	public void testIsSortedAsc()
 	{
+		assertTrue(NUMERAL_SYSTEM.isSortedAsc("0"));
+		assertTrue(NUMERAL_SYSTEM.isSortedAsc("0123"));
+		assertTrue(NUMERAL_SYSTEM.isSortedAsc("789"));
+		assertTrue(NUMERAL_SYSTEM.isSortedAsc("23456"));
 		assertTrue(NUMERAL_SYSTEM.isSortedAsc("0123456789"));
 	}
 
@@ -149,6 +155,9 @@ public class AbstractSystemTest
 	@Test
 	public void testIsSortedAscNotCorrect()
 	{
+		assertFalse(NUMERAL_SYSTEM.isSortedAsc("A"));
+		assertFalse(NUMERAL_SYSTEM.isSortedAsc("10"));
+		assertFalse(NUMERAL_SYSTEM.isSortedAsc("576890"));
 		assertFalse(NUMERAL_SYSTEM.isSortedAsc("1234567890"));
 	}
 
@@ -158,6 +167,10 @@ public class AbstractSystemTest
 	@Test
 	public void testIsSortedDesc()
 	{
+		assertTrue(NUMERAL_SYSTEM.isSortedDesc("0"));
+		assertTrue(NUMERAL_SYSTEM.isSortedDesc("9"));
+		assertTrue(NUMERAL_SYSTEM.isSortedDesc("65"));
+		assertTrue(NUMERAL_SYSTEM.isSortedDesc("3210"));
 		assertTrue(NUMERAL_SYSTEM.isSortedDesc("9876543210"));
 	}
 
@@ -167,6 +180,11 @@ public class AbstractSystemTest
 	@Test
 	public void testIsSortedDescNotCorrect()
 	{
+		assertFalse(NUMERAL_SYSTEM.isSortedDesc("A"));
+		assertFalse(NUMERAL_SYSTEM.isSortedDesc("09"));
+		assertFalse(NUMERAL_SYSTEM.isSortedDesc("098"));
+		assertFalse(NUMERAL_SYSTEM.isSortedDesc("25431"));
+		assertFalse(NUMERAL_SYSTEM.isSortedDesc("25431a"));
 		assertFalse(NUMERAL_SYSTEM.isSortedDesc("0987654321"));
 	}
 
