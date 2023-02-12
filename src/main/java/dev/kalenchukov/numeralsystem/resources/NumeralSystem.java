@@ -88,16 +88,4 @@ public enum NumeralSystem
 	{
 		return this.numeralSystem;
 	}
-
-	/**
-	 * Возвращает название константы.
-	 *
-	 * @return название константы.
-	 */
-	@NotNull
-	@Override
-	public String toString()
-	{
-		return this.name().replace('_', ' ');
-	}
 }
