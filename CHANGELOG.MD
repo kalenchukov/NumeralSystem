@@ -1,5 +1,5 @@
 # Журнал изменений
-## vX.X.X - XX.XX.XXXX
+## v1.5.0 - 12.02.2023
 ### Добавлено
 * Добавлен метод Numerable.isSorted(String).
 * Добавлен метод Numerable.isSortedAsc(String).
@@ -14,9 +14,6 @@
 ### Изменено
 * Обновлён README.MD.
 * Убраны модификаторы final из Numerable.
-
-### Исправлено
-* 
 
 ## v1.4.0 - 16.10.2022
 ### Добавлено
@@ -48,20 +45,8 @@
 * Добавлен метод AbstractSystem.toString().
 * Добавлен метод Numerable.contains(Character).
 * Добавлен метод Numerable.toArray().
-* Добавлен метод BinarySystem.equals(Object).
-* Добавлен метод DecimalSystem.equals(Object).
-* Добавлен метод DuodecimalSystem.equals(Object).
-* Добавлен метод HexadecimalSystem.equals(Object).
-* Добавлен метод OctalSystem.equals(Object).
-* Добавлен метод RomanSystem.equals(Object).
-* Добавлен метод TernarySystem.equals(Object).
-* Добавлен метод HexadecimalSystem.hashCode().
-* Добавлен метод OctalSystem.hashCode().
-* Добавлен метод DecimalSystem.hashCode().
-* Добавлен метод DuodecimalSystem.hashCode().
-* Добавлен метод RomanSystem.hashCode().
-* Добавлен метод BinarySystem.hashCode().
-* Добавлен метод TernarySystem.hashCode().
+* Добавлен метод Numerable.equals().
+* Добавлен метод Numerable.hashCode().
 
 ### Изменено
 * Переименован метод Numerable.getDigits() -> Numerable.get().
