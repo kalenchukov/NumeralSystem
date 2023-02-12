@@ -73,7 +73,7 @@ public class TernarySystem extends AbstractSystem
 
 		final TernarySystem numeralSystem = (TernarySystem) obj;
 
-		if (!Objects.equals(TernarySystem.DIGITS, numeralSystem.get())) {
+		if (!Objects.equals(this.get(), numeralSystem.get())) {
 			return false;
 		}
 
@@ -86,6 +86,6 @@ public class TernarySystem extends AbstractSystem
 	@Override
 	public int hashCode()
 	{
-		return TernarySystem.DIGITS.hashCode();
+		return this.get().hashCode();
 	}
 }

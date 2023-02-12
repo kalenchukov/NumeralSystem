@@ -73,7 +73,7 @@ public class RomanSystem extends AbstractSystem
 
 		final RomanSystem numeralSystem = (RomanSystem) obj;
 
-		if (!Objects.equals(RomanSystem.DIGITS, numeralSystem.get())) {
+		if (!Objects.equals(this.get(), numeralSystem.get())) {
 			return false;
 		}
 
@@ -86,6 +86,6 @@ public class RomanSystem extends AbstractSystem
 	@Override
 	public int hashCode()
 	{
-		return RomanSystem.DIGITS.hashCode();
+		return this.get().hashCode();
 	}
 }

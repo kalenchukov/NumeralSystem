@@ -73,7 +73,7 @@ public class BinarySystem extends AbstractSystem
 
 		final BinarySystem numeralSystem = (BinarySystem) obj;
 
-		if (!Objects.equals(BinarySystem.DIGITS, numeralSystem.get())) {
+		if (!Objects.equals(this.get(), numeralSystem.get())) {
 			return false;
 		}
 
@@ -86,6 +86,6 @@ public class BinarySystem extends AbstractSystem
 	@Override
 	public int hashCode()
 	{
-		return BinarySystem.DIGITS.hashCode();
+		return this.get().hashCode();
 	}
 }

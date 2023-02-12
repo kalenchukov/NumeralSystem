@@ -74,7 +74,7 @@ public class DecimalSystem extends AbstractSystem
 
 		final DecimalSystem numeralSystem = (DecimalSystem) obj;
 
-		if (!Objects.equals(DecimalSystem.DIGITS, numeralSystem.get())) {
+		if (!Objects.equals(this.get(), numeralSystem.get())) {
 			return false;
 		}
 
@@ -87,6 +87,6 @@ public class DecimalSystem extends AbstractSystem
 	@Override
 	public int hashCode()
 	{
-		return DecimalSystem.DIGITS.hashCode();
+		return this.get().hashCode();
 	}
 }

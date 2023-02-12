@@ -74,7 +74,7 @@ public class OctalSystem extends AbstractSystem
 
 		final OctalSystem numeralSystem = (OctalSystem) obj;
 
-		if (!Objects.equals(OctalSystem.DIGITS, numeralSystem.get())) {
+		if (!Objects.equals(this.get(), numeralSystem.get())) {
 			return false;
 		}
 
@@ -87,6 +87,6 @@ public class OctalSystem extends AbstractSystem
 	@Override
 	public int hashCode()
 	{
-		return OctalSystem.DIGITS.hashCode();
+		return this.get().hashCode();
 	}
 }

@@ -75,7 +75,7 @@ public class DuodecimalSystem extends AbstractSystem
 
 		final DuodecimalSystem numeralSystem = (DuodecimalSystem) obj;
 
-		if (!Objects.equals(DuodecimalSystem.DIGITS, numeralSystem.get())) {
+		if (!Objects.equals(this.get(), numeralSystem.get())) {
 			return false;
 		}
 
@@ -88,6 +88,6 @@ public class DuodecimalSystem extends AbstractSystem
 	@Override
 	public int hashCode()
 	{
-		return DuodecimalSystem.DIGITS.hashCode();
+		return this.get().hashCode();
 	}
 }

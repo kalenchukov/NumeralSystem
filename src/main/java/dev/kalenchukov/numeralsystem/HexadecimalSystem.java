@@ -76,7 +76,7 @@ public class HexadecimalSystem extends AbstractSystem
 
 		final HexadecimalSystem numeralSystem = (HexadecimalSystem) obj;
 
-		if (!Objects.equals(HexadecimalSystem.DIGITS, numeralSystem.get())) {
+		if (!Objects.equals(this.get(), numeralSystem.get())) {
 			return false;
 		}
 
@@ -89,6 +89,6 @@ public class HexadecimalSystem extends AbstractSystem
 	@Override
 	public int hashCode()
 	{
-		return HexadecimalSystem.DIGITS.hashCode();
+		return this.get().hashCode();
 	}
 }
