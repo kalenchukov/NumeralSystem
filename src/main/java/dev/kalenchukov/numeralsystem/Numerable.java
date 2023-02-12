@@ -115,6 +115,11 @@ public interface Numerable
 	boolean equals(@Nullable Object obj);
 
 	/**
+	 * @see Object#hashCode()
+	 */
+	int hashCode();
+
+	/**
 	 * Возвращает строковое представление цифр системы счисления.
 	 *
 	 * @param separator разделитель.

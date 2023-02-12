@@ -84,7 +84,7 @@ public class HexadecimalSystem extends AbstractSystem
 	}
 
 	/**
-	 * @see Object#hashCode()
+	 * @see Numerable#hashCode()
 	 */
 	@Override
 	public int hashCode()

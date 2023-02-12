@@ -5,6 +5,7 @@
 * Добавлен метод Numerable.isSortedAsc(String).
 * Добавлен метод Numerable.isSortedDesc(String).
 * Добавлен метод Numerable.equals(Object).
+* Добавлен метод Numerable.hashCode().
 * Добавлен AUTHOR.MD.
 * Добавлен INSTALL.MD.
 * Добавлен CHANGELOG.MD.
