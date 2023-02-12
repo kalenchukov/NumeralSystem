@@ -56,7 +56,7 @@ public class DuodecimalSystem extends AbstractSystem
 	}
 
 	/**
-	 * @see Object#equals(Object)
+	 * @see Numerable#equals(Object)
 	 */
 	@Override
 	public boolean equals(@Nullable final Object obj)

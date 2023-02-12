@@ -25,6 +25,7 @@
 package dev.kalenchukov.numeralsystem;
 
 import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 import org.jetbrains.annotations.Unmodifiable;
 
 import java.util.List;
@@ -107,6 +108,11 @@ public interface Numerable
 	 */
 	@NotNull
 	Character @NotNull [] toArray();
+
+	/**
+	 * @see Object#equals(Object)
+	 */
+	boolean equals(@Nullable Object obj);
 
 	/**
 	 * Возвращает строковое представление цифр системы счисления.
