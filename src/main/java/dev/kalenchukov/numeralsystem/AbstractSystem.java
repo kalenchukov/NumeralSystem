@@ -54,7 +54,9 @@ public abstract class AbstractSystem implements Numerable
 	}
 
 	/**
-	 * @see Numerable#get()
+	 * {@inheritDoc}
+	 *
+	 * @return {@inheritDoc}
 	 */
 	@Unmodifiable
 	@NotNull
@@ -65,7 +67,10 @@ public abstract class AbstractSystem implements Numerable
 	}
 
 	/**
-	 * @see Numerable#contains(Character)
+	 * {@inheritDoc}
+	 *
+	 * @param digit {@inheritDoc}
+	 * @return {@inheritDoc}
 	 */
 	@Override
 	public boolean contains(@NotNull final Character digit)
@@ -76,7 +81,10 @@ public abstract class AbstractSystem implements Numerable
 	}
 
 	/**
-	 * @see Numerable#allMatch(String)
+	 * {@inheritDoc}
+	 *
+	 * @param string {@inheritDoc}
+	 * @return {@inheritDoc}
 	 */
 	@Override
 	public boolean allMatch(@NotNull final String string)
@@ -92,7 +100,10 @@ public abstract class AbstractSystem implements Numerable
 	}
 
 	/**
-	 * @see Numerable#anyMatch(String)
+	 * {@inheritDoc}
+	 *
+	 * @param string {@inheritDoc}
+	 * @return {@inheritDoc}
 	 */
 	@Override
 	public boolean anyMatch(@NotNull final String string)
@@ -108,7 +119,10 @@ public abstract class AbstractSystem implements Numerable
 	}
 
 	/**
-	 * @see Numerable#noneMatch(String)
+	 * {@inheritDoc}
+	 *
+	 * @param string {@inheritDoc}
+	 * @return {@inheritDoc}
 	 */
 	@Override
 	public boolean noneMatch(@NotNull final String string)
@@ -124,7 +138,10 @@ public abstract class AbstractSystem implements Numerable
 	}
 
 	/**
-	 * @see Numerable#isSorted(String)
+	 * {@inheritDoc}
+	 *
+	 * @param string {@inheritDoc}
+	 * @return {@inheritDoc}
 	 */
 	@Override
 	public boolean isSorted(@NotNull final String string)
@@ -135,7 +152,10 @@ public abstract class AbstractSystem implements Numerable
 	}
 
 	/**
-	 * @see Numerable#isSortedAsc(String)
+	 * {@inheritDoc}
+	 *
+	 * @param string {@inheritDoc}
+	 * @return {@inheritDoc}
 	 */
 	@Override
 	public boolean isSortedAsc(@NotNull final String string)
@@ -167,7 +187,10 @@ public abstract class AbstractSystem implements Numerable
 	}
 
 	/**
-	 * @see Numerable#isSortedDesc(String)
+	 * {@inheritDoc}
+	 *
+	 * @param string {@inheritDoc}
+	 * @return {@inheritDoc}
 	 */
 	@Override
 	public boolean isSortedDesc(@NotNull final String string)
@@ -199,7 +222,9 @@ public abstract class AbstractSystem implements Numerable
 	}
 
 	/**
-	 * @see Numerable#toArray()
+	 * {@inheritDoc}
+	 *
+	 * @return {@inheritDoc}
 	 */
 	@NotNull
 	@Override
@@ -209,7 +234,10 @@ public abstract class AbstractSystem implements Numerable
 	}
 
 	/**
-	 * @see Numerable#toString(String)
+	 * {@inheritDoc}
+	 *
+	 * @param separator {@inheritDoc}
+	 * @return {@inheritDoc}
 	 */
 	@Override
 	@NotNull
@@ -230,7 +258,9 @@ public abstract class AbstractSystem implements Numerable
 	}
 
 	/**
-	 * @see Object#toString()
+	 * {@inheritDoc}
+	 *
+	 * @return {@inheritDoc}
 	 */
 	@Override
 	@NotNull

@@ -110,20 +110,36 @@ public interface Numerable
 	Character @NotNull [] toArray();
 
 	/**
+	 * Проверяет равенство объектов.
+	 *
+	 * @param obj сравниваемый объект.
+	 * @return {@code true}, если объекты равны, иначе {@code false}.
 	 * @see Object#equals(Object)
 	 */
 	boolean equals(@Nullable Object obj);
 
 	/**
+	 * Возвращает значение объекта в виде числа.
+	 *
+	 * @return число.
 	 * @see Object#hashCode()
 	 */
 	int hashCode();
 
 	/**
-	 * Возвращает строковое представление цифр системы счисления.
+	 * Возвращает значение объекта в виде строки.
+	 *
+	 * @return строку.
+	 * @see Object#toString()
+	 */
+	@NotNull
+	String toString();
+
+	/**
+	 * Возвращает значение объекта в виде строки.
 	 *
 	 * @param separator разделитель.
-	 * @return строку из цифр системы счисления.
+	 * @return строку.
 	 */
 	@NotNull
 	String toString(@NotNull String separator);

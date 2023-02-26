@@ -56,7 +56,10 @@ public class DuodecimalSystem extends AbstractSystem
 	}
 
 	/**
-	 * @see Numerable#equals(Object)
+	 * {@inheritDoc}
+	 *
+	 * @param obj {@inheritDoc}
+	 * @return {@inheritDoc}
 	 */
 	@Override
 	public boolean equals(@Nullable final Object obj)
@@ -83,7 +86,9 @@ public class DuodecimalSystem extends AbstractSystem
 	}
 
 	/**
-	 * @see Numerable#hashCode()
+	 * {@inheritDoc}
+	 *
+	 * @return {@inheritDoc}
 	 */
 	@Override
 	public int hashCode()
