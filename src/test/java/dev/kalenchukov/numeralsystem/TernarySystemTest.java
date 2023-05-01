@@ -33,6 +33,8 @@ import static org.junit.jupiter.api.Assertions.*;
 
 /**
  * Класс проверки методов класса {@link TernarySystem}.
+ *
+ * @author Aleksey Kalenchukov
  */
 public class TernarySystemTest
 {

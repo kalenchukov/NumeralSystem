@@ -33,6 +33,8 @@ import java.util.Objects;
 
 /**
  * Класс троичной системы счисления.
+ *
+ * @author Aleksey Kalenchukov
  */
 public class TernarySystem extends AbstractSystem
 {

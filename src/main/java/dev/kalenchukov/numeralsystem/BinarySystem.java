@@ -33,6 +33,8 @@ import java.util.Objects;
 
 /**
  * Класс двоичной системы счисления.
+ *
+ * @author Aleksey Kalenchukov
  */
 public class BinarySystem extends AbstractSystem
 {

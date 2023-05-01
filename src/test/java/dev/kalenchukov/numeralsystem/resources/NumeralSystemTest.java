@@ -31,6 +31,8 @@ import static org.junit.jupiter.api.Assertions.*;
 
 /**
  * Класс проверки констант и методов перечисления {@link NumeralSystem}.
+ *
+ * @author Aleksey Kalenchukov
  */
 public class NumeralSystemTest
 {

@@ -33,6 +33,8 @@ import java.util.Objects;
 
 /**
  * Класс десятеричной система счисления.
+ *
+ * @author Aleksey Kalenchukov
  */
 public class DecimalSystem extends AbstractSystem
 {
