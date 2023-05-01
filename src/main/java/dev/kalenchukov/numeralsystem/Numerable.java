@@ -32,6 +32,8 @@ import java.util.List;
 
 /**
  * Интерфейс системы счисления.
+ *
+ * @author Aleksey Kalenchukov
  */
 public interface Numerable
 {
