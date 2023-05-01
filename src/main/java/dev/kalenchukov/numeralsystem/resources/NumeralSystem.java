@@ -29,6 +29,8 @@ import org.jetbrains.annotations.NotNull;
 
 /**
  * Перечисление систем счисления.
+ *
+ * @author Aleksey Kalenchukov
  */
 public enum NumeralSystem
 {
