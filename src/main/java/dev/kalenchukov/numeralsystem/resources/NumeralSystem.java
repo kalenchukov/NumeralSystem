@@ -40,6 +40,11 @@ public enum NumeralSystem
 	BINARY(new BinarySystem()),
 
 	/**
+	 * Троичная.
+	 */
+	TERNARY(new TernarySystem()),
+
+	/**
 	 * Четвертичная.
 	 */
 	QUATERNARY(new QuaternarySystem()),
