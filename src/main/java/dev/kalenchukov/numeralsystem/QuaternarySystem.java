@@ -1,5 +1,5 @@
 /*
- * Copyright © 2022-2023 Алексей Каленчуков
+ * Copyright © 2023 Алексей Каленчуков
  * GitHub: https://github.com/kalenchukov
  * E-mail: mailto:aleksey.kalenchukov@yandex.ru
  *
@@ -22,77 +22,78 @@
  * SOFTWARE.
  */
 
-package dev.kalenchukov.numeralsystem.resources;
+package dev.kalenchukov.numeralsystem;
 
-import dev.kalenchukov.numeralsystem.*;
 import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
+import org.jetbrains.annotations.Unmodifiable;
+
+import java.util.List;
+import java.util.Objects;
 
 /**
- * Перечисление систем счисления.
+ * Класс четвертичной системы счисления.
  *
  * @author Алексей Каленчуков
  */
-public enum NumeralSystem
+public class QuaternarySystem extends AbstractSystem
 {
 	/**
-	 * Двоичная.
+	 * Цифры.
 	 */
-	BINARY(new BinarySystem()),
-
-	/**
-	 * Четвертичная.
-	 */
-	QUATERNARY(new QuaternarySystem()),
-
-	/**
-	 * Восьмеричная.
-	 */
-	OCTAL(new OctalSystem()),
-
-	/**
-	 * Десятеричная.
-	 */
-	DECIMAL(new DecimalSystem()),
-
-	/**
-	 * Двенадцатеричная.
-	 */
-	DUODECIMAL(new DuodecimalSystem()),
-
-	/**
-	 * Шестнадцатеричная.
-	 */
-	HEXADECIMAL(new HexadecimalSystem()),
-
-	/**
-	 * Римская.
-	 */
-	ROMAN(new RomanSystem());
-
-	/**
-	 * Система счисления.
-	 */
+	@Unmodifiable
 	@NotNull
-	private final Numerable numeralSystem;
+	public static final List<@NotNull Character> DIGITS = List.of(
+		'\u0030', '\u0031', '\u0032', '\u0033'
+	);
 
 	/**
-	 * Конструктор для {@code NumeralSystem}.
-	 *
-	 * @param numeralSystem система счисления.
+	 * Конструктор для {@code QuaternarySystem}.
 	 */
-	NumeralSystem(@NotNull final Numerable numeralSystem)
+	public QuaternarySystem()
 	{
-		this.numeralSystem = numeralSystem;
+		super(DIGITS);
+	}
+
+
+	/**
+	 * {@inheritDoc}
+	 *
+	 * @param obj {@inheritDoc}
+	 * @return {@inheritDoc}
+	 */
+	@Override
+	public boolean equals(@Nullable final Object obj)
+	{
+		if (obj == null) {
+			return false;
+		}
+
+		if (this == obj) {
+			return true;
+		}
+
+		if (!this.getClass().equals(obj.getClass())) {
+			return false;
+		}
+
+		final QuaternarySystem numeralSystem = (QuaternarySystem) obj;
+
+		if (!Objects.equals(this.get(), numeralSystem.get())) {
+			return false;
+		}
+
+		return true;
 	}
 
 	/**
-	 * Возвращает систему счисления.
+	 * {@inheritDoc}
 	 *
-	 * @return система счисления.
+	 * @return {@inheritDoc}
 	 */
-	@NotNull
-	public Numerable getNumeralSystem()
+	@Override
+	public int hashCode()
 	{
-		return this.numeralSystem;
+		return this.get().hashCode();
 	}
 }

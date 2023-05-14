@@ -1,5 +1,5 @@
 /*
- * Copyright © 2022-2023 Алексей Каленчуков
+ * Copyright © 2023 Алексей Каленчуков
  * GitHub: https://github.com/kalenchukov
  * E-mail: mailto:aleksey.kalenchukov@yandex.ru
  *
@@ -22,77 +22,63 @@
  * SOFTWARE.
  */
 
-package dev.kalenchukov.numeralsystem.resources;
+package dev.kalenchukov.numeralsystem;
 
-import dev.kalenchukov.numeralsystem.*;
 import org.jetbrains.annotations.NotNull;
+import org.junit.jupiter.api.Test;
+
+import java.util.List;
+
+import static org.junit.jupiter.api.Assertions.*;
 
 /**
- * Перечисление систем счисления.
+ * Класс проверки методов класса {@link QuaternarySystem}.
  *
  * @author Алексей Каленчуков
  */
-public enum NumeralSystem
+public class QuaternarySystemTest
 {
-	/**
-	 * Двоичная.
-	 */
-	BINARY(new BinarySystem()),
-
-	/**
-	 * Четвертичная.
-	 */
-	QUATERNARY(new QuaternarySystem()),
-
-	/**
-	 * Восьмеричная.
-	 */
-	OCTAL(new OctalSystem()),
-
-	/**
-	 * Десятеричная.
-	 */
-	DECIMAL(new DecimalSystem()),
-
-	/**
-	 * Двенадцатеричная.
-	 */
-	DUODECIMAL(new DuodecimalSystem()),
-
-	/**
-	 * Шестнадцатеричная.
-	 */
-	HEXADECIMAL(new HexadecimalSystem()),
-
-	/**
-	 * Римская.
-	 */
-	ROMAN(new RomanSystem());
-
-	/**
-	 * Система счисления.
-	 */
 	@NotNull
-	private final Numerable numeralSystem;
+	public static final Numerable NUMERAL_SYSTEM = new QuaternarySystem();
 
 	/**
-	 * Конструктор для {@code NumeralSystem}.
-	 *
-	 * @param numeralSystem система счисления.
+	 * Проверка метода {@link QuaternarySystem#get()}.
 	 */
-	NumeralSystem(@NotNull final Numerable numeralSystem)
+	@Test
+	public void testGet()
 	{
-		this.numeralSystem = numeralSystem;
+		List<Character> digits = List.of(
+			'0', '1', '2', '3'
+		);
+
+		assertArrayEquals(digits.toArray(), NUMERAL_SYSTEM.get().toArray());
 	}
 
 	/**
-	 * Возвращает систему счисления.
-	 *
-	 * @return система счисления.
+	 * Проверка метода {@link QuaternarySystem#equals(Object)}.
 	 */
-	@NotNull
-	public Numerable getNumeralSystem()
+	@Test
+	public void testEquals()
 	{
-		return this.numeralSystem;
+		assertNotEquals(null, NUMERAL_SYSTEM);
+
+		assertEquals(NUMERAL_SYSTEM, NUMERAL_SYSTEM);
+
+		assertNotEquals(NUMERAL_SYSTEM, new BinarySystem());
+
+		assertEquals(NUMERAL_SYSTEM, new QuaternarySystem());
+	}
+
+	/**
+	 * Проверка метода {@link QuaternarySystem#hashCode()}.
+	 */
+	@Test
+	public void testHashCode()
+	{
+		assertEquals(NUMERAL_SYSTEM.hashCode(), NUMERAL_SYSTEM.hashCode());
+
+		assertEquals(NUMERAL_SYSTEM.hashCode(), new QuaternarySystem().hashCode());
+
+		assertNotEquals(NUMERAL_SYSTEM.hashCode(), new BinarySystem().hashCode());
 	}
 }
