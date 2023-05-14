@@ -34,7 +34,7 @@ import java.util.Objects;
 /**
  * Класс восьмеричной системы счисления.
  *
- * @author Aleksey Kalenchukov
+ * @author Алексей Каленчуков
  */
 public class OctalSystem extends AbstractSystem
 {

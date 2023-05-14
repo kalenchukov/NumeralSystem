@@ -34,7 +34,7 @@ import java.util.Objects;
 /**
  * Класс двенадцатеричной системы счисления.
  *
- * @author Aleksey Kalenchukov
+ * @author Алексей Каленчуков
  */
 public class DuodecimalSystem extends AbstractSystem
 {

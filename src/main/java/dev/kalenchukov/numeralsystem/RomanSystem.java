@@ -34,7 +34,7 @@ import java.util.Objects;
 /**
  * Класс римской системы счисления.
  *
- * @author Aleksey Kalenchukov
+ * @author Алексей Каленчуков
  */
 public class RomanSystem extends AbstractSystem
 {

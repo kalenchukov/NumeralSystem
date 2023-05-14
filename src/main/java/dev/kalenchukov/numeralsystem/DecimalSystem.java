@@ -34,7 +34,7 @@ import java.util.Objects;
 /**
  * Класс десятеричной система счисления.
  *
- * @author Aleksey Kalenchukov
+ * @author Алексей Каленчуков
  */
 public class DecimalSystem extends AbstractSystem
 {

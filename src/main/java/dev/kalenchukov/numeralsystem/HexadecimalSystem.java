@@ -34,7 +34,7 @@ import java.util.Objects;
 /**
  * Класс шестнадцатеричной системы счисления.
  *
- * @author Aleksey Kalenchukov
+ * @author Алексей Каленчуков
  */
 public class HexadecimalSystem extends AbstractSystem
 {

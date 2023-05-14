@@ -35,7 +35,7 @@ import java.util.Objects;
 /**
  * Класс абстрактной системы счисления.
  *
- * @author Aleksey Kalenchukov
+ * @author Алексей Каленчуков
  */
 public abstract class AbstractSystem implements Numerable
 {
