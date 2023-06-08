@@ -45,7 +45,7 @@ public class QuaternarySystemTest
 	 * Проверка метода {@link QuaternarySystem#get()}.
 	 */
 	@Test
-	public void testGet()
+	public void get()
 	{
 		List<Character> digits = List.of(
 			'0', '1', '2', '3'

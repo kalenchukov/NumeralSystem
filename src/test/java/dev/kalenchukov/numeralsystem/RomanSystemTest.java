@@ -45,7 +45,7 @@ public class RomanSystemTest
 	 * Проверка метода {@link RomanSystem#get()}.
 	 */
 	@Test
-	public void testGet()
+	public void get()
 	{
 		List<Character> digits = List.of(
 			'I', 'V', 'X', 'L', 'C', 'D', 'M'

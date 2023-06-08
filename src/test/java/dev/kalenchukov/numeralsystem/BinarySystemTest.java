@@ -45,7 +45,7 @@ public class BinarySystemTest
 	 * Проверка метода {@link BinarySystem#get()}.
 	 */
 	@Test
-	public void testGet()
+	public void get()
 	{
 		List<Character> digits = List.of(
 			'0', '1'

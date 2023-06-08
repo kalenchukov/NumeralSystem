@@ -48,7 +48,7 @@ public class AbstractSystemTest
 	@ValueSource(chars = {
 		'7', '0', '3'
 	})
-	public void testContains(Character value)
+	public void contains(Character value)
 	{
 		assertTrue(NUMERAL_SYSTEM.contains(value));
 	}
@@ -60,7 +60,7 @@ public class AbstractSystemTest
 	@ValueSource(chars = {
 		'A', 'a', 'Ё'
 	})
-	public void testContainsNotCorrect(Character value)
+	public void containsNotCorrect(Character value)
 	{
 		assertFalse(NUMERAL_SYSTEM.contains(value));
 	}
@@ -72,7 +72,7 @@ public class AbstractSystemTest
 	@ValueSource(strings = {
 		"56734589057651234", "0", "23434"
 	})
-	public void testAllMatch(String value)
+	public void allMatch(String value)
 	{
 		assertTrue(NUMERAL_SYSTEM.allMatch(value));
 	}
@@ -84,7 +84,7 @@ public class AbstractSystemTest
 	@ValueSource(strings = {
 		"AB0CD", "7sddd"
 	})
-	public void testAnyMatch(String value)
+	public void anyMatch(String value)
 	{
 		assertTrue(NUMERAL_SYSTEM.anyMatch(value));
 	}
@@ -96,7 +96,7 @@ public class AbstractSystemTest
 	@ValueSource(strings = {
 		"", "ABCDEF", "erfds"
 	})
-	public void testAnyMatchNotCorrect(String value)
+	public void anyMatchNotCorrect(String value)
 	{
 		assertFalse(NUMERAL_SYSTEM.anyMatch(value));
 	}
@@ -108,7 +108,7 @@ public class AbstractSystemTest
 	@ValueSource(strings = {
 		"ABCDEF", "sddf"
 	})
-	public void testNoneMatch(String value)
+	public void noneMatch(String value)
 	{
 		assertTrue(NUMERAL_SYSTEM.noneMatch(value));
 	}
@@ -120,7 +120,7 @@ public class AbstractSystemTest
 	@ValueSource(strings = {
 		"", "AB7DEF", "324asd"
 	})
-	public void testNoneMatchNotCorrect(String value)
+	public void noneMatchNotCorrect(String value)
 	{
 		assertFalse(NUMERAL_SYSTEM.noneMatch(value));
 	}
@@ -132,7 +132,7 @@ public class AbstractSystemTest
 	@ValueSource(strings = {
 		"", "123F", "F", "123456A789"
 	})
-	public void testAllMatchNotCorrect(String value)
+	public void allMatchNotCorrect(String value)
 	{
 		assertFalse(NUMERAL_SYSTEM.allMatch(value));
 	}
@@ -144,7 +144,7 @@ public class AbstractSystemTest
 	@ValueSource(strings = {
 		"0", "9", "55", "77665544322", "0123456789", "9876543210"
 	})
-	public void testIsSorted(String value)
+	public void isSorted(String value)
 	{
 		assertTrue(NUMERAL_SYSTEM.isSorted(value));
 	}
@@ -156,7 +156,7 @@ public class AbstractSystemTest
 	@ValueSource(strings = {
 		"", "6789012345", "2345671890", "23r44567"
 	})
-	public void testIsSortedNotCorrect(String value)
+	public void isSortedNotCorrect(String value)
 	{
 		assertFalse(NUMERAL_SYSTEM.isSorted(value));
 	}
@@ -168,7 +168,7 @@ public class AbstractSystemTest
 	@ValueSource(strings = {
 		"0", "22", "22334455", "0123", "789", "23456", "0123456789"
 	})
-	public void testIsSortedAsc(String value)
+	public void isSortedAsc(String value)
 	{
 		assertTrue(NUMERAL_SYSTEM.isSortedAsc(value));
 	}
@@ -180,7 +180,7 @@ public class AbstractSystemTest
 	@ValueSource(strings = {
 		"", "A", "10", "576890", "576z890", "1234567890"
 	})
-	public void testIsSortedAscNotCorrect(String value)
+	public void isSortedAscNotCorrect(String value)
 	{
 		assertFalse(NUMERAL_SYSTEM.isSortedAsc(value));
 	}
@@ -192,7 +192,7 @@ public class AbstractSystemTest
 	@ValueSource(strings = {
 		"0", "9", "77", "6655443221", "65", "3210", "9876543210"
 	})
-	public void testIsSortedDesc(String value)
+	public void isSortedDesc(String value)
 	{
 		assertTrue(NUMERAL_SYSTEM.isSortedDesc(value));
 	}
@@ -204,7 +204,7 @@ public class AbstractSystemTest
 	@ValueSource(strings = {
 		"", "A", "09", "098", "25431", "25431a", "0987654321"
 	})
-	public void testIsSortedDescNotCorrect(String value)
+	public void isSortedDescNotCorrect(String value)
 	{
 		assertFalse(NUMERAL_SYSTEM.isSortedDesc(value));
 	}
@@ -213,7 +213,7 @@ public class AbstractSystemTest
 	 * Проверка метода {@link AbstractSystem#toArray()}.
 	 */
 	@Test
-	public void testToArray()
+	public void toArray()
 	{
 		Character[] digits = new Character[] {
 			'0', '1', '2', '3', '4',
@@ -227,7 +227,7 @@ public class AbstractSystemTest
 	 * Проверка метода {@link AbstractSystem#toString(String)}.
 	 */
 	@Test
-	public void testToStringSeparator()
+	public void toStringSeparator()
 	{
 		String string = "0,1,2,3,4,5,6,7,8,9";
 

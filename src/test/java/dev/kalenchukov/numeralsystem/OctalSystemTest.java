@@ -45,7 +45,7 @@ public class OctalSystemTest
 	 * Проверка метода {@link OctalSystem#get()}.
 	 */
 	@Test
-	public void testGet()
+	public void get()
 	{
 		List<Character> digits = List.of(
 			'0', '1', '2', '3', '4',
