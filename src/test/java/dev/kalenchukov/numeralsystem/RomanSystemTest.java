@@ -24,7 +24,6 @@
 
 package dev.kalenchukov.numeralsystem;
 
-import org.jetbrains.annotations.NotNull;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;
@@ -38,8 +37,7 @@ import static org.junit.jupiter.api.Assertions.*;
  */
 public class RomanSystemTest
 {
-	@NotNull
-	public static final Numerable NUMERAL_SYSTEM = new RomanSystem();
+	private static final Numerable NUMERAL_SYSTEM = new RomanSystem();
 
 	/**
 	 * Проверка метода {@link RomanSystem#get()}.
@@ -47,11 +45,13 @@ public class RomanSystemTest
 	@Test
 	public void get()
 	{
-		List<Character> digits = List.of(
+		List<Character> expected = List.of(
 			'I', 'V', 'X', 'L', 'C', 'D', 'M'
 		);
 
-		assertArrayEquals(digits.toArray(), NUMERAL_SYSTEM.get().toArray());
+		List<Character> actual = NUMERAL_SYSTEM.get();
+
+		assertArrayEquals(expected.toArray(), actual.toArray());
 	}
 
 	/**

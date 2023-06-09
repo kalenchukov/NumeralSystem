@@ -24,7 +24,6 @@
 
 package dev.kalenchukov.numeralsystem;
 
-import org.jetbrains.annotations.NotNull;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;
@@ -38,8 +37,7 @@ import static org.junit.jupiter.api.Assertions.*;
  */
 public class OctalSystemTest
 {
-	@NotNull
-	public static final Numerable NUMERAL_SYSTEM = new OctalSystem();
+	private static final Numerable NUMERAL_SYSTEM = new OctalSystem();
 
 	/**
 	 * Проверка метода {@link OctalSystem#get()}.
@@ -47,12 +45,14 @@ public class OctalSystemTest
 	@Test
 	public void get()
 	{
-		List<Character> digits = List.of(
+		List<Character> expected = List.of(
 			'0', '1', '2', '3', '4',
 			'5', '6', '7'
 		);
 
-		assertArrayEquals(digits.toArray(), NUMERAL_SYSTEM.get().toArray());
+		List<Character> actual = NUMERAL_SYSTEM.get();
+
+		assertArrayEquals(expected.toArray(), actual.toArray());
 	}
 
 	/**

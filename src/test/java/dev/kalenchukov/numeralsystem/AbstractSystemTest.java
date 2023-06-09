@@ -24,7 +24,6 @@
 
 package dev.kalenchukov.numeralsystem;
 
-import org.jetbrains.annotations.NotNull;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ValueSource;
@@ -38,8 +37,7 @@ import static org.junit.jupiter.api.Assertions.*;
  */
 public class AbstractSystemTest
 {
-	@NotNull
-	public static final Numerable NUMERAL_SYSTEM = new DecimalSystem();
+	private static final Numerable NUMERAL_SYSTEM = new DecimalSystem();
 
 	/**
 	 * Проверка метода {@link AbstractSystem#contains(Character)}.
@@ -50,7 +48,9 @@ public class AbstractSystemTest
 	})
 	public void contains(Character value)
 	{
-		assertTrue(NUMERAL_SYSTEM.contains(value));
+		boolean actual = NUMERAL_SYSTEM.contains(value);
+
+		assertTrue(actual);
 	}
 
 	/**
@@ -62,7 +62,9 @@ public class AbstractSystemTest
 	})
 	public void containsNotCorrect(Character value)
 	{
-		assertFalse(NUMERAL_SYSTEM.contains(value));
+		boolean actual = NUMERAL_SYSTEM.contains(value);
+
+		assertFalse(actual);
 	}
 
 	/**
@@ -74,7 +76,9 @@ public class AbstractSystemTest
 	})
 	public void allMatch(String value)
 	{
-		assertTrue(NUMERAL_SYSTEM.allMatch(value));
+		boolean actual = NUMERAL_SYSTEM.allMatch(value);
+
+		assertTrue(actual);
 	}
 
 	/**
@@ -86,7 +90,9 @@ public class AbstractSystemTest
 	})
 	public void anyMatch(String value)
 	{
-		assertTrue(NUMERAL_SYSTEM.anyMatch(value));
+		boolean actual = NUMERAL_SYSTEM.anyMatch(value);
+
+		assertTrue(actual);
 	}
 
 	/**
@@ -98,7 +104,9 @@ public class AbstractSystemTest
 	})
 	public void anyMatchNotCorrect(String value)
 	{
-		assertFalse(NUMERAL_SYSTEM.anyMatch(value));
+		boolean actual = NUMERAL_SYSTEM.anyMatch(value);
+
+		assertFalse(actual);
 	}
 
 	/**
@@ -110,7 +118,9 @@ public class AbstractSystemTest
 	})
 	public void noneMatch(String value)
 	{
-		assertTrue(NUMERAL_SYSTEM.noneMatch(value));
+		boolean actual = NUMERAL_SYSTEM.noneMatch(value);
+
+		assertTrue(actual);
 	}
 
 	/**
@@ -122,7 +132,9 @@ public class AbstractSystemTest
 	})
 	public void noneMatchNotCorrect(String value)
 	{
-		assertFalse(NUMERAL_SYSTEM.noneMatch(value));
+		boolean actual = NUMERAL_SYSTEM.noneMatch(value);
+
+		assertFalse(actual);
 	}
 
 	/**
@@ -134,7 +146,9 @@ public class AbstractSystemTest
 	})
 	public void allMatchNotCorrect(String value)
 	{
-		assertFalse(NUMERAL_SYSTEM.allMatch(value));
+		boolean actual = NUMERAL_SYSTEM.allMatch(value);
+
+		assertFalse(actual);
 	}
 
 	/**
@@ -146,7 +160,9 @@ public class AbstractSystemTest
 	})
 	public void isSorted(String value)
 	{
-		assertTrue(NUMERAL_SYSTEM.isSorted(value));
+		boolean actual = NUMERAL_SYSTEM.isSorted(value);
+
+		assertTrue(actual);
 	}
 
 	/**
@@ -158,7 +174,9 @@ public class AbstractSystemTest
 	})
 	public void isSortedNotCorrect(String value)
 	{
-		assertFalse(NUMERAL_SYSTEM.isSorted(value));
+		boolean actual = NUMERAL_SYSTEM.isSorted(value);
+
+		assertFalse(actual);
 	}
 
 	/**
@@ -170,7 +188,9 @@ public class AbstractSystemTest
 	})
 	public void isSortedAsc(String value)
 	{
-		assertTrue(NUMERAL_SYSTEM.isSortedAsc(value));
+		boolean actual = NUMERAL_SYSTEM.isSortedAsc(value);
+
+		assertTrue(actual);
 	}
 
 	/**
@@ -182,7 +202,9 @@ public class AbstractSystemTest
 	})
 	public void isSortedAscNotCorrect(String value)
 	{
-		assertFalse(NUMERAL_SYSTEM.isSortedAsc(value));
+		boolean actual = NUMERAL_SYSTEM.isSortedAsc(value);
+
+		assertFalse(actual);
 	}
 
 	/**
@@ -194,7 +216,9 @@ public class AbstractSystemTest
 	})
 	public void isSortedDesc(String value)
 	{
-		assertTrue(NUMERAL_SYSTEM.isSortedDesc(value));
+		boolean actual = NUMERAL_SYSTEM.isSortedDesc(value);
+
+		assertTrue(actual);
 	}
 
 	/**
@@ -206,7 +230,9 @@ public class AbstractSystemTest
 	})
 	public void isSortedDescNotCorrect(String value)
 	{
-		assertFalse(NUMERAL_SYSTEM.isSortedDesc(value));
+		boolean actual = NUMERAL_SYSTEM.isSortedDesc(value);
+
+		assertFalse(actual);
 	}
 
 	/**
@@ -215,12 +241,14 @@ public class AbstractSystemTest
 	@Test
 	public void toArray()
 	{
-		Character[] digits = new Character[] {
+		Character[] expected = new Character[] {
 			'0', '1', '2', '3', '4',
 			'5', '6', '7', '8', '9'
 		};
 
-		assertArrayEquals(digits, NUMERAL_SYSTEM.toArray());
+		Character[] actual = NUMERAL_SYSTEM.toArray();
+
+		assertArrayEquals(expected, actual);
 	}
 
 	/**
@@ -229,9 +257,11 @@ public class AbstractSystemTest
 	@Test
 	public void toStringSeparator()
 	{
-		String string = "0,1,2,3,4,5,6,7,8,9";
+		String expected = "0,1,2,3,4,5,6,7,8,9";
 
-		assertEquals(string, NUMERAL_SYSTEM.toString(","));
+		String actual = NUMERAL_SYSTEM.toString(",");
+
+		assertEquals(expected, actual);
 	}
 
 	/**
@@ -240,8 +270,10 @@ public class AbstractSystemTest
 	@Test
 	public void testToString()
 	{
-		String string = "0123456789";
+		String expected = "0123456789";
 
-		assertEquals(string, NUMERAL_SYSTEM.toString());
+		String actual = NUMERAL_SYSTEM.toString();
+
+		assertEquals(expected, actual);
 	}
 }

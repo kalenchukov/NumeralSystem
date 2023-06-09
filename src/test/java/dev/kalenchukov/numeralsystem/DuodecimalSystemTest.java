@@ -24,7 +24,6 @@
 
 package dev.kalenchukov.numeralsystem;
 
-import org.jetbrains.annotations.NotNull;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;
@@ -38,8 +37,7 @@ import static org.junit.jupiter.api.Assertions.*;
  */
 public class DuodecimalSystemTest
 {
-	@NotNull
-	public static final Numerable NUMERAL_SYSTEM = new DuodecimalSystem();
+	private static final Numerable NUMERAL_SYSTEM = new DuodecimalSystem();
 
 	/**
 	 * Проверка метода {@link DuodecimalSystem#get()}.
@@ -47,13 +45,15 @@ public class DuodecimalSystemTest
 	@Test
 	public void get()
 	{
-		List<Character> digits = List.of(
+		List<Character> expected = List.of(
 			'0', '1', '2', '3', '4',
 			'5', '6', '7', '8', '9',
 			'A', 'B'
 		);
 
-		assertArrayEquals(digits.toArray(), NUMERAL_SYSTEM.get().toArray());
+		List<Character> actual = NUMERAL_SYSTEM.get();
+
+		assertArrayEquals(expected.toArray(), actual.toArray());
 	}
 
 	/**

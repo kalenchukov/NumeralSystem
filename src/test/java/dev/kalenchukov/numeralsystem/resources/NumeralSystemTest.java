@@ -25,7 +25,10 @@
 package dev.kalenchukov.numeralsystem.resources;
 
 import dev.kalenchukov.numeralsystem.BinarySystem;
+import dev.kalenchukov.numeralsystem.Numerable;
 import org.junit.jupiter.api.Test;
+
+import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -42,6 +45,10 @@ public class NumeralSystemTest
 	@Test
 	public void getNumeralSystem()
 	{
-		assertEquals(new BinarySystem(), NumeralSystem.BINARY.getNumeralSystem());
+		Numerable expected = new BinarySystem();
+
+		Numerable actual = NumeralSystem.BINARY.getNumeralSystem();
+
+		assertEquals(expected, actual);
 	}
 }

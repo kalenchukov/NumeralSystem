@@ -24,7 +24,6 @@
 
 package dev.kalenchukov.numeralsystem;
 
-import org.jetbrains.annotations.NotNull;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;
@@ -38,8 +37,7 @@ import static org.junit.jupiter.api.Assertions.*;
  */
 public class BinarySystemTest
 {
-	@NotNull
-	public static final Numerable NUMERAL_SYSTEM = new BinarySystem();
+	private static final Numerable NUMERAL_SYSTEM = new BinarySystem();
 
 	/**
 	 * Проверка метода {@link BinarySystem#get()}.
@@ -47,11 +45,13 @@ public class BinarySystemTest
 	@Test
 	public void get()
 	{
-		List<Character> digits = List.of(
+		List<Character> expected = List.of(
 			'0', '1'
 		);
 
-		assertArrayEquals(digits.toArray(), NUMERAL_SYSTEM.get().toArray());
+		List<Character> actual = NUMERAL_SYSTEM.get();
+
+		assertArrayEquals(expected.toArray(), actual.toArray());
 	}
 
 	/**
