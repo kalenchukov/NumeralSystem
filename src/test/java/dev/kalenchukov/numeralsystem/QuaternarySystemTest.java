@@ -52,33 +52,4 @@ public class QuaternarySystemTest
 
 		assertThat(actualList).containsSequence(expectedList);
 	}
-
-	/**
-	 * Проверка метода {@link QuaternarySystem#equals(Object)}.
-	 */
-	@Test
-	public void testEquals()
-	{
-		QuaternarySystem numeralSystem1 = new QuaternarySystem();
-		QuaternarySystem numeralSystem2 = new QuaternarySystem();
-
-		boolean actual = numeralSystem1.equals(numeralSystem2);
-
-		assertThat(actual).isTrue();
-	}
-
-	/**
-	 * Проверка метода {@link QuaternarySystem#hashCode()}.
-	 */
-	@Test
-	public void testHashCode()
-	{
-		QuaternarySystem numeralSystem1 = new QuaternarySystem();
-		QuaternarySystem numeralSystem2 = new QuaternarySystem();
-
-		int expectedHashCode = numeralSystem1.hashCode();
-		int actualHashCode = numeralSystem2.hashCode();
-
-		assertThat(actualHashCode).isEqualTo(expectedHashCode);
-	}
 }

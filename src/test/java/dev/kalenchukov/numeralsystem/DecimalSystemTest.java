@@ -53,33 +53,4 @@ public class DecimalSystemTest
 
 		assertThat(actualList).containsSequence(expectedList);
 	}
-
-	/**
-	 * Проверка метода {@link DecimalSystem#equals(Object)}.
-	 */
-	@Test
-	public void testEquals()
-	{
-		DecimalSystem numeralSystem1 = new DecimalSystem();
-		DecimalSystem numeralSystem2 = new DecimalSystem();
-
-		boolean actual = numeralSystem1.equals(numeralSystem2);
-
-		assertThat(actual).isTrue();
-	}
-
-	/**
-	 * Проверка метода {@link DecimalSystem#hashCode()}.
-	 */
-	@Test
-	public void testHashCode()
-	{
-		DecimalSystem numeralSystem1 = new DecimalSystem();
-		DecimalSystem numeralSystem2 = new DecimalSystem();
-
-		int expectedHashCode = numeralSystem1.hashCode();
-		int actualHashCode = numeralSystem2.hashCode();
-
-		assertThat(actualHashCode).isEqualTo(expectedHashCode);
-	}
 }

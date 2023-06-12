@@ -54,33 +54,4 @@ public class DuodecimalSystemTest
 
 		assertThat(actualList).containsSequence(expectedList);
 	}
-
-	/**
-	 * Проверка метода {@link DuodecimalSystem#equals(Object)}.
-	 */
-	@Test
-	public void testEquals()
-	{
-		DuodecimalSystem numeralSystem1 = new DuodecimalSystem();
-		DuodecimalSystem numeralSystem2 = new DuodecimalSystem();
-
-		boolean actual = numeralSystem1.equals(numeralSystem2);
-
-		assertThat(actual).isTrue();
-	}
-
-	/**
-	 * Проверка метода {@link DuodecimalSystem#hashCode()}.
-	 */
-	@Test
-	public void testHashCode()
-	{
-		DuodecimalSystem numeralSystem1 = new DuodecimalSystem();
-		DuodecimalSystem numeralSystem2 = new DuodecimalSystem();
-
-		int expectedHashCode = numeralSystem1.hashCode();
-		int actualHashCode = numeralSystem2.hashCode();
-
-		assertThat(actualHashCode).isEqualTo(expectedHashCode);
-	}
 }

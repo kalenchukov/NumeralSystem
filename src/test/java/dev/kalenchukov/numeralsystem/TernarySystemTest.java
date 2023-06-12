@@ -52,33 +52,4 @@ public class TernarySystemTest
 
 		assertThat(actualList).containsSequence(expectedList);
 	}
-
-	/**
-	 * Проверка метода {@link TernarySystem#equals(Object)}.
-	 */
-	@Test
-	public void testEquals()
-	{
-		TernarySystem numeralSystem1 = new TernarySystem();
-		TernarySystem numeralSystem2 = new TernarySystem();
-
-		boolean actual = numeralSystem1.equals(numeralSystem2);
-
-		assertThat(actual).isTrue();
-	}
-
-	/**
-	 * Проверка метода {@link TernarySystem#hashCode()}.
-	 */
-	@Test
-	public void testHashCode()
-	{
-		TernarySystem numeralSystem1 = new TernarySystem();
-		TernarySystem numeralSystem2 = new TernarySystem();
-
-		int expectedHashCode = numeralSystem1.hashCode();
-		int actualHashCode = numeralSystem2.hashCode();
-
-		assertThat(actualHashCode).isEqualTo(expectedHashCode);
-	}
 }

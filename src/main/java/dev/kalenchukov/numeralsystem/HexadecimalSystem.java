@@ -25,11 +25,9 @@
 package dev.kalenchukov.numeralsystem;
 
 import org.jetbrains.annotations.NotNull;
-import org.jetbrains.annotations.Nullable;
 import org.jetbrains.annotations.Unmodifiable;
 
 import java.util.List;
-import java.util.Objects;
 
 /**
  * Класс шестнадцатеричной системы счисления.
@@ -56,46 +54,5 @@ public class HexadecimalSystem extends AbstractSystem
 	public HexadecimalSystem()
 	{
 		super(DIGITS);
-	}
-
-	/**
-	 * {@inheritDoc}
-	 *
-	 * @param obj {@inheritDoc}
-	 * @return {@inheritDoc}
-	 */
-	@Override
-	public boolean equals(@Nullable final Object obj)
-	{
-		if (obj == null) {
-			return false;
-		}
-
-		if (this == obj) {
-			return true;
-		}
-
-		if (!this.getClass().equals(obj.getClass())) {
-			return false;
-		}
-
-		final HexadecimalSystem numeralSystem = (HexadecimalSystem) obj;
-
-		if (!Objects.equals(this.get(), numeralSystem.get())) {
-			return false;
-		}
-
-		return true;
-	}
-
-	/**
-	 * {@inheritDoc}
-	 *
-	 * @return {@inheritDoc}
-	 */
-	@Override
-	public int hashCode()
-	{
-		return this.get().hashCode();
 	}
 }

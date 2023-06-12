@@ -52,33 +52,4 @@ public class BinarySystemTest
 
 		assertThat(actualList).containsSequence(expectedList);
 	}
-
-	/**
-	 * Проверка метода {@link BinarySystem#equals(Object)}.
-	 */
-	@Test
-	public void testEquals()
-	{
-		BinarySystem numeralSystem1 = new BinarySystem();
-		BinarySystem numeralSystem2 = new BinarySystem();
-
-		boolean actual = numeralSystem1.equals(numeralSystem2);
-
-		assertThat(actual).isTrue();
-	}
-
-	/**
-	 * Проверка метода {@link BinarySystem#hashCode()}.
-	 */
-	@Test
-	public void testHashCode()
-	{
-		BinarySystem numeralSystem1 = new BinarySystem();
-		BinarySystem numeralSystem2 = new BinarySystem();
-
-		int expectedHashCode = numeralSystem1.hashCode();
-		int actualHashCode = numeralSystem2.hashCode();
-
-		assertThat(actualHashCode).isEqualTo(expectedHashCode);
-	}
 }

@@ -25,6 +25,7 @@
 package dev.kalenchukov.numeralsystem;
 
 import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 import org.jetbrains.annotations.Unmodifiable;
 
 import java.util.Arrays;
@@ -269,6 +270,43 @@ public abstract class AbstractSystem implements Numerable
 	public String toString()
 	{
 		return this.toString("");
+	}
+
+	/**
+	 * {@inheritDoc}
+	 *
+	 * @param obj {@inheritDoc}
+	 * @return {@inheritDoc}
+	 */
+	@Override
+	public boolean equals(@Nullable final Object obj)
+	{
+		if (this == obj) {
+			return true;
+		}
+
+		if (!(obj instanceof Numerable)) {
+			return false;
+		}
+
+		final Numerable numerable = (Numerable) obj;
+
+		if (!Objects.equals(this.get(), numerable.get())) {
+			return false;
+		}
+
+		return true;
+	}
+
+	/**
+	 * {@inheritDoc}
+	 *
+	 * @return {@inheritDoc}
+	 */
+	@Override
+	public int hashCode()
+	{
+		return this.get().hashCode();
 	}
 
 	/**

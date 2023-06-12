@@ -53,33 +53,4 @@ public class OctalSystemTest
 
 		assertThat(actualList).containsSequence(expectedList);
 	}
-
-	/**
-	 * Проверка метода {@link OctalSystem#equals(Object)}.
-	 */
-	@Test
-	public void testEquals()
-	{
-		OctalSystem numeralSystem1 = new OctalSystem();
-		OctalSystem numeralSystem2 = new OctalSystem();
-
-		boolean actual = numeralSystem1.equals(numeralSystem2);
-
-		assertThat(actual).isTrue();
-	}
-
-	/**
-	 * Проверка метода {@link OctalSystem#hashCode()}.
-	 */
-	@Test
-	public void testHashCode()
-	{
-		OctalSystem numeralSystem1 = new OctalSystem();
-		OctalSystem numeralSystem2 = new OctalSystem();
-
-		int expectedHashCode = numeralSystem1.hashCode();
-		int actualHashCode = numeralSystem2.hashCode();
-
-		assertThat(actualHashCode).isEqualTo(expectedHashCode);
-	}
 }

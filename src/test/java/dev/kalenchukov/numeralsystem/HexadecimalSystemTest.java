@@ -55,33 +55,4 @@ public class HexadecimalSystemTest
 
 		assertThat(actualList).containsSequence(expectedList);
 	}
-
-	/**
-	 * Проверка метода {@link HexadecimalSystem#equals(Object)}.
-	 */
-	@Test
-	public void testEquals()
-	{
-		HexadecimalSystem numeralSystem1 = new HexadecimalSystem();
-		HexadecimalSystem numeralSystem2 = new HexadecimalSystem();
-
-		boolean actual = numeralSystem1.equals(numeralSystem2);
-
-		assertThat(actual).isTrue();
-	}
-
-	/**
-	 * Проверка метода {@link HexadecimalSystem#hashCode()}.
-	 */
-	@Test
-	public void testHashCode()
-	{
-		HexadecimalSystem numeralSystem1 = new HexadecimalSystem();
-		HexadecimalSystem numeralSystem2 = new HexadecimalSystem();
-
-		int expectedHashCode = numeralSystem1.hashCode();
-		int actualHashCode = numeralSystem2.hashCode();
-
-		assertThat(actualHashCode).isEqualTo(expectedHashCode);
-	}
 }

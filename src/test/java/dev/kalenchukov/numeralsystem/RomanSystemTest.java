@@ -52,33 +52,4 @@ public class RomanSystemTest
 
 		assertThat(actualList).containsSequence(expectedList);
 	}
-
-	/**
-	 * Проверка метода {@link RomanSystem#equals(Object)}.
-	 */
-	@Test
-	public void testEquals()
-	{
-		RomanSystem numeralSystem1 = new RomanSystem();
-		RomanSystem numeralSystem2 = new RomanSystem();
-
-		boolean actual = numeralSystem1.equals(numeralSystem2);
-
-		assertThat(actual).isTrue();
-	}
-
-	/**
-	 * Проверка метода {@link RomanSystem#hashCode()}.
-	 */
-	@Test
-	public void testHashCode()
-	{
-		RomanSystem numeralSystem1 = new RomanSystem();
-		RomanSystem numeralSystem2 = new RomanSystem();
-
-		int expectedHashCode = numeralSystem1.hashCode();
-		int actualHashCode = numeralSystem2.hashCode();
-
-		assertThat(actualHashCode).isEqualTo(expectedHashCode);
-	}
 }
