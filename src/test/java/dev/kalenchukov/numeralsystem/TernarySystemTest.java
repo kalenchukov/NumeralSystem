@@ -28,7 +28,7 @@ import org.junit.jupiter.api.Test;
 
 import java.util.List;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.assertj.core.api.Assertions.assertThat;
 
 /**
  * Класс проверки методов класса {@link TernarySystem}.
@@ -50,7 +50,7 @@ public class TernarySystemTest
 
 		List<Character> actualList = numeralSystem.get();
 
-		assertArrayEquals(expectedList.toArray(), actualList.toArray());
+		assertThat(actualList).containsSequence(expectedList);
 	}
 
 	/**
@@ -64,7 +64,7 @@ public class TernarySystemTest
 
 		boolean actual = numeralSystem1.equals(numeralSystem2);
 
-		assertTrue(actual);
+		assertThat(actual).isTrue();
 	}
 
 	/**
@@ -76,9 +76,9 @@ public class TernarySystemTest
 		TernarySystem numeralSystem1 = new TernarySystem();
 		TernarySystem numeralSystem2 = new TernarySystem();
 
-		Integer expectedHashCode = numeralSystem1.hashCode();
-		Integer actualHashCode = numeralSystem2.hashCode();
+		int expectedHashCode = numeralSystem1.hashCode();
+		int actualHashCode = numeralSystem2.hashCode();
 
-		assertEquals(expectedHashCode, actualHashCode);
+		assertThat(actualHashCode).isEqualTo(expectedHashCode);
 	}
 }

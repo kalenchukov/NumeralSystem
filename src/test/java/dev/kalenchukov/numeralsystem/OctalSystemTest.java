@@ -28,7 +28,7 @@ import org.junit.jupiter.api.Test;
 
 import java.util.List;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.assertj.core.api.Assertions.assertThat;
 
 /**
  * Класс проверки методов класса {@link OctalSystem}.
@@ -51,7 +51,7 @@ public class OctalSystemTest
 
 		List<Character> actualList = numeralSystem.get();
 
-		assertArrayEquals(expectedList.toArray(), actualList.toArray());
+		assertThat(actualList).containsSequence(expectedList);
 	}
 
 	/**
@@ -65,7 +65,7 @@ public class OctalSystemTest
 
 		boolean actual = numeralSystem1.equals(numeralSystem2);
 
-		assertTrue(actual);
+		assertThat(actual).isTrue();
 	}
 
 	/**
@@ -77,9 +77,9 @@ public class OctalSystemTest
 		OctalSystem numeralSystem1 = new OctalSystem();
 		OctalSystem numeralSystem2 = new OctalSystem();
 
-		Integer expectedHashCode = numeralSystem1.hashCode();
-		Integer actualHashCode = numeralSystem2.hashCode();
+		int expectedHashCode = numeralSystem1.hashCode();
+		int actualHashCode = numeralSystem2.hashCode();
 
-		assertEquals(expectedHashCode, actualHashCode);
+		assertThat(actualHashCode).isEqualTo(expectedHashCode);
 	}
 }

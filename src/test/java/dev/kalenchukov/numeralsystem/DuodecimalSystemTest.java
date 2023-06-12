@@ -28,7 +28,7 @@ import org.junit.jupiter.api.Test;
 
 import java.util.List;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.assertj.core.api.Assertions.assertThat;
 
 /**
  * Класс проверки методов класса {@link DuodecimalSystem}.
@@ -52,7 +52,7 @@ public class DuodecimalSystemTest
 
 		List<Character> actualList = numeralSystem.get();
 
-		assertArrayEquals(expectedList.toArray(), actualList.toArray());
+		assertThat(actualList).containsSequence(expectedList);
 	}
 
 	/**
@@ -66,7 +66,7 @@ public class DuodecimalSystemTest
 
 		boolean actual = numeralSystem1.equals(numeralSystem2);
 
-		assertTrue(actual);
+		assertThat(actual).isTrue();
 	}
 
 	/**
@@ -78,9 +78,9 @@ public class DuodecimalSystemTest
 		DuodecimalSystem numeralSystem1 = new DuodecimalSystem();
 		DuodecimalSystem numeralSystem2 = new DuodecimalSystem();
 
-		Integer expectedHashCode = numeralSystem1.hashCode();
-		Integer actualHashCode = numeralSystem2.hashCode();
+		int expectedHashCode = numeralSystem1.hashCode();
+		int actualHashCode = numeralSystem2.hashCode();
 
-		assertEquals(expectedHashCode, actualHashCode);
+		assertThat(actualHashCode).isEqualTo(expectedHashCode);
 	}
 }

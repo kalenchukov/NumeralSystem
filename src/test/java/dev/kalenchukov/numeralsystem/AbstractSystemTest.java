@@ -28,7 +28,7 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ValueSource;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.assertj.core.api.Assertions.assertThat;
 
 /**
  * Класс проверки методов класса {@link AbstractSystem}.
@@ -50,7 +50,7 @@ public class AbstractSystemTest
 
 		boolean actual = numeralSystem.contains(value);
 
-		assertTrue(actual);
+		assertThat(actual).isTrue();
 	}
 
 	/**
@@ -66,7 +66,7 @@ public class AbstractSystemTest
 
 		boolean actual = numeralSystem.contains(value);
 
-		assertFalse(actual);
+		assertThat(actual).isFalse();
 	}
 
 	/**
@@ -82,7 +82,7 @@ public class AbstractSystemTest
 
 		boolean actual = numeralSystem.allMatch(value);
 
-		assertTrue(actual);
+		assertThat(actual).isTrue();
 	}
 
 	/**
@@ -98,7 +98,7 @@ public class AbstractSystemTest
 
 		boolean actual = numeralSystem.anyMatch(value);
 
-		assertTrue(actual);
+		assertThat(actual).isTrue();
 	}
 
 	/**
@@ -114,7 +114,7 @@ public class AbstractSystemTest
 
 		boolean actual = numeralSystem.anyMatch(value);
 
-		assertFalse(actual);
+		assertThat(actual).isFalse();
 	}
 
 	/**
@@ -130,7 +130,7 @@ public class AbstractSystemTest
 
 		boolean actual = numeralSystem.noneMatch(value);
 
-		assertTrue(actual);
+		assertThat(actual).isTrue();
 	}
 
 	/**
@@ -146,7 +146,7 @@ public class AbstractSystemTest
 
 		boolean actual = numeralSystem.noneMatch(value);
 
-		assertFalse(actual);
+		assertThat(actual).isFalse();
 	}
 
 	/**
@@ -162,7 +162,7 @@ public class AbstractSystemTest
 
 		boolean actual = numeralSystem.allMatch(value);
 
-		assertFalse(actual);
+		assertThat(actual).isFalse();
 	}
 
 	/**
@@ -178,7 +178,7 @@ public class AbstractSystemTest
 
 		boolean actual = numeralSystem.isSorted(value);
 
-		assertTrue(actual);
+		assertThat(actual).isTrue();
 	}
 
 	/**
@@ -194,7 +194,7 @@ public class AbstractSystemTest
 
 		boolean actual = numeralSystem.isSorted(value);
 
-		assertFalse(actual);
+		assertThat(actual).isFalse();
 	}
 
 	/**
@@ -210,7 +210,7 @@ public class AbstractSystemTest
 
 		boolean actual = numeralSystem.isSortedAsc(value);
 
-		assertTrue(actual);
+		assertThat(actual).isTrue();
 	}
 
 	/**
@@ -226,7 +226,7 @@ public class AbstractSystemTest
 
 		boolean actual = numeralSystem.isSortedAsc(value);
 
-		assertFalse(actual);
+		assertThat(actual).isFalse();
 	}
 
 	/**
@@ -242,7 +242,7 @@ public class AbstractSystemTest
 
 		boolean actual = numeralSystem.isSortedDesc(value);
 
-		assertTrue(actual);
+		assertThat(actual).isTrue();
 	}
 
 	/**
@@ -258,7 +258,7 @@ public class AbstractSystemTest
 
 		boolean actual = numeralSystem.isSortedDesc(value);
 
-		assertFalse(actual);
+		assertThat(actual).isFalse();
 	}
 
 	/**
@@ -274,7 +274,7 @@ public class AbstractSystemTest
 
 		Character[] actualArray = new DecimalSystem().toArray();
 
-		assertArrayEquals(expectedArray, actualArray);
+		assertThat(actualArray).containsSequence(expectedArray);
 	}
 
 	/**
@@ -287,7 +287,7 @@ public class AbstractSystemTest
 
 		String actualString = new DecimalSystem().toString(",");
 
-		assertEquals(expectedString, actualString);
+		assertThat(actualString).isEqualTo(expectedString);
 	}
 
 	/**
@@ -300,6 +300,6 @@ public class AbstractSystemTest
 
 		String actualString = new DecimalSystem().toString();
 
-		assertEquals(expectedString, actualString);
+		assertThat(actualString).isEqualTo(expectedString);
 	}
 }

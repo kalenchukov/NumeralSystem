@@ -28,9 +28,7 @@ import dev.kalenchukov.numeralsystem.BinarySystem;
 import dev.kalenchukov.numeralsystem.Numerable;
 import org.junit.jupiter.api.Test;
 
-import java.util.List;
-
-import static org.junit.jupiter.api.Assertions.*;
+import static org.assertj.core.api.Assertions.assertThat;
 
 /**
  * Класс проверки констант и методов перечисления {@link NumeralSystem}.
@@ -50,6 +48,6 @@ public class NumeralSystemTest
 
 		Numerable actualNumeralSystem = numeralSystem.getNumeralSystem();
 
-		assertEquals(expectedNumeralSystem, actualNumeralSystem);
+		assertThat(actualNumeralSystem).isEqualTo(expectedNumeralSystem);
 	}
 }
