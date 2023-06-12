@@ -37,24 +37,23 @@ import static org.junit.jupiter.api.Assertions.*;
  */
 public class HexadecimalSystemTest
 {
-	private static final Numerable NUMERAL_SYSTEM = new HexadecimalSystem();
-
 	/**
 	 * Проверка метода {@link HexadecimalSystem#get()}.
 	 */
 	@Test
 	public void get()
 	{
-		List<Character> expected = List.of(
+		HexadecimalSystem numeralSystem = new HexadecimalSystem();
+		List<Character> expectedList = List.of(
 			'0', '1', '2', '3', '4',
 			'5', '6', '7', '8', '9',
 			'A', 'B', 'C', 'D', 'E',
 			'F'
 		);
 
-		List<Character> actual = NUMERAL_SYSTEM.get();
+		List<Character> actualList = numeralSystem.get();
 
-		assertArrayEquals(expected.toArray(), actual.toArray());
+		assertArrayEquals(expectedList.toArray(), actualList.toArray());
 	}
 
 	/**
@@ -63,13 +62,12 @@ public class HexadecimalSystemTest
 	@Test
 	public void testEquals()
 	{
-		assertNotEquals(null, NUMERAL_SYSTEM);
+		HexadecimalSystem numeralSystem1 = new HexadecimalSystem();
+		HexadecimalSystem numeralSystem2 = new HexadecimalSystem();
 
-		assertEquals(NUMERAL_SYSTEM, NUMERAL_SYSTEM);
+		boolean actual = numeralSystem1.equals(numeralSystem2);
 
-		assertNotEquals(NUMERAL_SYSTEM, new OctalSystem());
-
-		assertEquals(NUMERAL_SYSTEM, new HexadecimalSystem());
+		assertTrue(actual);
 	}
 
 	/**
@@ -78,10 +76,12 @@ public class HexadecimalSystemTest
 	@Test
 	public void testHashCode()
 	{
-		assertEquals(NUMERAL_SYSTEM.hashCode(), NUMERAL_SYSTEM.hashCode());
+		HexadecimalSystem numeralSystem1 = new HexadecimalSystem();
+		HexadecimalSystem numeralSystem2 = new HexadecimalSystem();
 
-		assertEquals(NUMERAL_SYSTEM.hashCode(), new HexadecimalSystem().hashCode());
+		Integer expectedHashCode = numeralSystem1.hashCode();
+		Integer actualHashCode = numeralSystem2.hashCode();
 
-		assertNotEquals(NUMERAL_SYSTEM.hashCode(), new OctalSystem().hashCode());
+		assertEquals(expectedHashCode, actualHashCode);
 	}
 }

@@ -45,10 +45,11 @@ public class NumeralSystemTest
 	@Test
 	public void getNumeralSystem()
 	{
-		Numerable expected = new BinarySystem();
+		NumeralSystem numeralSystem = NumeralSystem.BINARY;
+		Numerable expectedNumeralSystem = new BinarySystem();
 
-		Numerable actual = NumeralSystem.BINARY.getNumeralSystem();
+		Numerable actualNumeralSystem = numeralSystem.getNumeralSystem();
 
-		assertEquals(expected, actual);
+		assertEquals(expectedNumeralSystem, actualNumeralSystem);
 	}
 }

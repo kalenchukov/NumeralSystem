@@ -37,8 +37,6 @@ import static org.junit.jupiter.api.Assertions.*;
  */
 public class AbstractSystemTest
 {
-	private static final Numerable NUMERAL_SYSTEM = new DecimalSystem();
-
 	/**
 	 * Проверка метода {@link AbstractSystem#contains(Character)}.
 	 */
@@ -48,7 +46,9 @@ public class AbstractSystemTest
 	})
 	public void contains(Character value)
 	{
-		boolean actual = NUMERAL_SYSTEM.contains(value);
+		DecimalSystem numeralSystem = new DecimalSystem();
+
+		boolean actual = numeralSystem.contains(value);
 
 		assertTrue(actual);
 	}
@@ -62,7 +62,9 @@ public class AbstractSystemTest
 	})
 	public void containsNotCorrect(Character value)
 	{
-		boolean actual = NUMERAL_SYSTEM.contains(value);
+		DecimalSystem numeralSystem = new DecimalSystem();
+
+		boolean actual = numeralSystem.contains(value);
 
 		assertFalse(actual);
 	}
@@ -76,7 +78,9 @@ public class AbstractSystemTest
 	})
 	public void allMatch(String value)
 	{
-		boolean actual = NUMERAL_SYSTEM.allMatch(value);
+		DecimalSystem numeralSystem = new DecimalSystem();
+
+		boolean actual = numeralSystem.allMatch(value);
 
 		assertTrue(actual);
 	}
@@ -90,7 +94,9 @@ public class AbstractSystemTest
 	})
 	public void anyMatch(String value)
 	{
-		boolean actual = NUMERAL_SYSTEM.anyMatch(value);
+		DecimalSystem numeralSystem = new DecimalSystem();
+
+		boolean actual = numeralSystem.anyMatch(value);
 
 		assertTrue(actual);
 	}
@@ -104,7 +110,9 @@ public class AbstractSystemTest
 	})
 	public void anyMatchNotCorrect(String value)
 	{
-		boolean actual = NUMERAL_SYSTEM.anyMatch(value);
+		DecimalSystem numeralSystem = new DecimalSystem();
+
+		boolean actual = numeralSystem.anyMatch(value);
 
 		assertFalse(actual);
 	}
@@ -118,7 +126,9 @@ public class AbstractSystemTest
 	})
 	public void noneMatch(String value)
 	{
-		boolean actual = NUMERAL_SYSTEM.noneMatch(value);
+		DecimalSystem numeralSystem = new DecimalSystem();
+
+		boolean actual = numeralSystem.noneMatch(value);
 
 		assertTrue(actual);
 	}
@@ -132,7 +142,9 @@ public class AbstractSystemTest
 	})
 	public void noneMatchNotCorrect(String value)
 	{
-		boolean actual = NUMERAL_SYSTEM.noneMatch(value);
+		DecimalSystem numeralSystem = new DecimalSystem();
+
+		boolean actual = numeralSystem.noneMatch(value);
 
 		assertFalse(actual);
 	}
@@ -146,7 +158,9 @@ public class AbstractSystemTest
 	})
 	public void allMatchNotCorrect(String value)
 	{
-		boolean actual = NUMERAL_SYSTEM.allMatch(value);
+		DecimalSystem numeralSystem = new DecimalSystem();
+
+		boolean actual = numeralSystem.allMatch(value);
 
 		assertFalse(actual);
 	}
@@ -160,7 +174,9 @@ public class AbstractSystemTest
 	})
 	public void isSorted(String value)
 	{
-		boolean actual = NUMERAL_SYSTEM.isSorted(value);
+		DecimalSystem numeralSystem = new DecimalSystem();
+
+		boolean actual = numeralSystem.isSorted(value);
 
 		assertTrue(actual);
 	}
@@ -174,7 +190,9 @@ public class AbstractSystemTest
 	})
 	public void isSortedNotCorrect(String value)
 	{
-		boolean actual = NUMERAL_SYSTEM.isSorted(value);
+		DecimalSystem numeralSystem = new DecimalSystem();
+
+		boolean actual = numeralSystem.isSorted(value);
 
 		assertFalse(actual);
 	}
@@ -188,7 +206,9 @@ public class AbstractSystemTest
 	})
 	public void isSortedAsc(String value)
 	{
-		boolean actual = NUMERAL_SYSTEM.isSortedAsc(value);
+		DecimalSystem numeralSystem = new DecimalSystem();
+
+		boolean actual = numeralSystem.isSortedAsc(value);
 
 		assertTrue(actual);
 	}
@@ -202,7 +222,9 @@ public class AbstractSystemTest
 	})
 	public void isSortedAscNotCorrect(String value)
 	{
-		boolean actual = NUMERAL_SYSTEM.isSortedAsc(value);
+		DecimalSystem numeralSystem = new DecimalSystem();
+
+		boolean actual = numeralSystem.isSortedAsc(value);
 
 		assertFalse(actual);
 	}
@@ -216,7 +238,9 @@ public class AbstractSystemTest
 	})
 	public void isSortedDesc(String value)
 	{
-		boolean actual = NUMERAL_SYSTEM.isSortedDesc(value);
+		DecimalSystem numeralSystem = new DecimalSystem();
+
+		boolean actual = numeralSystem.isSortedDesc(value);
 
 		assertTrue(actual);
 	}
@@ -230,7 +254,9 @@ public class AbstractSystemTest
 	})
 	public void isSortedDescNotCorrect(String value)
 	{
-		boolean actual = NUMERAL_SYSTEM.isSortedDesc(value);
+		DecimalSystem numeralSystem = new DecimalSystem();
+
+		boolean actual = numeralSystem.isSortedDesc(value);
 
 		assertFalse(actual);
 	}
@@ -241,14 +267,14 @@ public class AbstractSystemTest
 	@Test
 	public void toArray()
 	{
-		Character[] expected = new Character[] {
+		Character[] expectedArray = new Character[] {
 			'0', '1', '2', '3', '4',
 			'5', '6', '7', '8', '9'
 		};
 
-		Character[] actual = NUMERAL_SYSTEM.toArray();
+		Character[] actualArray = new DecimalSystem().toArray();
 
-		assertArrayEquals(expected, actual);
+		assertArrayEquals(expectedArray, actualArray);
 	}
 
 	/**
@@ -257,11 +283,11 @@ public class AbstractSystemTest
 	@Test
 	public void toStringSeparator()
 	{
-		String expected = "0,1,2,3,4,5,6,7,8,9";
+		String expectedString = "0,1,2,3,4,5,6,7,8,9";
 
-		String actual = NUMERAL_SYSTEM.toString(",");
+		String actualString = new DecimalSystem().toString(",");
 
-		assertEquals(expected, actual);
+		assertEquals(expectedString, actualString);
 	}
 
 	/**
@@ -270,10 +296,10 @@ public class AbstractSystemTest
 	@Test
 	public void testToString()
 	{
-		String expected = "0123456789";
+		String expectedString = "0123456789";
 
-		String actual = NUMERAL_SYSTEM.toString();
+		String actualString = new DecimalSystem().toString();
 
-		assertEquals(expected, actual);
+		assertEquals(expectedString, actualString);
 	}
 }

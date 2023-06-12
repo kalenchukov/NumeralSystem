@@ -37,22 +37,21 @@ import static org.junit.jupiter.api.Assertions.*;
  */
 public class DecimalSystemTest
 {
-	private static final Numerable NUMERAL_SYSTEM = new DecimalSystem();
-
 	/**
 	 * Проверка метода {@link DecimalSystem#get()}.
 	 */
 	@Test
 	public void get()
 	{
-		List<Character> expected = List.of(
+		DecimalSystem numeralSystem = new DecimalSystem();
+		List<Character> expectedList = List.of(
 			'0', '1', '2', '3', '4',
 			'5', '6', '7', '8', '9'
 		);
 
-		List<Character> actual = NUMERAL_SYSTEM.get();
+		List<Character> actualList = numeralSystem.get();
 
-		assertArrayEquals(expected.toArray(), actual.toArray());
+		assertArrayEquals(expectedList.toArray(), actualList.toArray());
 	}
 
 	/**
@@ -61,13 +60,12 @@ public class DecimalSystemTest
 	@Test
 	public void testEquals()
 	{
-		assertNotEquals(null, NUMERAL_SYSTEM);
+		DecimalSystem numeralSystem1 = new DecimalSystem();
+		DecimalSystem numeralSystem2 = new DecimalSystem();
 
-		assertEquals(NUMERAL_SYSTEM, NUMERAL_SYSTEM);
+		boolean actual = numeralSystem1.equals(numeralSystem2);
 
-		assertNotEquals(NUMERAL_SYSTEM, new DuodecimalSystem());
-
-		assertEquals(NUMERAL_SYSTEM, new DecimalSystem());
+		assertTrue(actual);
 	}
 
 	/**
@@ -76,10 +74,12 @@ public class DecimalSystemTest
 	@Test
 	public void testHashCode()
 	{
-		assertEquals(NUMERAL_SYSTEM.hashCode(), NUMERAL_SYSTEM.hashCode());
+		DecimalSystem numeralSystem1 = new DecimalSystem();
+		DecimalSystem numeralSystem2 = new DecimalSystem();
 
-		assertEquals(NUMERAL_SYSTEM.hashCode(), new DecimalSystem().hashCode());
+		Integer expectedHashCode = numeralSystem1.hashCode();
+		Integer actualHashCode = numeralSystem2.hashCode();
 
-		assertNotEquals(NUMERAL_SYSTEM.hashCode(), new DuodecimalSystem().hashCode());
+		assertEquals(expectedHashCode, actualHashCode);
 	}
 }

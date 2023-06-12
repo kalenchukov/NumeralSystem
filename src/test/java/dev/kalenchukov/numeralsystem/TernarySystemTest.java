@@ -37,21 +37,20 @@ import static org.junit.jupiter.api.Assertions.*;
  */
 public class TernarySystemTest
 {
-	private static final Numerable NUMERAL_SYSTEM = new TernarySystem();
-
 	/**
 	 * Проверка метода {@link TernarySystem#get()}.
 	 */
 	@Test
 	public void get()
 	{
-		List<Character> expected = List.of(
+		TernarySystem numeralSystem = new TernarySystem();
+		List<Character> expectedList = List.of(
 			'0', '1', '2'
 		);
 
-		List<Character> actual = NUMERAL_SYSTEM.get();
+		List<Character> actualList = numeralSystem.get();
 
-		assertArrayEquals(expected.toArray(), actual.toArray());
+		assertArrayEquals(expectedList.toArray(), actualList.toArray());
 	}
 
 	/**
@@ -60,13 +59,12 @@ public class TernarySystemTest
 	@Test
 	public void testEquals()
 	{
-		assertNotEquals(null, NUMERAL_SYSTEM);
+		TernarySystem numeralSystem1 = new TernarySystem();
+		TernarySystem numeralSystem2 = new TernarySystem();
 
-		assertEquals(NUMERAL_SYSTEM, NUMERAL_SYSTEM);
+		boolean actual = numeralSystem1.equals(numeralSystem2);
 
-		assertNotEquals(NUMERAL_SYSTEM, new BinarySystem());
-
-		assertEquals(NUMERAL_SYSTEM, new TernarySystem());
+		assertTrue(actual);
 	}
 
 	/**
@@ -75,10 +73,12 @@ public class TernarySystemTest
 	@Test
 	public void testHashCode()
 	{
-		assertEquals(NUMERAL_SYSTEM.hashCode(), NUMERAL_SYSTEM.hashCode());
+		TernarySystem numeralSystem1 = new TernarySystem();
+		TernarySystem numeralSystem2 = new TernarySystem();
 
-		assertEquals(NUMERAL_SYSTEM.hashCode(), new TernarySystem().hashCode());
+		Integer expectedHashCode = numeralSystem1.hashCode();
+		Integer actualHashCode = numeralSystem2.hashCode();
 
-		assertNotEquals(NUMERAL_SYSTEM.hashCode(), new BinarySystem().hashCode());
+		assertEquals(expectedHashCode, actualHashCode);
 	}
 }

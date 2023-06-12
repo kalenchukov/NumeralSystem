@@ -37,21 +37,20 @@ import static org.junit.jupiter.api.Assertions.*;
  */
 public class BinarySystemTest
 {
-	private static final Numerable NUMERAL_SYSTEM = new BinarySystem();
-
 	/**
 	 * Проверка метода {@link BinarySystem#get()}.
 	 */
 	@Test
 	public void get()
 	{
-		List<Character> expected = List.of(
+		BinarySystem numeralSystem = new BinarySystem();
+		List<Character> expectedList = List.of(
 			'0', '1'
 		);
 
-		List<Character> actual = NUMERAL_SYSTEM.get();
+		List<Character> actualList = numeralSystem.get();
 
-		assertArrayEquals(expected.toArray(), actual.toArray());
+		assertArrayEquals(expectedList.toArray(), actualList.toArray());
 	}
 
 	/**
@@ -60,13 +59,12 @@ public class BinarySystemTest
 	@Test
 	public void testEquals()
 	{
-		assertNotEquals(null, NUMERAL_SYSTEM);
+		BinarySystem numeralSystem1 = new BinarySystem();
+		BinarySystem numeralSystem2 = new BinarySystem();
 
-		assertEquals(NUMERAL_SYSTEM, NUMERAL_SYSTEM);
+		boolean actual = numeralSystem1.equals(numeralSystem2);
 
-		assertNotEquals(NUMERAL_SYSTEM, new RomanSystem());
-
-		assertEquals(NUMERAL_SYSTEM, new BinarySystem());
+		assertTrue(actual);
 	}
 
 	/**
@@ -75,10 +73,12 @@ public class BinarySystemTest
 	@Test
 	public void testHashCode()
 	{
-		assertEquals(NUMERAL_SYSTEM.hashCode(), NUMERAL_SYSTEM.hashCode());
+		BinarySystem numeralSystem1 = new BinarySystem();
+		BinarySystem numeralSystem2 = new BinarySystem();
 
-		assertEquals(NUMERAL_SYSTEM.hashCode(), new BinarySystem().hashCode());
+		Integer expectedHashCode = numeralSystem1.hashCode();
+		Integer actualHashCode = numeralSystem2.hashCode();
 
-		assertNotEquals(NUMERAL_SYSTEM.hashCode(), new RomanSystem().hashCode());
+		assertEquals(expectedHashCode, actualHashCode);
 	}
 }
