@@ -43,7 +43,7 @@ public class DuodecimalSystemTest
 	@Test
 	public void get()
 	{
-		DuodecimalSystem numeralSystem = new DuodecimalSystem();
+		Numerable numeralSystem = new DuodecimalSystem();
 		List<Character> expectedList = List.of(
 			'0', '1', '2', '3', '4',
 			'5', '6', '7', '8', '9',

@@ -43,7 +43,7 @@ public class DecimalSystemTest
 	@Test
 	public void get()
 	{
-		DecimalSystem numeralSystem = new DecimalSystem();
+		Numerable numeralSystem = new DecimalSystem();
 		List<Character> expectedList = List.of(
 			'0', '1', '2', '3', '4',
 			'5', '6', '7', '8', '9'

@@ -43,7 +43,7 @@ public class HexadecimalSystemTest
 	@Test
 	public void get()
 	{
-		HexadecimalSystem numeralSystem = new HexadecimalSystem();
+		Numerable numeralSystem = new HexadecimalSystem();
 		List<Character> expectedList = List.of(
 			'0', '1', '2', '3', '4',
 			'5', '6', '7', '8', '9',

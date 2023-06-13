@@ -43,7 +43,7 @@ public class TernarySystemTest
 	@Test
 	public void get()
 	{
-		TernarySystem numeralSystem = new TernarySystem();
+		Numerable numeralSystem = new TernarySystem();
 		List<Character> expectedList = List.of(
 			'0', '1', '2'
 		);

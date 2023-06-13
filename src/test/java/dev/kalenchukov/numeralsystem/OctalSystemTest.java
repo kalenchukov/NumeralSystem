@@ -43,7 +43,7 @@ public class OctalSystemTest
 	@Test
 	public void get()
 	{
-		OctalSystem numeralSystem = new OctalSystem();
+		Numerable numeralSystem = new OctalSystem();
 		List<Character> expectedList = List.of(
 			'0', '1', '2', '3', '4',
 			'5', '6', '7'

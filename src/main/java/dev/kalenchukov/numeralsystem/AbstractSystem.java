@@ -289,9 +289,9 @@ public abstract class AbstractSystem implements Numerable
 			return false;
 		}
 
-		final Numerable numerable = (Numerable) obj;
+		final Numerable numeralSystem = (Numerable) obj;
 
-		if (!Objects.equals(this.get(), numerable.get())) {
+		if (!Objects.equals(this.get(), numeralSystem.get())) {
 			return false;
 		}
 

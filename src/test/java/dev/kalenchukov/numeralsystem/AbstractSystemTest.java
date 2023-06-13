@@ -46,7 +46,7 @@ public class AbstractSystemTest
 	})
 	public void contains(Character value)
 	{
-		DecimalSystem numeralSystem = new DecimalSystem();
+		Numerable numeralSystem = new DecimalSystem();
 
 		boolean actual = numeralSystem.contains(value);
 
@@ -62,7 +62,7 @@ public class AbstractSystemTest
 	})
 	public void containsNotCorrect(Character value)
 	{
-		DecimalSystem numeralSystem = new DecimalSystem();
+		Numerable numeralSystem = new DecimalSystem();
 
 		boolean actual = numeralSystem.contains(value);
 
@@ -78,7 +78,7 @@ public class AbstractSystemTest
 	})
 	public void allMatch(String value)
 	{
-		DecimalSystem numeralSystem = new DecimalSystem();
+		Numerable numeralSystem = new DecimalSystem();
 
 		boolean actual = numeralSystem.allMatch(value);
 
@@ -94,7 +94,7 @@ public class AbstractSystemTest
 	})
 	public void anyMatch(String value)
 	{
-		DecimalSystem numeralSystem = new DecimalSystem();
+		Numerable numeralSystem = new DecimalSystem();
 
 		boolean actual = numeralSystem.anyMatch(value);
 
@@ -110,7 +110,7 @@ public class AbstractSystemTest
 	})
 	public void anyMatchNotCorrect(String value)
 	{
-		DecimalSystem numeralSystem = new DecimalSystem();
+		Numerable numeralSystem = new DecimalSystem();
 
 		boolean actual = numeralSystem.anyMatch(value);
 
@@ -126,7 +126,7 @@ public class AbstractSystemTest
 	})
 	public void noneMatch(String value)
 	{
-		DecimalSystem numeralSystem = new DecimalSystem();
+		Numerable numeralSystem = new DecimalSystem();
 
 		boolean actual = numeralSystem.noneMatch(value);
 
@@ -142,7 +142,7 @@ public class AbstractSystemTest
 	})
 	public void noneMatchNotCorrect(String value)
 	{
-		DecimalSystem numeralSystem = new DecimalSystem();
+		Numerable numeralSystem = new DecimalSystem();
 
 		boolean actual = numeralSystem.noneMatch(value);
 
@@ -158,7 +158,7 @@ public class AbstractSystemTest
 	})
 	public void allMatchNotCorrect(String value)
 	{
-		DecimalSystem numeralSystem = new DecimalSystem();
+		Numerable numeralSystem = new DecimalSystem();
 
 		boolean actual = numeralSystem.allMatch(value);
 
@@ -174,7 +174,7 @@ public class AbstractSystemTest
 	})
 	public void isSorted(String value)
 	{
-		DecimalSystem numeralSystem = new DecimalSystem();
+		Numerable numeralSystem = new DecimalSystem();
 
 		boolean actual = numeralSystem.isSorted(value);
 
@@ -190,7 +190,7 @@ public class AbstractSystemTest
 	})
 	public void isSortedNotCorrect(String value)
 	{
-		DecimalSystem numeralSystem = new DecimalSystem();
+		Numerable numeralSystem = new DecimalSystem();
 
 		boolean actual = numeralSystem.isSorted(value);
 
@@ -206,7 +206,7 @@ public class AbstractSystemTest
 	})
 	public void isSortedAsc(String value)
 	{
-		DecimalSystem numeralSystem = new DecimalSystem();
+		Numerable numeralSystem = new DecimalSystem();
 
 		boolean actual = numeralSystem.isSortedAsc(value);
 
@@ -222,7 +222,7 @@ public class AbstractSystemTest
 	})
 	public void isSortedAscNotCorrect(String value)
 	{
-		DecimalSystem numeralSystem = new DecimalSystem();
+		Numerable numeralSystem = new DecimalSystem();
 
 		boolean actual = numeralSystem.isSortedAsc(value);
 
@@ -238,7 +238,7 @@ public class AbstractSystemTest
 	})
 	public void isSortedDesc(String value)
 	{
-		DecimalSystem numeralSystem = new DecimalSystem();
+		Numerable numeralSystem = new DecimalSystem();
 
 		boolean actual = numeralSystem.isSortedDesc(value);
 
@@ -254,7 +254,7 @@ public class AbstractSystemTest
 	})
 	public void isSortedDescNotCorrect(String value)
 	{
-		DecimalSystem numeralSystem = new DecimalSystem();
+		Numerable numeralSystem = new DecimalSystem();
 
 		boolean actual = numeralSystem.isSortedDesc(value);
 
@@ -309,12 +309,40 @@ public class AbstractSystemTest
 	@Test
 	public void testEquals()
 	{
-		BinarySystem numeralSystem1 = new BinarySystem();
-		BinarySystem numeralSystem2 = new BinarySystem();
+		Numerable numeralSystem1 = new BinarySystem();
+		Numerable numeralSystem2 = new BinarySystem();
 
 		boolean actual = numeralSystem1.equals(numeralSystem2);
 
 		assertThat(actual).isTrue();
+	}
+
+	/**
+	 * Проверка метода {@link AbstractSystem#equals(Object)} с {@code null}.
+	 */
+	@Test
+	public void testEqualsNull()
+	{
+		Numerable numeralSystem1 = new BinarySystem();
+		Numerable numeralSystem2 = null;
+
+		boolean actual = numeralSystem1.equals(numeralSystem2);
+
+		assertThat(actual).isFalse();
+	}
+
+	/**
+	 * Проверка метода {@link AbstractSystem#equals(Object)} с разными классами.
+	 */
+	@Test
+	public void testEqualsDifferentClass()
+	{
+		Numerable numeralSystem1 = new BinarySystem();
+		Numerable numeralSystem2 = new DecimalSystem();
+
+		boolean actual = numeralSystem1.equals(numeralSystem2);
+
+		assertThat(actual).isFalse();
 	}
 
 	/**
@@ -323,8 +351,8 @@ public class AbstractSystemTest
 	@Test
 	public void testHashCode()
 	{
-		BinarySystem numeralSystem1 = new BinarySystem();
-		BinarySystem numeralSystem2 = new BinarySystem();
+		Numerable numeralSystem1 = new BinarySystem();
+		Numerable numeralSystem2 = new BinarySystem();
 
 		int expectedHashCode = numeralSystem1.hashCode();
 		int actualHashCode = numeralSystem2.hashCode();

@@ -43,7 +43,7 @@ public class RomanSystemTest
 	@Test
 	public void get()
 	{
-		RomanSystem numeralSystem = new RomanSystem();
+		Numerable numeralSystem = new RomanSystem();
 		List<Character> expectedList = List.of(
 			'I', 'V', 'X', 'L', 'C', 'D', 'M'
 		);

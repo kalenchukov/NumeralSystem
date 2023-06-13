@@ -43,7 +43,7 @@ public class QuaternarySystemTest
 	@Test
 	public void get()
 	{
-		QuaternarySystem numeralSystem = new QuaternarySystem();
+		Numerable numeralSystem = new QuaternarySystem();
 		List<Character> expectedList = List.of(
 			'0', '1', '2', '3'
 		);

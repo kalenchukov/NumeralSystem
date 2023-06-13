@@ -43,7 +43,7 @@ public class BinarySystemTest
 	@Test
 	public void get()
 	{
-		BinarySystem numeralSystem = new BinarySystem();
+		Numerable numeralSystem = new BinarySystem();
 		List<Character> expectedList = List.of(
 			'0', '1'
 		);
