@@ -64,7 +64,7 @@ public abstract class AbstractSystem implements Numerable
 	@Unmodifiable
 	@NotNull
 	@Override
-	public List<@NotNull Character> get()
+	public List<@NotNull Character> toList()
 	{
 		return Collections.unmodifiableList(this.digits);
 	}
@@ -291,7 +291,7 @@ public abstract class AbstractSystem implements Numerable
 
 		final Numerable numeralSystem = (Numerable) obj;
 
-		if (!Objects.equals(this.get(), numeralSystem.get())) {
+		if (!Objects.equals(this.toList(), numeralSystem.toList())) {
 			return false;
 		}
 
@@ -306,7 +306,7 @@ public abstract class AbstractSystem implements Numerable
 	@Override
 	public int hashCode()
 	{
-		return this.get().hashCode();
+		return this.toList().hashCode();
 	}
 
 	/**

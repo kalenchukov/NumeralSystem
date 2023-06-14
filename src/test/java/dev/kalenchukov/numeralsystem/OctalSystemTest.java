@@ -38,10 +38,10 @@ import static org.assertj.core.api.Assertions.assertThat;
 public class OctalSystemTest
 {
 	/**
-	 * Проверка метода {@link OctalSystem#get()}.
+	 * Проверка метода {@link OctalSystem#toList()}.
 	 */
 	@Test
-	public void get()
+	public void toList()
 	{
 		Numerable numeralSystem = new OctalSystem();
 		List<Character> expectedList = List.of(
@@ -49,7 +49,7 @@ public class OctalSystemTest
 			'5', '6', '7'
 		);
 
-		List<Character> actualList = numeralSystem.get();
+		List<Character> actualList = numeralSystem.toList();
 
 		assertThat(actualList).containsSequence(expectedList);
 	}

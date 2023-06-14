@@ -19,25 +19,7 @@
 NumeralSystem.HEXADECIMAL.getNumeralSystem();
 ```
 
-### Цифры систем счисления 
-#### Получение цифр
-```java
-Numerable numeralSystem = new HexadecimalSystem();
-numeralSystem.get();
-```
-
-Результат выполнения:
-```
-[
-    0, 1, 2, 3, 4, 5, 6, 7, 8, 9, A, B, C, D, E, F
-]
-```
-
-Аналог в виде константы:
-```java
-HexadecimalSystem.DIGITS;
-```
-
+### Цифры систем счисления
 #### Проверка содержания цифры в системе счисления
 ```java
 Numerable numeralSystem = new DuodecimalSystem();
@@ -113,6 +95,24 @@ numeralSystem.isSortedDesc("987654");
 Результат выполнения:
 ```
 true
+```
+
+#### Получение цифр в виде коллекции
+```java
+Numerable numeralSystem = new HexadecimalSystem();
+numeralSystem.toList();
+```
+
+Результат выполнения:
+```
+[
+    0, 1, 2, 3, 4, 5, 6, 7, 8, 9, A, B, C, D, E, F
+]
+```
+
+Аналог в виде константы:
+```java
+HexadecimalSystem.DIGITS;
 ```
 
 #### Получение цифр в виде массива

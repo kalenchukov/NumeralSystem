@@ -38,17 +38,17 @@ import static org.assertj.core.api.Assertions.assertThat;
 public class RomanSystemTest
 {
 	/**
-	 * Проверка метода {@link RomanSystem#get()}.
+	 * Проверка метода {@link RomanSystem#toList()}.
 	 */
 	@Test
-	public void get()
+	public void toList()
 	{
 		Numerable numeralSystem = new RomanSystem();
 		List<Character> expectedList = List.of(
 			'I', 'V', 'X', 'L', 'C', 'D', 'M'
 		);
 
-		List<Character> actualList = numeralSystem.get();
+		List<Character> actualList = numeralSystem.toList();
 
 		assertThat(actualList).containsSequence(expectedList);
 	}

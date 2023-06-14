@@ -38,10 +38,10 @@ import static org.assertj.core.api.Assertions.assertThat;
 public class DuodecimalSystemTest
 {
 	/**
-	 * Проверка метода {@link DuodecimalSystem#get()}.
+	 * Проверка метода {@link DuodecimalSystem#toList()}.
 	 */
 	@Test
-	public void get()
+	public void toList()
 	{
 		Numerable numeralSystem = new DuodecimalSystem();
 		List<Character> expectedList = List.of(
@@ -50,7 +50,7 @@ public class DuodecimalSystemTest
 			'A', 'B'
 		);
 
-		List<Character> actualList = numeralSystem.get();
+		List<Character> actualList = numeralSystem.toList();
 
 		assertThat(actualList).containsSequence(expectedList);
 	}

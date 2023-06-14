@@ -38,17 +38,17 @@ import static org.assertj.core.api.Assertions.assertThat;
 public class TernarySystemTest
 {
 	/**
-	 * Проверка метода {@link TernarySystem#get()}.
+	 * Проверка метода {@link TernarySystem#toList()}.
 	 */
 	@Test
-	public void get()
+	public void toList()
 	{
 		Numerable numeralSystem = new TernarySystem();
 		List<Character> expectedList = List.of(
 			'0', '1', '2'
 		);
 
-		List<Character> actualList = numeralSystem.get();
+		List<Character> actualList = numeralSystem.toList();
 
 		assertThat(actualList).containsSequence(expectedList);
 	}

@@ -38,15 +38,6 @@ import java.util.List;
 public interface Numerable
 {
 	/**
-	 * Возвращает цифры системы счисления.
-	 *
-	 * @return коллекцию цифр системы счисления.
-	 */
-	@Unmodifiable
-	@NotNull
-	List<@NotNull Character> get();
-
-	/**
 	 * Проверяет содержание цифры в системе счисления.
 	 *
 	 * @param digit цифра.
@@ -102,6 +93,15 @@ public interface Numerable
 	 * @return {@code true}, если цифры системы счисления расположены в убывающем порядке, иначе {@code false}.
 	 */
 	boolean isSortedDesc(@NotNull String string);
+
+	/**
+	 * Возвращает коллекцию из цифр системы счисления.
+	 *
+	 * @return коллекцию цифр системы счисления.
+	 */
+	@Unmodifiable
+	@NotNull
+	List<@NotNull Character> toList();
 
 	/**
 	 * Возвращает массив из цифр системы счисления.

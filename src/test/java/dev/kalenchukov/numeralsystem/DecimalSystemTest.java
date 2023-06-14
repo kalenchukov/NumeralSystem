@@ -38,10 +38,10 @@ import static org.assertj.core.api.Assertions.assertThat;
 public class DecimalSystemTest
 {
 	/**
-	 * Проверка метода {@link DecimalSystem#get()}.
+	 * Проверка метода {@link DecimalSystem#toList()}.
 	 */
 	@Test
-	public void get()
+	public void toList()
 	{
 		Numerable numeralSystem = new DecimalSystem();
 		List<Character> expectedList = List.of(
@@ -49,7 +49,7 @@ public class DecimalSystemTest
 			'5', '6', '7', '8', '9'
 		);
 
-		List<Character> actualList = numeralSystem.get();
+		List<Character> actualList = numeralSystem.toList();
 
 		assertThat(actualList).containsSequence(expectedList);
 	}

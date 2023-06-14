@@ -38,10 +38,10 @@ import static org.assertj.core.api.Assertions.assertThat;
 public class HexadecimalSystemTest
 {
 	/**
-	 * Проверка метода {@link HexadecimalSystem#get()}.
+	 * Проверка метода {@link HexadecimalSystem#toList()}.
 	 */
 	@Test
-	public void get()
+	public void toList()
 	{
 		Numerable numeralSystem = new HexadecimalSystem();
 		List<Character> expectedList = List.of(
@@ -51,7 +51,7 @@ public class HexadecimalSystemTest
 			'F'
 		);
 
-		List<Character> actualList = numeralSystem.get();
+		List<Character> actualList = numeralSystem.toList();
 
 		assertThat(actualList).containsSequence(expectedList);
 	}

@@ -38,17 +38,17 @@ import static org.assertj.core.api.Assertions.assertThat;
 public class BinarySystemTest
 {
 	/**
-	 * Проверка метода {@link BinarySystem#get()}.
+	 * Проверка метода {@link BinarySystem#toList()}.
 	 */
 	@Test
-	public void get()
+	public void toList()
 	{
 		Numerable numeralSystem = new BinarySystem();
 		List<Character> expectedList = List.of(
 			'0', '1'
 		);
 
-		List<Character> actualList = numeralSystem.get();
+		List<Character> actualList = numeralSystem.toList();
 
 		assertThat(actualList).containsSequence(expectedList);
 	}
