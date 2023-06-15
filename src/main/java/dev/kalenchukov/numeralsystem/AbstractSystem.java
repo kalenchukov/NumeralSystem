@@ -99,7 +99,7 @@ public abstract class AbstractSystem implements Numerable
 			return false;
 		}
 
-		return Arrays.stream(this.stringToArrayCharacter(string))
+		return Arrays.stream(Stringi.toCharArray(string))
 					 .allMatch(this.digits::contains);
 	}
 
@@ -118,7 +118,7 @@ public abstract class AbstractSystem implements Numerable
 			return false;
 		}
 
-		return Arrays.stream(this.stringToArrayCharacter(string))
+		return Arrays.stream(Stringi.toCharArray(string))
 					 .anyMatch(this.digits::contains);
 	}
 
@@ -137,7 +137,7 @@ public abstract class AbstractSystem implements Numerable
 			return false;
 		}
 
-		return Arrays.stream(this.stringToArrayCharacter(string))
+		return Arrays.stream(Stringi.toCharArray(string))
 					 .noneMatch(this.digits::contains);
 	}
 
@@ -297,19 +297,5 @@ public abstract class AbstractSystem implements Numerable
 	public int hashCode()
 	{
 		return this.toList().hashCode();
-	}
-
-	/**
-	 * Преобразовывает строку в массив символов.
-	 *
-	 * @param string строка.
-	 * @return массив символов.
-	 */
-	@NotNull
-	private Character @NotNull [] stringToArrayCharacter(@NotNull final String string)
-	{
-		return string.chars()
-					 .mapToObj(i -> (char) i)
-					 .toArray(Character[]::new);
 	}
 }
