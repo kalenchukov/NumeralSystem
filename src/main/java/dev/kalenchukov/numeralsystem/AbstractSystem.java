@@ -24,6 +24,7 @@
 
 package dev.kalenchukov.numeralsystem;
 
+import dev.kalenchukov.stringi.Stringi;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import org.jetbrains.annotations.Unmodifiable;
@@ -246,18 +247,7 @@ public abstract class AbstractSystem implements Numerable
 	@NotNull
 	public String toString(@NotNull final String separator)
 	{
-		StringBuilder string = new StringBuilder();
-
-		for (int index = 0; index < this.digits.size(); index++)
-		{
-			string.append(this.digits.get(index));
-
-			if (index != this.digits.size() - 1) {
-				string.append(separator);
-			}
-		}
-
-		return string.toString();
+		return Stringi.glue(this.digits, separator);
 	}
 
 	/**
