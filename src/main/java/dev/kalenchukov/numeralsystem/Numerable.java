@@ -95,6 +95,14 @@ public interface Numerable
 	boolean isSortedDesc(@NotNull String string);
 
 	/**
+	 * Возвращает минимальную цифру системы счисления.
+	 *
+	 * @return минимальную цифру системы счисления.
+	 */
+	@NotNull
+	Character getMin();
+
+	/**
 	 * Возвращает коллекцию из цифр системы счисления.
 	 *
 	 * @return коллекцию цифр системы счисления.

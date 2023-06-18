@@ -97,6 +97,17 @@ numeralSystem.isSortedDesc("987654");
 true
 ```
 
+#### Получение минимальной цифры
+```java
+Numerable numeralSystem = new HexadecimalSystem();
+numeralSystem.getMin();
+```
+
+Результат выполнения:
+```
+0
+```
+
 #### Получение цифр в виде коллекции
 ```java
 Numerable numeralSystem = new HexadecimalSystem();

@@ -73,6 +73,18 @@ public abstract class AbstractSystem implements Numerable
 	/**
 	 * {@inheritDoc}
 	 *
+	 * @return {@inheritDoc}
+	 */
+	@NotNull
+	@Override
+	public Character getMin()
+	{
+		return this.digits.get(0);
+	}
+
+	/**
+	 * {@inheritDoc}
+	 *
 	 * @param digit {@inheritDoc}
 	 * @return {@inheritDoc}
 	 */

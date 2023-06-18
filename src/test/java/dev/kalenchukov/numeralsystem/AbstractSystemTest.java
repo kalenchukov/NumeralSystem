@@ -457,4 +457,17 @@ public class AbstractSystemTest
 
 		assertThat(actualString).isEqualTo(expectedString);
 	}
+
+	/**
+	 * Проверка метода {@link AbstractSystem#getMin()}.
+	 */
+	@Test
+	public void getMin()
+	{
+		Numerable numeralSystem = new DecimalSystem();
+
+		char actualMin = numeralSystem.getMin();
+
+		assertThat(actualMin).isEqualTo('0');
+	}
 }
