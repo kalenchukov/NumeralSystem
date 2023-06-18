@@ -43,7 +43,7 @@ public interface Numerable
 	 * @param digit цифра.
 	 * @return {@code true}, если цифра содержится в системе счисления, иначе {@code false}.
 	 */
-	boolean contains(@NotNull Character digit);
+	boolean contains(char digit);
 
 	/**
 	 * Проверяет принадлежность всех цифр системе счисления.
@@ -99,16 +99,14 @@ public interface Numerable
 	 *
 	 * @return минимальную цифру системы счисления.
 	 */
-	@NotNull
-	Character getMin();
+	char getMin();
 
 	/**
 	 * Возвращает максимальную цифру системы счисления.
 	 *
 	 * @return максимальную цифру системы счисления.
 	 */
-	@NotNull
-	Character getMax();
+	char getMax();
 
 	/**
 	 * Возвращает коллекцию из цифр системы счисления.

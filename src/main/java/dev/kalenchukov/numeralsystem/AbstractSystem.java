@@ -75,9 +75,8 @@ public abstract class AbstractSystem implements Numerable
 	 *
 	 * @return {@inheritDoc}
 	 */
-	@NotNull
 	@Override
-	public Character getMin()
+	public char getMin()
 	{
 		return this.digits.get(0);
 	}
@@ -87,9 +86,8 @@ public abstract class AbstractSystem implements Numerable
 	 *
 	 * @return {@inheritDoc}
 	 */
-	@NotNull
 	@Override
-	public Character getMax()
+	public char getMax()
 	{
 		return this.digits.get(this.digits.size() - 1);
 	}
@@ -101,10 +99,8 @@ public abstract class AbstractSystem implements Numerable
 	 * @return {@inheritDoc}
 	 */
 	@Override
-	public boolean contains(@NotNull final Character digit)
+	public boolean contains(final char digit)
 	{
-		Objects.requireNonNull(digit);
-
 		return this.digits.contains(digit);
 	}
 

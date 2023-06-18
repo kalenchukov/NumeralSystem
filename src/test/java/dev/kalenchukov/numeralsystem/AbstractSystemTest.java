@@ -24,7 +24,6 @@
 
 package dev.kalenchukov.numeralsystem;
 
-import dev.kalenchukov.stringi.Stringi;
 import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
@@ -40,7 +39,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 public class AbstractSystemTest
 {
 	/**
-	 * Класс проверки метода {@link AbstractSystem#contains(Character)}.
+	 * Класс проверки метода {@link AbstractSystem#contains(char)}.
 	 *
 	 * @author Алексей Каленчуков
 	 */
@@ -48,13 +47,13 @@ public class AbstractSystemTest
 	public class Contains
 	{
 		/**
-		 * Проверка метода {@link AbstractSystem#contains(Character)}.
+		 * Проверка метода {@link AbstractSystem#contains(char)}.
 		 */
 		@ParameterizedTest
 		@ValueSource(chars = {
 			'7', '0', '3'
 		})
-		public void contains(Character value)
+		public void contains(char value)
 		{
 			Numerable numeralSystem = new DecimalSystem();
 
@@ -64,13 +63,13 @@ public class AbstractSystemTest
 		}
 
 		/**
-		 * Проверка метода {@link AbstractSystem#contains(Character)} с некорректным значением.
+		 * Проверка метода {@link AbstractSystem#contains(char)} с некорректным значением.
 		 */
 		@ParameterizedTest
 		@ValueSource(chars = {
 			'A', 'a', 'Ё'
 		})
-		public void containsNotCorrect(Character value)
+		public void containsNotCorrect(char value)
 		{
 			Numerable numeralSystem = new DecimalSystem();
 
