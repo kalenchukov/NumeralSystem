@@ -470,4 +470,17 @@ public class AbstractSystemTest
 
 		assertThat(actualMin).isEqualTo('0');
 	}
+
+	/**
+	 * Проверка метода {@link AbstractSystem#getMax()}.
+	 */
+	@Test
+	public void getMax()
+	{
+		Numerable numeralSystem = new HexadecimalSystem();
+
+		char actualMin = numeralSystem.getMax();
+
+		assertThat(actualMin).isEqualTo('F');
+	}
 }

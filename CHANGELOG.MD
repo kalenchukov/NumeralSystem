@@ -4,6 +4,7 @@
 * Добавлен модуль assertj-core версии 3.24.2.
 * Добавлен модуль stringi версии 1.5.0.
 * Добавлен метод Numerable.getMin().
+* Добавлен метод Numerable.getMax().
 
 ### Изменено
 * Переименован метод Numerable.get() -> Numerable.toList().

@@ -108,6 +108,17 @@ numeralSystem.getMin();
 0
 ```
 
+#### Получение максимальной цифры
+```java
+Numerable numeralSystem = new HexadecimalSystem();
+numeralSystem.getMax();
+```
+
+Результат выполнения:
+```
+F
+```
+
 #### Получение цифр в виде коллекции
 ```java
 Numerable numeralSystem = new HexadecimalSystem();
