@@ -41,7 +41,7 @@ public interface Numerable
 	 * Проверяет содержание цифры в системе счисления.
 	 *
 	 * @param digit цифра.
-	 * @return {@code true}, если цифра содержится в системе счисления, иначе {@code false}.
+	 * @return {@code true}, если {@code digit} содержится в системе счисления, иначе {@code false}.
 	 */
 	boolean contains(char digit);
 
@@ -49,7 +49,7 @@ public interface Numerable
 	 * Проверяет принадлежность всех цифр системе счисления.
 	 *
 	 * @param string строка.
-	 * @return {@code true}, если все цифры принадлежат системе счисления, иначе {@code false}.
+	 * @return {@code true}, если все цифры из {@code string} принадлежат системе счисления, иначе {@code false}.
 	 */
 	boolean allMatch(@NotNull String string);
 
@@ -57,7 +57,7 @@ public interface Numerable
 	 * Проверяет принадлежность хотя бы одной цифры системе счисления.
 	 *
 	 * @param string строка.
-	 * @return {@code true}, если хотя бы одна цифра принадлежит системе счисления, иначе {@code false}.
+	 * @return {@code true}, если хотя бы одна цифра из  {@code string} принадлежит системе счисления, иначе {@code false}.
 	 */
 	boolean anyMatch(@NotNull String string);
 
@@ -65,7 +65,7 @@ public interface Numerable
 	 * Проверяет не принадлежность всех цифр системе счисления.
 	 *
 	 * @param string строка.
-	 * @return {@code true}, если все цифры не принадлежат системе счисления, иначе {@code false}.
+	 * @return {@code true}, если все цифры из {@code string} не принадлежат системе счисления, иначе {@code false}.
 	 */
 	boolean noneMatch(@NotNull String string);
 
@@ -73,7 +73,7 @@ public interface Numerable
 	 * Проверяет, расположены ли цифры системы счисления в возрастающем или убывающем порядке.
 	 *
 	 * @param string строка.
-	 * @return {@code true}, если цифры системы счисления расположены в возрастающем или
+	 * @return {@code true}, если цифры из {@code string} расположены в возрастающем или
 	 * убывающем порядке, иначе {@code false}.
 	 */
 	boolean isSorted(@NotNull String string);
@@ -82,7 +82,7 @@ public interface Numerable
 	 * Проверяет, расположены ли цифры системы счисления в возрастающем порядке.
 	 *
 	 * @param string строка.
-	 * @return {@code true}, если цифры системы счисления расположены в возрастающем порядке, иначе {@code false}.
+	 * @return {@code true}, если цифры из {@code string} расположены в возрастающем порядке, иначе {@code false}.
 	 */
 	boolean isSortedAsc(@NotNull String string);
 
@@ -90,7 +90,7 @@ public interface Numerable
 	 * Проверяет, расположены ли цифры системы счисления в убывающем порядке.
 	 *
 	 * @param string строка.
-	 * @return {@code true}, если цифры системы счисления расположены в убывающем порядке, иначе {@code false}.
+	 * @return {@code true}, если цифры из {@code string} расположены в убывающем порядке, иначе {@code false}.
 	 */
 	boolean isSortedDesc(@NotNull String string);
 
@@ -129,7 +129,7 @@ public interface Numerable
 	 * Проверяет равенство объектов.
 	 *
 	 * @param obj сравниваемый объект.
-	 * @return {@code true}, если объекты равны, иначе {@code false}.
+	 * @return {@code true}, если данный объект равен {@code obj}, иначе {@code false}.
 	 * @see Object#equals(Object)
 	 */
 	boolean equals(@Nullable Object obj);
