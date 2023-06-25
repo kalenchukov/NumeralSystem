@@ -73,6 +73,24 @@ public abstract class AbstractSystem implements Numerable
 	/**
 	 * {@inheritDoc}
 	 *
+	 * @param position {@inheritDoc}
+	 * @return {@inheritDoc}
+	 */
+	@Nullable
+	@Override
+	public Character get(final int position)
+	{
+		try {
+			return this.digits.get(position - 1);
+		}
+		catch (IndexOutOfBoundsException exception) {
+			return null;
+		}
+	}
+
+	/**
+	 * {@inheritDoc}
+	 *
 	 * @return {@inheritDoc}
 	 */
 	@Override

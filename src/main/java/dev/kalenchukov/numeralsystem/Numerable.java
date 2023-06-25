@@ -95,6 +95,15 @@ public interface Numerable
 	boolean isSortedDesc(@NotNull String string);
 
 	/**
+	 * Возвращает цифру системы счисления.
+	 *
+	 * @param position позиция цифры в системе счисления.
+	 * @return цифра системы счисления или {@code null} если цифры в позиции {@code position} нет.
+	 */
+	@Nullable
+	Character get(int position);
+
+	/**
 	 * Возвращает минимальную цифру системы счисления.
 	 *
 	 * @return минимальную цифру системы счисления.

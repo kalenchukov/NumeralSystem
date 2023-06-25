@@ -5,6 +5,7 @@
 * Добавлен модуль stringi версии 1.5.0.
 * Добавлен метод Numerable.getMin().
 * Добавлен метод Numerable.getMax().
+* Добавлен метод Numerable.get(int).
 
 ### Изменено
 * Переименован метод Numerable.get() -> Numerable.toList().

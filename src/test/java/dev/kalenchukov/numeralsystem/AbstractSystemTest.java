@@ -39,6 +39,41 @@ import static org.assertj.core.api.Assertions.assertThat;
 public class AbstractSystemTest
 {
 	/**
+	 * Класс проверки метода {@link AbstractSystem#get(int)}.
+	 *
+	 * @author Алексей Каленчуков
+	 */
+	@Nested
+	public class Get
+	{
+		/**
+		 * Проверка метода {@link AbstractSystem#get(int)}.
+		 */
+		@Test
+		public void get()
+		{
+			Numerable numeralSystem = new OctalSystem();
+
+			Character actualLetter = numeralSystem.get(8);
+
+			assertThat(actualLetter).isEqualTo('7');
+		}
+
+		/**
+		 * Проверка метода {@link AbstractSystem#get(int)} с некорректным значением.
+		 */
+		@Test
+		public void getNotCorrect()
+		{
+			Numerable numeralSystem = new OctalSystem();
+
+			Character actualLetter = numeralSystem.get(0);
+
+			assertThat(actualLetter).isNull();
+		}
+	}
+
+	/**
 	 * Класс проверки метода {@link AbstractSystem#contains(char)}.
 	 *
 	 * @author Алексей Каленчуков

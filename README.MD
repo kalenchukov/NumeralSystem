@@ -97,6 +97,17 @@ numeralSystem.isSortedDesc("987654");
 true
 ```
 
+#### Получение цифры по позиции
+```java
+Numerable numeralSystem = new OctalSystem();
+numeralSystem.get(8);
+```
+
+Результат выполнения:
+```
+7
+```
+
 #### Получение минимальной цифры
 ```java
 Numerable numeralSystem = new HexadecimalSystem();
