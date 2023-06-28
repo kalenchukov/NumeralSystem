@@ -127,6 +127,7 @@ public abstract class AbstractSystem implements Numerable
 	 *
 	 * @param string {@inheritDoc}
 	 * @return {@inheritDoc}
+	 * @throws NullPointerException если в качестве {@code string} передан {@code null}.
 	 */
 	@Override
 	public boolean allMatch(@NotNull final String string)
@@ -146,6 +147,7 @@ public abstract class AbstractSystem implements Numerable
 	 *
 	 * @param string {@inheritDoc}
 	 * @return {@inheritDoc}
+	 * @throws NullPointerException если в качестве {@code string} передан {@code null}.
 	 */
 	@Override
 	public boolean anyMatch(@NotNull final String string)
@@ -165,6 +167,7 @@ public abstract class AbstractSystem implements Numerable
 	 *
 	 * @param string {@inheritDoc}
 	 * @return {@inheritDoc}
+	 * @throws NullPointerException если в качестве {@code string} передан {@code null}.
 	 */
 	@Override
 	public boolean noneMatch(@NotNull final String string)
@@ -184,6 +187,7 @@ public abstract class AbstractSystem implements Numerable
 	 *
 	 * @param string {@inheritDoc}
 	 * @return {@inheritDoc}
+	 * @throws NullPointerException если в качестве {@code string} передан {@code null}.
 	 */
 	@Override
 	public boolean isSorted(@NotNull final String string)
@@ -198,6 +202,7 @@ public abstract class AbstractSystem implements Numerable
 	 *
 	 * @param string {@inheritDoc}
 	 * @return {@inheritDoc}
+	 * @throws NullPointerException если в качестве {@code string} передан {@code null}.
 	 */
 	@Override
 	public boolean isSortedAsc(@NotNull final String string)
@@ -233,6 +238,7 @@ public abstract class AbstractSystem implements Numerable
 	 *
 	 * @param string {@inheritDoc}
 	 * @return {@inheritDoc}
+	 * @throws NullPointerException если в качестве {@code string} передан {@code null}.
 	 */
 	@Override
 	public boolean isSortedDesc(@NotNull final String string)
