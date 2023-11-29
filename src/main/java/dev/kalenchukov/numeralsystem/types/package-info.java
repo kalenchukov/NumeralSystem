@@ -25,4 +25,4 @@
 /**
  * Предоставляет перечисления, необходимые для определения типов.
  */
-package dev.kalenchukov.numeralsystem.resources;
+package dev.kalenchukov.numeralsystem.types;

@@ -22,7 +22,7 @@
  * SOFTWARE.
  */
 
-package dev.kalenchukov.numeralsystem.resources;
+package dev.kalenchukov.numeralsystem.types;
 
 import dev.kalenchukov.numeralsystem.*;
 import org.jetbrains.annotations.NotNull;

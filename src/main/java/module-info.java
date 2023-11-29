@@ -7,5 +7,5 @@ module dev.kalenchukov.numeralsystem
 	requires dev.kalenchukov.stringi;
 
 	exports dev.kalenchukov.numeralsystem;
-	exports dev.kalenchukov.numeralsystem.resources;
+	exports dev.kalenchukov.numeralsystem.types;
 }
