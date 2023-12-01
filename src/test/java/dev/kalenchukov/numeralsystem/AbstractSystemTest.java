@@ -63,7 +63,7 @@ public class AbstractSystemTest
 		 * Проверка метода {@link AbstractSystem#get(int)} с некорректным значением.
 		 */
 		@Test
-		public void getNotCorrect()
+		public void getWithValueZero()
 		{
 			Numerable numeralSystem = new OctalSystem();
 
@@ -104,7 +104,7 @@ public class AbstractSystemTest
 		@ValueSource(chars = {
 			'A', 'a', 'Ё'
 		})
-		public void containsNotCorrect(char value)
+		public void containsValueInvalid(char value)
 		{
 			Numerable numeralSystem = new DecimalSystem();
 
@@ -145,7 +145,7 @@ public class AbstractSystemTest
 		@ValueSource(strings = {
 			"", "123F", "F", "123456A789"
 		})
-		public void allMatchNotCorrect(String value)
+		public void allMatchValueInvalid(String value)
 		{
 			Numerable numeralSystem = new DecimalSystem();
 
@@ -186,7 +186,7 @@ public class AbstractSystemTest
 		@ValueSource(strings = {
 			"", "ABCDEF", "erfds"
 		})
-		public void anyMatchNotCorrect(String value)
+		public void anyMatchValueInvalid(String value)
 		{
 			Numerable numeralSystem = new DecimalSystem();
 
@@ -227,7 +227,7 @@ public class AbstractSystemTest
 		@ValueSource(strings = {
 			"", "AB7DEF", "324asd"
 		})
-		public void noneMatchNotCorrect(String value)
+		public void noneMatchValueInvalid(String value)
 		{
 			Numerable numeralSystem = new DecimalSystem();
 
@@ -268,7 +268,7 @@ public class AbstractSystemTest
 		@ValueSource(strings = {
 			"", "6789012345", "2345671890", "23r44567"
 		})
-		public void isSortedNotCorrect(String value)
+		public void isSortedValueInvalid(String value)
 		{
 			Numerable numeralSystem = new DecimalSystem();
 
@@ -309,7 +309,7 @@ public class AbstractSystemTest
 		@ValueSource(strings = {
 			"", "A", "10", "576890", "576z890", "1234567890"
 		})
-		public void isSortedAscNotCorrect(String value)
+		public void isSortedAscValueInvalid(String value)
 		{
 			Numerable numeralSystem = new DecimalSystem();
 
@@ -350,7 +350,7 @@ public class AbstractSystemTest
 		@ValueSource(strings = {
 			"", "A", "09", "098", "25431", "25431a", "0987654321"
 		})
-		public void isSortedDescNotCorrect(String value)
+		public void isSortedDescValueInvalid(String value)
 		{
 			Numerable numeralSystem = new DecimalSystem();
 
@@ -369,10 +369,10 @@ public class AbstractSystemTest
 	public class Equals
 	{
 		/**
-		 * Проверка метода {@link AbstractSystem#equals(Object)}.
+		 * Проверка метода {@link AbstractSystem#equals(Object)} с равными объектами.
 		 */
 		@Test
-		public void testEquals()
+		public void equalsWithEqualsValue()
 		{
 			Numerable numeralSystem1 = new BinarySystem();
 			Numerable numeralSystem2 = new BinarySystem();
@@ -383,10 +383,10 @@ public class AbstractSystemTest
 		}
 
 		/**
-		 * Проверка метода {@link AbstractSystem#equals(Object)} с {@code null}.
+		 * Проверка метода {@link AbstractSystem#equals(Object)} с значением в виде {@code null}.
 		 */
 		@Test
-		public void testEqualsNull()
+		public void equalsWithNull()
 		{
 			Numerable numeralSystem1 = new BinarySystem();
 			Numerable numeralSystem2 = null;
@@ -400,7 +400,7 @@ public class AbstractSystemTest
 		 * Проверка метода {@link AbstractSystem#equals(Object)} с разными классами.
 		 */
 		@Test
-		public void testEqualsDifferentClass()
+		public void equalsWithDifferentTypeClass()
 		{
 			Numerable numeralSystem1 = new BinarySystem();
 			Numerable numeralSystem2 = new DecimalSystem();
@@ -420,10 +420,10 @@ public class AbstractSystemTest
 	public class HashCode
 	{
 		/**
-		 * Проверка метода {@link AbstractSystem#hashCode()}.
+		 * Проверка метода {@link AbstractSystem#hashCode()} с равными объектами.
 		 */
 		@Test
-		public void testHashCode()
+		public void hashCodeWithEqualsValue()
 		{
 			Numerable numeralSystem1 = new BinarySystem();
 			Numerable numeralSystem2 = new BinarySystem();
@@ -438,7 +438,7 @@ public class AbstractSystemTest
 		 * Проверка метода {@link AbstractSystem#hashCode()} с разными классами.
 		 */
 		@Test
-		public void testHashCodeDifferentClass()
+		public void hashCodeWithDifferentTypeClass()
 		{
 			Numerable numeralSystem1 = new BinarySystem();
 			Numerable numeralSystem2 = new HexadecimalSystem();
@@ -470,7 +470,7 @@ public class AbstractSystemTest
 	 * Проверка метода {@link AbstractSystem#toString()}.
 	 */
 	@Test
-	public void testToString()
+	public void toStringWithValid()
 	{
 		String expectedString = "0123456789";
 
@@ -483,7 +483,7 @@ public class AbstractSystemTest
 	 * Проверка метода {@link AbstractSystem#toString(String)}.
 	 */
 	@Test
-	public void toStringSeparator()
+	public void toStringWithSeparator()
 	{
 		String expectedString = "0,1,2,3,4,5,6,7,8,9";
 

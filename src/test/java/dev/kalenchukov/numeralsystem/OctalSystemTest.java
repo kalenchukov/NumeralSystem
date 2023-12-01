@@ -51,6 +51,6 @@ public class OctalSystemTest
 
 		List<Character> actualList = numeralSystem.toList();
 
-		assertThat(actualList).containsSequence(expectedList);
+		assertThat(actualList).containsExactlyElementsOf(expectedList);
 	}
 }
